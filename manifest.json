@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "Assetic Extensions",
+    "description": "This extension adds addtional functionality to assetic.net",
+    "version": "1.0",
+    "page_action": {
+        "default_icon": "icon-19.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://*.assetic.net/*"
+        ],
+        "all_frames": true,
+        "js": [
+            "scripts/content.js"
+        ]
+    }],
+
+    "background": {
+        "scripts": [
+            "plugins/jquery-3.1.1.min.js",
+            "plugins/jsgrid-1.5.2/jsgrid.min.js",
+            "scripts/db.js",
+            "scripts/background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "activeTab",
+        "tabs",
+        "https://ajax.googleapis.com/",
+        "https://*.assetic.net/"
+    ],
+    "web_accessible_resources": [
+        "scripts/tab.js"
+    ]
+}
