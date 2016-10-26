@@ -1,4 +1,3 @@
-var expandWidgetId;
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log("something happening from the extension");
     var data = request.data || {};
@@ -18,15 +17,32 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             if (!request.data.field) {
                 sendResponse({ data: data, success: false });
             }
+            var spinner = new ajaxLoader($("body"));
             var element = $("span:contains('" + request.data.field + "')")
             if (element && element.length > 0) {
                 var widgetElement = element.closest(".widget");
                 if (widgetElement.length > 0 && widgetElement[0].id) {
-                    expandWidgetId = widgetElement[0].id.replace("widget", "")
-                    injectScript(chrome.extension.getURL('scripts/tab.js'), 'body');
-                }
-                element.focus();
 
+                    var script = document.createElement('script');
+                    script.textContent = "formLayoutConfiguration.expandCollapse('" + widgetElement[0].id.replace("widget", "") + "', false);";
+                    (document.head || document.documentElement).appendChild(script);
+                    script.remove();
+
+                }
+                element.fadeOut(300)
+                    .fadeIn(300)
+                    .fadeOut(300)
+                    .fadeIn(300)
+                    .fadeOut(300)
+                    .fadeIn(300)
+                    .fadeOut(300)
+                    .fadeIn(300)
+                    .fadeOut(300)
+                    .fadeIn(300);
+
+            }
+            if (spinner) {
+                spinner.remove();
             }
             break;
         default:
@@ -35,16 +51,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 
 });
-
-function injectScript(file, node) {
-    var th = document.getElementsByTagName(node)[0];
-    var s = document.createElement('script');
-    s.setAttribute('type', 'text/javascript');
-    s.setAttribute('src', file);
-    th.appendChild(s);
-}
-
-
+/*
+var s = document.createElement('aExtPageScript');
+s.src = chrome.extension.getURL('scripts/pageScript.js');
+(document.head || document.documentElement).appendChild(s);
+s.onload = function() {
+    s.remove();
+};
+*/
+// Event listener
+document.addEventListener('RW759_connectExtension', function(e) {
+    // e.detail contains the transferred data (can be anything, ranging
+    // from JavaScript objects to strings).
+    // Do something, for example:
+    console.log(e.detail);
+});
 
 function colorReplace(findHexColor, replaceWith) {
     // Convert rgb color strings to hex

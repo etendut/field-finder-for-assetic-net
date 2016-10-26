@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Assetic Extensions",
-    "description": "This extension adds addtional functionality to assetic.net",
+    "name": "Assetic Field Finder",
+    "description": "Helps you find fields in the register",
     "version": "1.0",
     "page_action": {
         "default_icon": "icon-19.png",
@@ -17,12 +17,16 @@
         ],
         "all_frames": true,
         "js": [
+            "plugins/jquery-3.1.1.min.js",
+            "scripts/spinloader.js",
             "scripts/content.js"
-        ]
+        ],
+        "run_at": "document_end"
     }],
 
     "background": {
         "scripts": [
+            "scripts/content.js",
             "scripts/background.js"
         ],
         "persistent": false
@@ -35,6 +39,6 @@
         "https://*.assetic.net/"
     ],
     "web_accessible_resources": [
-        "scripts/tab.js"
+        "scripts/pageScript.js"
     ]
 }

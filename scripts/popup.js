@@ -1,5 +1,7 @@
 var defaultColor = '#008da8'
 var dataDictionary;
+var db = new SearchFieldlist();
+
 window.onload = function() {
 
     loadOptions();
@@ -12,7 +14,10 @@ window.onload = function() {
 
         });
     $("#eraseOptions").click(function() {
-        eraseOptions()
+        eraseOptions();
+    })
+    $("#reload").click(function() {
+        location.reload();
     })
 
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
@@ -20,7 +25,8 @@ window.onload = function() {
 
             var field = localStorage["showField"];
             if (field) {
-                sendMessage("showField", {field:field}, localStorage.removeItem("showField"))
+                sendMessage("showField", { field: field }, localStorage.removeItem("showField"))
+
             }
         }
     });
@@ -36,12 +42,17 @@ function sendMessage(action, data, successFunction) {
                 successFunction;
             }
         });
+        if (spinner) {
+            spinner.remove();
+            window.close();
+        }
     });
 }
 
+var spinner;
 
 function loadSearchLink(item) {
-
+    spinner = new ajaxLoader($("#searchGrid"));
     chrome.tabs.getSelected(function(tab) {
 
         var re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/Complex\/ComplexAsset\/)');
@@ -56,7 +67,6 @@ function loadSearchLink(item) {
         chrome.tabs.update(tab.id, { url: myNewUrl });
 
     });
-
 }
 
 function loadSearchGrid() {
@@ -76,11 +86,12 @@ function loadSearchGrid() {
             loadSearchLink(args.item);
         },
         fields: [
-            { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },
-            { name: "group", title: "Control Group", type: "text", width: 100 },
-            { name: "label", title: "Control", type: "text", width: 100 },
+            // { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },
+            { name: "label", title: "Control", type: "text", width: 150 },
             { name: "help", title: "Control Help", type: "text", width: 200 },
-            { name: "type", title: "Control Type", type: "text", width: 100, sorting: false }
+            { name: "type", title: "Control Type", type: "text", width: 100, sorting: false },
+            { name: "group", title: "Control Group", type: "text", width: 100 }
+
         ]
     });
 
