@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "jslint.options": {
+        jslintindent: 4,
+        maxerr: 50,
+        white: true,
+        browser: true,
+        devel: true,
+        vars: true,
+        node: true,
+        sloppy: true,
+        eqeq: true
+    }
+}
