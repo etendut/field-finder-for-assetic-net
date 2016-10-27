@@ -1,4 +1,4 @@
-var defaultColor = '#008da8'
+var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
 
@@ -25,13 +25,28 @@ window.onload = function() {
 
             var field = localStorage["showField"];
             if (field) {
-                sendMessage("showField", { field: field }, localStorage.removeItem("showField"))
+                sendMessage("showField", { field: field }, function() {
+                    localStorage.removeItem("showField");
+                    unShrinkGrid();
+
+                    if (spinner) {
+                        spinner.remove();
+                    }
+                })
 
             }
         }
     });
 
 
+};
+
+function shrinkGrid() {
+    $("#searchGrid").addClass("maxheight10");
+}
+
+function unShrinkGrid() {
+    $("#searchGrid").removeClass("maxheight10");
 }
 
 function sendMessage(action, data, successFunction) {
@@ -42,25 +57,23 @@ function sendMessage(action, data, successFunction) {
                 successFunction;
             }
         });
-        if (spinner) {
-            spinner.remove();
-            window.close();
-        }
     });
 }
 
 var spinner;
 
 function loadSearchLink(item) {
-    spinner = new ajaxLoader($("#searchGrid"));
+    spinner = new ajaxLoader($("body"));
+    shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
 
         var re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/Complex\/ComplexAsset\/)');
         var urlParts = re.exec(tab.url)
-        if (!urlParts || urlParts.length < 4)
+        if (!urlParts || urlParts.length < 4) {
             return;
+        }
 
-        var myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link
+        var myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
 
         localStorage["showField"] = item.label;
 
@@ -68,6 +81,20 @@ function loadSearchLink(item) {
 
     });
 }
+
+
+/* Search on keypress*/
+var originalFilterTemplate = jsGrid.fields.text.prototype.filterTemplate;
+jsGrid.fields.text.prototype.filterTemplate = function() {
+    var grid = this._grid;
+    var $result = originalFilterTemplate.call(this);
+    $result.on("keyup", function(e) {
+        // TODO: add proper condition and optionally throttling to avoid too much requests  
+        grid.search();
+    });
+    return $result;
+}
+
 
 function loadSearchGrid() {
     $("#searchGrid").jsGrid({
@@ -85,6 +112,10 @@ function loadSearchGrid() {
         rowClick: function(args) {
             loadSearchLink(args.item);
         },
+        filterToolbar: {
+            searchOnEnter: false,
+            ignoreCase: true
+        },
         fields: [
             // { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },
             { name: "label", title: "Control", type: "text", width: 150 },
@@ -94,7 +125,6 @@ function loadSearchGrid() {
 
         ]
     });
-
 }
 
 function loadCurrentColor() {
@@ -109,8 +139,9 @@ function loadCurrentColor() {
 }
 
 function saveCurrentColor(newColor) {
-    if (!newColor)
+    if (!newColor) {
         return;
+    }
     localStorage["currentColor"] = newColor;
 }
 
