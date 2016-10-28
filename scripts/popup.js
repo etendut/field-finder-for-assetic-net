@@ -5,7 +5,17 @@ var db = new SearchFieldlist();
 window.onload = function() {
 
     loadOptions();
-    loadSearchGrid();
+
+
+
+    sendMessage("getContext", {}, function(e) {
+        if (e){
+           db.setCategory(e.Category)
+        }
+        loadSearchGrid();
+    });
+
+
     $("#colorChooser").change(
         function(e) {
             var newColor = this.jscolor.toHEXString()
@@ -54,7 +64,7 @@ function sendMessage(action, data, successFunction) {
         chrome.tabs.sendMessage(tabs[0].id, { action: action, data: data }, function(response) {
             console.log(response);
             if (response && response.success) {
-                successFunction;
+                successFunction(response.data);
             }
         });
     });
@@ -97,6 +107,7 @@ jsGrid.fields.text.prototype.filterTemplate = function() {
 
 
 function loadSearchGrid() {
+
     $("#searchGrid").jsGrid({
         width: "100%",
         height: "400px",
@@ -111,10 +122,6 @@ function loadSearchGrid() {
         controller: db,
         rowClick: function(args) {
             loadSearchLink(args.item);
-        },
-        filterToolbar: {
-            searchOnEnter: false,
-            ignoreCase: true
         },
         fields: [
             // { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },

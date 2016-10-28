@@ -1,5 +1,5 @@
+var pageContext;
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log("something happening from the extension");
     var data = request.data || {};
     if (!request || !request.action || !request.data) {
         sendResponse({ data: data, success: false });
@@ -13,6 +13,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             colorReplace(request.data.oldColor, request.data.newColor)
             break;
 
+        case "getContext":
+            sendResponse({ data: pageContext, success: true });
+            break;
         case "showField":
             if (!request.data.field) {
                 sendResponse({ data: data, success: false });
@@ -51,20 +54,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 
 });
-/*
-var s = document.createElement('aExtPageScript');
+
+var s = document.createElement('script');
 s.src = chrome.extension.getURL('scripts/pageScript.js');
 (document.head || document.documentElement).appendChild(s);
 s.onload = function() {
     s.remove();
 };
-*/
+
 // Event listener
-document.addEventListener('RW759_connectExtension', function(e) {
-    // e.detail contains the transferred data (can be anything, ranging
-    // from JavaScript objects to strings).
-    // Do something, for example:
-    console.log(e.detail);
+document.addEventListener('asseticExtension_context', function(e) {
+    if (!e || !e.detail) {
+        return;
+    }
+    pageContext = e.detail;
+
 });
 
 function colorReplace(findHexColor, replaceWith) {
