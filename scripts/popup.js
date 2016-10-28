@@ -84,13 +84,15 @@ function loadSearchLink(item) {
             myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
             localStorage["showField"] = item.label;
             chrome.tabs.update(tab.id, { url: myNewUrl });
+            return;
         }
         re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/complex)');
         urlParts = re.exec(tab.url)
         if (urlParts && urlParts.length > 4) {
-            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] +"/Complex/ComplexAsset/"+ urlParts[3] + item.link;
+            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + "/Complex/ComplexAsset/" + urlParts[3] + item.link;
             localStorage["showField"] = item.label;
             chrome.tabs.update(tab.id, { url: myNewUrl });
+            return;
         }
         unShrinkGrid()
         if (spinner)
