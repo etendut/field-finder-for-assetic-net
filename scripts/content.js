@@ -1,13 +1,13 @@
 var pageContext;
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     var data = request.data || {};
-    if (!request || !request.action || !request.data) {
+    if (!request || !request.action) {
         sendResponse({ data: data, success: false });
     }
 
     switch (request.action) {
         case "changeColor":
-            if (!request.data.newColor || !request.data.oldColor) {
+            if (!request.data || !request.data.newColor || !request.data.oldColor) {
                 sendResponse({ data: data, success: false });
             }
             colorReplace(request.data.oldColor, request.data.newColor)
@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             sendResponse({ data: pageContext, success: true });
             break;
         case "showField":
-            if (!request.data.field) {
+            if (!request.data || !request.data.field) {
                 sendResponse({ data: data, success: false });
             }
             var spinner = new ajaxLoader($("body"));
