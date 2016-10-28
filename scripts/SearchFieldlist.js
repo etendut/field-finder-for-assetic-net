@@ -4,8 +4,9 @@ function SearchFieldlist() {
 
     this.loadData = function(filter) {
 
-        if (fields.length === 0)
+        if (fields.length === 0) {
             initdb_();
+        }
 
         return $.grep(fields, function(field) {
             return (
@@ -16,6 +17,7 @@ function SearchFieldlist() {
                 (!filter.type || field.type.toUpperCase().indexOf(filter.type.toUpperCase()) > -1)
             );
         });
+
     };
 
     this.insertItem = function(insertingField) {
@@ -33,7 +35,7 @@ function SearchFieldlist() {
 
     function initdb_() {
         $.ajax({
-            url: 'data/fieldFinder.json',
+            url: 'data/fieldFinder2.json',
             dataType: 'json',
             async: false,
             success: function(data) {
@@ -44,4 +46,4 @@ function SearchFieldlist() {
 
 
 
-};
+}
