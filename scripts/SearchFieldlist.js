@@ -18,8 +18,8 @@ function SearchFieldlist() {
                 return (!categoryTemplate || d2.toUpperCase().indexOf(categoryTemplate.toUpperCase()) > -1);
             });
             return (
-               (field.categoryTemplates.length > 0) &&
-               (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
+                (!categoryTemplate || field.categoryTemplates.length > 0) &&
+                (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
