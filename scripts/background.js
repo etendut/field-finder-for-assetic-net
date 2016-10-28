@@ -12,6 +12,9 @@ chrome.runtime.onInstalled.addListener(function() {
             conditions: [
                 new chrome.declarativeContent.PageStateMatcher({
                     pageUrl: { hostContains: ".assetic.net", urlContains: 'ComplexAsset', schemes: ['https'] }
+                }),
+                new chrome.declarativeContent.PageStateMatcher({
+                    pageUrl: { hostContains: ".assetic.net", urlContains: 'complex', schemes: ['https'] }
                 })
             ],
             // And shows the extension's page action.
@@ -19,4 +22,3 @@ chrome.runtime.onInstalled.addListener(function() {
         }]);
     });
 });
-
