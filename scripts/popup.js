@@ -9,8 +9,8 @@ window.onload = function() {
 
 
     sendMessage("getContext", {}, function(e) {
-        if (e){
-           db.setCategory(e.Category)
+        if (e) {
+            db.setCategory(e.Category)
         }
         loadSearchGrid();
     });
@@ -79,16 +79,23 @@ function loadSearchLink(item) {
 
         var re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/Complex\/ComplexAsset\/)');
         var urlParts = re.exec(tab.url)
-        if (!urlParts || urlParts.length < 4) {
-            return;
+        var myNewUrl
+        if (urlParts && urlParts.length >= 4) {
+            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
+            localStorage["showField"] = item.label;
+            chrome.tabs.update(tab.id, { url: myNewUrl });
         }
-
-        var myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
-
-        localStorage["showField"] = item.label;
-
-        chrome.tabs.update(tab.id, { url: myNewUrl });
-
+        re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/complex)');
+        urlParts = re.exec(tab.url)
+        if (urlParts && urlParts.length > 4) {
+            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] +"/Complex/ComplexAsset/"+ urlParts[3] + item.link;
+            localStorage["showField"] = item.label;
+            chrome.tabs.update(tab.id, { url: myNewUrl });
+        }
+        unShrinkGrid()
+        if (spinner)
+            spinner.remove();
+        return;
     });
 }
 
