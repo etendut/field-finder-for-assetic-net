@@ -2,6 +2,47 @@
 SET NOCOUNT OFF
 
 
+
+--control view
+IF OBJECT_ID('FieldMappings', 'V') IS NOT NULL
+	DROP VIEW dbo.[FieldMappings] 
+GO
+CREATE VIEW [dbo].[FieldMappings]
+AS
+SELECT DISTINCT 
+                         dbo.MrMigrationType.Label AS MigrationType, dbo.MrCategory.Name AS myDataCategoryName, dbo.MrFieldMappingMyData.MdpComponentRef, dbo.MrFieldMappingMyData.MdpLabelDescription, 
+                         dbo.MrFieldMappingMyData.IsObsolete, dbo.MrFieldMappingMyData.ObsoleteReason, empty.dbo.configCACategory.Label AS CloudCategory, dbo.ApplicationControls.Label AS CloudLabel, 
+                         CASE dbo.ApplicationControls.Type WHEN 'checkbox' THEN 'Checkbox' WHEN 'datePicker' THEN 'Date Picker' WHEN 'hyperLinkEdit' THEN 'Link' WHEN 'mdCombobox' THEN 'Combobox' WHEN 'numericTextbox'
+                          THEN 'Numeric Stepper' WHEN 'resourceChooser' THEN 'Resource Chooser' WHEN 'textArea' THEN 'Mulitline Text' WHEN 'textbox' THEN 'Text' WHEN 'ValueUnit' THEN 'Measurement' ELSE dbo.ApplicationControls.Type
+                          END AS cloudControlType, dbo.MrFieldMappingMyData.MdpDataType, dbo.ApplicationControls.DataType AS CloudDataType, CASE WHEN replace(dbo.ApplicationControls.DataType, '?', '') 
+                         = replace(replace(replace(replace(dbo.MrFieldMappingMyData.MdpDataType, 'system.', ''), 'boolean', 'bool'), 'int32', 'int'), 'system.', '') THEN 0 ELSE 1 END AS DataTypeDifferent, 
+                         dbo.ApplicationSections.Name AS cloudSection, dbo.ApplicationSections.Label AS cloudSectionLabel, dbo.ApplicationControlGroups.Name AS cloudControlGroup, 
+                         dbo.ApplicationControlGroups.Label AS cloudControlGroupLabel, dbo.MrFieldMappingMyData.MyDataCategoryId, CASE WHEN dbo.ApplicationControls.Type = 'mdCombobox' OR
+                         dbo.ApplicationControls.Id IN (71) THEN 100 WHEN dbo.ApplicationControls.Type = 'mdCombobox' OR
+                         dbo.ApplicationControls.Id IN (72, 2402) THEN 200 WHEN dbo.ApplicationControls.Type = 'resourceChooser' THEN 50 ELSE sc.CHARACTER_MAXIMUM_LENGTH END AS CloudTextLength, 
+                         dbo.ApplicationControls.Name AS CloudControlName, dbo.MrFieldMappingMyData.MdpIsCalculation, dbo.MrFieldMappingMyData.MdpCalculation, dbo.MrFieldMappingMyData.MdpGroupLabelDescription, 
+                         dbo.ApplicationSubModules.Name AS cloudsubModule, dbo.ApplicationSubModules.Label AS cloudsubModuleLabel, dbo.ApplicationControls.HelpString AS cloudHelpstring, 
+                         CASE ResourceType WHEN 8 THEN 'Contractor' WHEN 27 THEN 'User,Team,Contractor,Employee' WHEN 32 THEN 'Company' WHEN 40 THEN 'Contractor,Company' ELSE CAST(ResourceType AS nvarchar(100)) 
+                         END AS cloudResourceType, dbo.ApplicationCategories.Name AS cloudTemplate
+FROM            empty.INFORMATION_SCHEMA.COLUMNS AS sc RIGHT OUTER JOIN
+                         dbo.ApplicationControlConstraints RIGHT OUTER JOIN
+                         dbo.ApplicationControlGroups INNER JOIN
+                         dbo.ApplicationControls ON dbo.ApplicationControlGroups.Id = dbo.ApplicationControls.ApplicationControlGroupId ON 
+                         dbo.ApplicationControlConstraints.ApplicationControlId = dbo.ApplicationControls.Id LEFT OUTER JOIN
+                         dbo.ApplicationSections INNER JOIN
+                         dbo.ApplicationSectCtrlGp ON dbo.ApplicationSections.Id = dbo.ApplicationSectCtrlGp.SectionID INNER JOIN
+                         dbo.ApplicationSubModules ON dbo.ApplicationSections.SubModuleId = dbo.ApplicationSubModules.Id ON dbo.ApplicationControlGroups.Id = dbo.ApplicationSectCtrlGp.ControlGroupID RIGHT OUTER JOIN
+                         dbo.ApplicationCategories ON dbo.ApplicationSubModules.CategoryId = dbo.ApplicationCategories.Id ON 
+                         sc.TABLE_NAME COLLATE SQL_Latin1_General_CP1_CI_AS = 'CAGR' + dbo.ApplicationControlGroups.Name AND 
+                         sc.COLUMN_NAME COLLATE SQL_Latin1_General_CP1_CI_AS = dbo.ApplicationControls.Name RIGHT OUTER JOIN
+                         dbo.MrCategory LEFT OUTER JOIN
+                         empty.dbo.configCACategory ON dbo.MrCategory.ConfigCaCategoryId = empty.dbo.configCACategory.Id INNER JOIN
+                         dbo.MrFieldMappingMyData ON dbo.MrCategory.Id = dbo.MrFieldMappingMyData.MyDataCategoryId INNER JOIN
+                         dbo.MrMigrationType ON dbo.MrFieldMappingMyData.MyDataMigrationTypeId = dbo.MrMigrationType.Id ON dbo.ApplicationCategories.Id = dbo.MrCategory.ApplicationCategoryId AND 
+                         dbo.ApplicationControls.Id = dbo.MrFieldMappingMyData.ApplicationControlID
+GO
+
+
  IF OBJECT_ID('tempdb.dbo.#cloudCat', 'U') IS NOT NULL
 	DROP TABLE #cloudCat; 
 IF OBJECT_ID('tempdb.dbo.#cloudTemp', 'U') IS NOT NULL
@@ -11,7 +52,7 @@ IF OBJECT_ID('tempdb.dbo.#cloudFields', 'U') IS NOT NULL
 IF OBJECT_ID('tempdb.dbo.#cloudDashboardFields', 'U') IS NOT NULL
 	DROP TABLE #cloudDashboardFields; 
 
-
+--common fields
 select A.* into #cloudDashboardFields  from (
  values
  ('Asset - Attributes','Asset ID','Unique Identifier for the Asset','textBox',CAST(null AS NVARCHAR(100)),'CAAssetDashboard','CAAttributes')
