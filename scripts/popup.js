@@ -58,9 +58,7 @@ function shrinkGrid() {
 
 function unShrinkGrid() {
     $("#searchGrid").removeClass("maxheight10");
-    if (spinner) {
-        spinner.remove();
-    }
+    !spinner || spinner.remove();
 }
 
 function sendMessage(action, data, successFunction, failFunction) {
@@ -118,9 +116,7 @@ function loadSearchLink(item) {
         } else {
             /*reset grid*/
             unShrinkGrid()
-            if (spinner) {
-                spinner.remove();
-            }
+            !spinner || spinner.remove();
         }
     });
 }

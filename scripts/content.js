@@ -30,9 +30,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     script.remove();
 
                 }
-                if (spinner) {
-                    spinner.remove();
-                }
+               spinner || spinner.remove();
+
                 element.fadeOut(300)
                     .fadeIn(300)
 
@@ -46,9 +45,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     .fadeIn(300);
 
             } else {
-                if (spinner) {
-                    spinner.remove();
-                }
+               spinner || spinner.remove();
             }
             break;
         default:
