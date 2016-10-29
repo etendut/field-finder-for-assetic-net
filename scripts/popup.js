@@ -1,6 +1,7 @@
 var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
+var category;
 /* ga */
 var _AnalyticsCode = 'UA-86528300-1';
 
@@ -32,7 +33,9 @@ window.onload = function() {
 
     sendMessage("getContext", {}, function(e) {
         if (e) {
-            db.setCategory(e.Category)
+            category = e.Category;
+            db.setCategory(category)
+            trackEvent('category-change:' + category);
         }
         loadSearchGrid();
     }, function() {
@@ -120,7 +123,7 @@ function loadSearchLink(item) {
         return;
     }
 
-    trackEvent("link:" + item.label);
+    trackEvent("link:" +category+'-'+ item.label);
     spinner = new ajaxLoader($("body").parent());
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
