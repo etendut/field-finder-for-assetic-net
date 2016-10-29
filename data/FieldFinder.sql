@@ -23,7 +23,7 @@ SELECT DISTINCT
                          dbo.ApplicationControls.Name AS CloudControlName, dbo.MrFieldMappingMyData.MdpIsCalculation, dbo.MrFieldMappingMyData.MdpCalculation, dbo.MrFieldMappingMyData.MdpGroupLabelDescription, 
                          dbo.ApplicationSubModules.Name AS cloudsubModule, dbo.ApplicationSubModules.Label AS cloudsubModuleLabel, dbo.ApplicationControls.HelpString AS cloudHelpstring, 
                          CASE ResourceType WHEN 8 THEN 'Contractor' WHEN 27 THEN 'User,Team,Contractor,Employee' WHEN 32 THEN 'Company' WHEN 40 THEN 'Contractor,Company' ELSE CAST(ResourceType AS nvarchar(100)) 
-                         END AS cloudResourceType, dbo.ApplicationCategories.Name AS cloudTemplate
+                         END AS cloudResourceType, dbo.ApplicationCategories.Name AS cloudTemplate, dbo.ApplicationCategories.Id AS templateID, empty.dbo.configCACategory.Id AS categoryID
 FROM            dbo.MrCategory INNER JOIN
                          dbo.MrFieldMappingMyData ON dbo.MrCategory.Id = dbo.MrFieldMappingMyData.MyDataCategoryId INNER JOIN
                          dbo.MrMigrationType ON dbo.MrFieldMappingMyData.MyDataMigrationTypeId = dbo.MrMigrationType.Id RIGHT OUTER JOIN
@@ -88,27 +88,27 @@ CREATE TABLE #cloudFields (
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 
-SELECT distinct cloudlabel, cloudcategory
+SELECT distinct cloudlabel, categoryID
 into #cloudCat  
-FROM (SELECT distinct cloudlabel , cloudcategory
+FROM (SELECT distinct cloudlabel , categoryID
 from dbo.FieldDDMappings 
-where cloudcategory is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields) --and cloudlabel = 'Sign Type'
+where categoryID is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields) --and cloudlabel = 'Sign Type'
 UNION ALL
-SELECT distinct CloudLabel, C.CloudCategory from #cloudDashboardFields
-CROSS JOIN (SELECT distinct cloudcategory from dbo.FieldDDMappings where cloudcategory is not null) C) S (cloudlabel, cloudcategory)
-ORDER BY cloudlabel , cloudcategory
+SELECT distinct CloudLabel, C.categoryID from #cloudDashboardFields
+CROSS JOIN (SELECT distinct categoryID from dbo.FieldDDMappings where categoryID is not null) C) S (cloudlabel, categoryID)
+ORDER BY cloudlabel , categoryID
 
-CREATE CLUSTERED INDEX IDX_C_cloudlabel_cloudcategory ON #cloudCat(cloudlabel, cloudcategory)
+CREATE CLUSTERED INDEX IDX_C_cloudlabel_cloudcategory ON #cloudCat(cloudlabel, categoryID)
 
-SELECT distinct cloudlabel, CAST(cloudTemplate AS NVARCHAR(100)) cloudTemplate  into #cloudTemp  from 
-(SELECT distinct cloudlabel, cloudTemplate FROM dbo.FieldDDMappings 
-where cloudTemplate is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields) --and cloudlabel = 'Sign Type'
+SELECT distinct cloudlabel, CAST(templateID AS NVARCHAR(100)) templateID  into #cloudTemp  from 
+(SELECT distinct cloudlabel, templateID FROM dbo.FieldDDMappings 
+where templateID is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields) --and cloudlabel = 'Sign Type'
 UNION ALL
-SELECT distinct CloudLabel,C.cloudTemplate from #cloudDashboardFields
-CROSS JOIN (SELECT distinct cloudTemplate from dbo.FieldDDMappings where cloudTemplate is not null) C) S (cloudlabel, cloudTemplate)
-ORDER BY cloudlabel , cloudTemplate
+SELECT distinct CloudLabel,C.templateID from #cloudDashboardFields
+CROSS JOIN (SELECT distinct templateID from dbo.FieldDDMappings where templateID is not null) C) S (cloudlabel, templateID)
+ORDER BY cloudlabel , templateID
 
-CREATE CLUSTERED INDEX IDX_C_cloudlabel_cloudTemplate ON #cloudTemp(cloudlabel, cloudTemplate)
+CREATE CLUSTERED INDEX IDX_C_cloudlabel_cloudTemplate ON #cloudTemp(cloudlabel, templateID)
 
 INSERT INTO #cloudFields
            ([cloudControlGroupLabel]
@@ -133,8 +133,10 @@ select replace(replace(replace(
 				--,(select distinct cloudcategory  from #cloudCat s where s.CloudLabel = fm.cloudlabel AND cloudcategory IS NOT NULL FOR JSON PATH)  as categories
 				--,(select distinct cloudTemplate  from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND cloudTemplate IS NOT NULL for json PATH) as categoryTemplates
 				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT MdpLabelDescription from dbo.FieldDDMappings s where s.CloudLabel = fm.cloudlabel AND MdpLabelDescription IS NOT NULL FOR JSON AUTO),'{"MdpLabelDescription":','' ),'"}','"' )) as mdpLabels
-				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudcategory from #cloudCat s where s.CloudLabel = fm.cloudlabel COLLATE SQL_Latin1_General_CP1_CI_AS AND cloudcategory IS NOT NULL FOR JSON AUTO),'{"cloudcategory":','' ),'"}','"' )) as categories
-				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudTemplate from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND cloudTemplate IS NOT NULL FOR JSON AUTO),'{"cloudTemplate":','' ),'"}','"' )) as categoryTemplates
+				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT categoryID from #cloudCat s where s.CloudLabel = fm.cloudlabel COLLATE SQL_Latin1_General_CP1_CI_AS AND categoryID IS NOT NULL FOR JSON AUTO),'{"categoryID":','' ),'"}','"' )) as categories
+				--,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudcategory from #cloudCat s where s.CloudLabel = fm.cloudlabel COLLATE SQL_Latin1_General_CP1_CI_AS AND cloudcategory IS NOT NULL FOR JSON AUTO),'{"cloudcategory":','' ),'"}','"' )) as categories
+				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT templateID from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND templateID IS NOT NULL FOR JSON AUTO),'{"templateID":','' ),'"}','"' )) as categoryTemplates
+				--,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudTemplate from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND cloudTemplate IS NOT NULL FOR JSON AUTO),'{"cloudTemplate":','' ),'"}','"' )) as categoryTemplates
 				,CASE WHEN isnull(cloudsection, '') = '' THEN '' ELSE '/a/Auto/' + cloudsubmodule + '/' + cloudsection + '/' END AS link
 
 FROM     #cloudFields fm 
@@ -149,4 +151,11 @@ DROP TABLE #cloudFields
 DROP TABLE #cloudDashboardFields
 
 SET NOCOUNT OFF
+
+
+
+select DISTINCT ca.Label categoryLabel,ac.Name templateName,ac.id templateID from ApplicationCategories ac 
+	inner join empty..configCACategoryTemplate ct on ct.Name COLLATE SQL_Latin1_General_CP1_CI_AS= ac.Name
+	inner join empty..configCACategory ca on ca.CategoryTemplateValue = ct.id
+	FOR JSON PATH, root('categories')
 

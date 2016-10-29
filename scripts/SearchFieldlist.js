@@ -1,9 +1,12 @@
 function SearchFieldlist() {
 
     var fields = [];
-    var categoryTemplate;
+    var categories = [];
+    var categoryTemplateID;
     this.setCategory = function(template) {
-        categoryTemplate = template;
+        categoryTemplateID = !template ? null : $.grep(fields, function(field) {
+            return (field.templateName.toUpperCase().indexOf(template.toUpperCase()) > -1);
+        });
     }
 
     this.loadData = function(filter) {
@@ -14,12 +17,12 @@ function SearchFieldlist() {
 
 
         data = $.grep(fields, function(field) {
-            field.categoryTemplates = $.grep(field.categoryTemplates, function(d2) {
-                return (!categoryTemplate || d2.toUpperCase().indexOf(categoryTemplate.toUpperCase()) > -1);
+            field.categoryTemplates = $.grep(field.categoryTemplates, function(field2) {
+                return (!categoryTemplateID || field2 == categoryTemplateID);
             });
             return (
-                (!categoryTemplate || field.categoryTemplates.length > 0) &&
-                (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
+                (!categoryTemplateID || field.categoryTemplates.length > 0) &&
+               // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
@@ -49,6 +52,14 @@ function SearchFieldlist() {
             async: false,
             success: function(data) {
                 fields = data.DataDictionary;
+            }
+        });
+        $.ajax({
+            url: 'data/categories.json',
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                categories = data.categories;
             }
         });
     }
