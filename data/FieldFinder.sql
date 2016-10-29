@@ -119,7 +119,7 @@ INSERT INTO #cloudFields
            ,[cloudsection]
            ,[cloudsubmodule])
 SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule from FieldDDMappings 
-where cloudsection is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields) and cloudlabel = 'Sign Type'
+where cloudsection is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields)
 UNION ALL
 SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule from #cloudDashboardFields
 ORDER BY CloudLabel
