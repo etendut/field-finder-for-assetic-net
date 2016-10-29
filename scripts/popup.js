@@ -84,7 +84,7 @@ var spinner;
 function loadSearchLink(item) {
 
 
-    spinner = new ajaxLoader($("body"));
+    spinner = new ajaxLoader($("body").parent());
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
 

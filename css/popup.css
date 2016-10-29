@@ -9,7 +9,7 @@
 html,
 body {
     min-width: 430px;
-    height: 410px;
+    /*height: 410px;*/
     background: #fff;
     font-family: Roboto, Arial!important;
     margin: 0;
