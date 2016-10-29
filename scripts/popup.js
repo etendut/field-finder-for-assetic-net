@@ -28,7 +28,7 @@ window.onload = function() {
     $("#eraseOptions").click(function() {
         eraseOptions();
     })
-    $("#reload").click(function() {
+    $(".reload-app").click(function() {
         location.reload();
     })
 
