@@ -33,11 +33,12 @@ function SearchFieldlist() {
             //field.categoryLabels = getCategoryLabels(field.categoryTemplates)
 
             return (
-                (!categoryTemplateID || field.inCurrentCategory) &&
+                //(!categoryTemplateID || field.inCurrentCategory) &&
                 // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
+                (!filter.inCurrentCategory || field.inCurrentCategory == filter.inCurrentCategory) &&
                 (!filter.type || field.type.toUpperCase().indexOf(filter.type.toUpperCase()) > -1)
             );
         });

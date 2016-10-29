@@ -3,13 +3,14 @@ var dataDictionary;
 var db = new SearchFieldlist();
 var category;
 var dbCat = new Categorylist();
+var fieldItem;
 /* main code */
 window.onload = function() {
 
     sendMessage("getContext", {}, function(e) {
         if (e) {
             category = e.Category;
-            db.setCategory(category)
+             db.setCategory(category)
             trackEvent('category-change:' + category);
             $("#searchGrid").jsGrid("reset");
         }
@@ -80,22 +81,51 @@ function sendMessage(action, data, successFunction, failFunction) {
 
 var spinner;
 
+function loadfirstCategoryAsset(item) {
+    chrome.tabs.getSelected(function(tab) {
+        var re = new RegExp('(.*?)(.assetic.net)(.*?)');
+        var urlParts = re.exec(tab.url)
+        if (urlParts && urlParts.length >= 3) {
+            myNewUrl = urlParts[1] + urlParts[2] + '/api/ComplexAssetApi/Category?sort=Label-asc&page=1&pageSize=1&group=&filter=ComplexAssetCategoryLabel~eq~%27' + item.categoryLabel + '%27';
+            spinner = new ajaxLoader($("body").parent());
+            $.get(myNewUrl, function(data, status) {
+                if (data && data.Data && data.Data.length > 0) {
+
+                    myNewUrl = urlParts[1] + urlParts[2] + '/Assets/' + data.Data[0].Id + '/Complex/ComplexAsset/' + data.Data[0].Id + '/' + fieldItem.link
+                    localStorage["showField"] = fieldItem.label;
+                    chrome.tabs.update(tab.id, { url: myNewUrl });
+                    shrinkGrid();
+                    $("#searchGrid").show();
+                    $("#categorySelector").hide();
+                } else {
+                    //not found
+                    !spinner || spinner.remove();
+                }
+            });
+        }
+    });
+}
+
+
 function loadSearchLink(item) {
 
     if (!item || !item.label) {
         return;
     }
+    trackEvent("link:" + category + '-' + item.label);
+
     if (true || !item.inCurrentCategory) {
         //show category popup
         dbCat.setTemplateIds(item.categoryTemplates)
         loadCategoryGrid();
+        fieldItem = item;
         $("#searchGrid").hide();
         $("#categorySelector").show();
+        return;
     } else {
         $("#searchGrid").show();
         $("#categorySelector").hide();
     }
-    trackEvent("link:" + category + '-' + item.label);
     spinner = new ajaxLoader($("body").parent());
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
@@ -104,14 +134,13 @@ function loadSearchLink(item) {
         var re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/Complex\/ComplexAsset\/)');
         var urlParts = re.exec(tab.url)
         var myNewUrl = "";
-        if (urlParts && urlParts.length >= 4) {
-            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
+        if (!urlParts || urlParts.length < 4) {
+            re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/complex)');
+            urlParts = re.exec(tab.url)
         }
         /*test URL pattern 2*/
-        re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/complex)');
-        urlParts = re.exec(tab.url)
         if (urlParts && urlParts.length > 4) {
-            myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + "/Complex/ComplexAsset/" + urlParts[3] + item.link;
+            myNewUrl = urlParts[1] + '/Assets/' + urlParts[3] + "/Complex/ComplexAsset/" + urlParts[3] + item.link;
         }
         if (myNewUrl != "") {
             /*Reload tab*/
@@ -169,7 +198,7 @@ function loadSearchGrid() {
             { name: "help", title: "Control Help", type: "text", width: 200 },
             { name: "type", title: "Control Type", type: "text", width: 80, sorting: false },
             { name: "group", title: "Control Group", type: "text", width: 100 },
-            { name: "inCurrentCategory", title: "Available?", type: "checkbox", width: 40, sorting: false, visible: false }
+            { name: "inCurrentCategory", title: "Available?", type: "checkbox", width: 40, sorting: false }
 
         ]
     });
@@ -190,7 +219,7 @@ function loadCategoryGrid() {
         autoload: true,
         controller: dbCat,
         rowClick: function(args) {
-            loadSearchLink(args.item);
+            loadfirstCategoryAsset(args.item);
         },
         fields: [
             { name: "categoryLabel", title: "Category", type: "text", width: 150 },
