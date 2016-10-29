@@ -41,6 +41,14 @@ window.onload = function() {
 
 };
 
+var delay = (function() {
+    var timer = 0;
+    return function(callback, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+
 function showField(field) {
 
     if (field) {
@@ -48,7 +56,12 @@ function showField(field) {
             localStorage.removeItem("showField");
             unShrinkGrid();
         }, function() {
-            unShrinkGrid();
+
+            delay(function() {
+                unShrinkGrid();
+            }, 1000);
+
+
         })
     }
 }
