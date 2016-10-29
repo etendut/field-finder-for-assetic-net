@@ -10,6 +10,7 @@ window.onload = function() {
             category = e.Category;
             db.setCategory(category)
             trackEvent('category-change:' + category);
+            $("#searchGrid").jsGrid("reset");
         }
         loadSearchGrid();
     }, function() {
@@ -116,7 +117,7 @@ function loadSearchLink(item) {
         } else {
             /*reset grid*/
             unShrinkGrid();
-             !spinner || spinner.remove();
+            !spinner || spinner.remove();
         }
     });
 }

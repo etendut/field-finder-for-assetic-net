@@ -1,4 +1,5 @@
 var pageContext;
+var pendingContextSendResponse;
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     var data = request.data || {};
     if (!request || !request.action) {
@@ -8,7 +9,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     switch (request.action) {
         case "getContext":
             if (!pageContext) {
-                getContext
+                pendingContextSendResponse = sendResponse;
+                getContext();
             } else {
                 sendResponse({ data: pageContext, success: true });
             }
@@ -29,8 +31,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     (document.head || document.documentElement).appendChild(script);
                     script.remove();
 
-                }
-               spinner || spinner.remove();
+                } 
+                !spinner || spinner.remove();
 
                 element.fadeOut(300)
                     .fadeIn(300)
@@ -45,7 +47,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     .fadeIn(300);
 
             } else {
-               spinner || spinner.remove();
+                !spinner || spinner.remove();
             }
             break;
         default:
@@ -58,7 +60,7 @@ var contextScript;
 
 function getContext() {
     contextScript = document.createElement('script');
-    contextScript.src = chrome.extension.getURL('scripts/getContext.js');
+    contextScript.src = chrome.extension.getURL('scripts/pageScripts/getContext.js');
     (document.head || document.documentElement).appendChild(contextScript);
 }
 getContext();
@@ -68,7 +70,7 @@ document.addEventListener('asseticExtension_context', function(e) {
         return;
     }
     pageContext = e.detail;
-    if (contextScript) {
-        contextScript.remove();
-    }
+    !contextScript || contextScript.remove();
+    !pendingContextSendResponse || pendingContextSendResponse()
+    pendingContextSendResponse = null;
 });
