@@ -42,17 +42,6 @@ window.onload = function() {
         loadSearchGrid();
     });
 
-
-    $("#colorChooser").change(
-        function(e) {
-            var newColor = this.jscolor.toHEXString()
-            var currentColor = loadCurrentColor()
-            sendMessage("changeColor", { oldColor: currentColor, newColor: newColor }, saveCurrentColor(newColor))
-
-        });
-    $("#eraseOptions").click(function() {
-        eraseOptions();
-    })
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
@@ -202,32 +191,4 @@ function loadSearchGrid() {
 
         ]
     });
-}
-
-function loadCurrentColor() {
-    var currentColor = localStorage["currentColor"];
-
-    // valid colors are red, blue, green and yellow
-    if (!currentColor) {
-        currentColor = defaultColor;
-    }
-
-    return currentColor;
-}
-
-function saveCurrentColor(newColor) {
-    if (!newColor) {
-        return;
-    }
-    localStorage["currentColor"] = newColor;
-}
-
-function loadOptions() {
-    $("#colorChooser").val(loadCurrentColor()).addClass("jscolor");
-    jscolor.installByClassName("jscolor");
-}
-
-function eraseOptions() {
-    localStorage.removeItem("currentColor");
-    location.reload();
 }
