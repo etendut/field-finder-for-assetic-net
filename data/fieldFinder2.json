@@ -2160,10 +2160,10 @@
             "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
-            "group": "Asset Information",
+            "group": "Asset - Attributes",
             "label": "Asset Catalogue",
-            "help": "Asset Catalogue Label",
-            "type": "Text",
+            "help": "Catalogue of the asset",
+            "type": "textBox",
             "categoryTemplates": [
                 1916,
                 1917,
@@ -2279,13 +2279,13 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAttributes\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
-            "group": "Asset Information",
+            "group": "Asset - Attributes",
             "label": "Asset Category",
-            "help": "Asset Category Label",
-            "type": "Text",
+            "help": "Category of the asset",
+            "type": "textBox",
             "categoryTemplates": [
                 1916,
                 1917,
@@ -2401,7 +2401,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAttributes\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Asset - Core Fields",
@@ -2526,7 +2526,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Asset Commissioning",
@@ -3355,7 +3355,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Location",
@@ -3477,7 +3477,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Asset - Attributes",
@@ -3603,7 +3603,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Region Location",
@@ -4141,7 +4141,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Region Location",
@@ -4282,7 +4282,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Service Classification",
@@ -4532,7 +4532,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Fair Value Information",
@@ -10322,7 +10322,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "IRIS Pavement Detail",
@@ -21904,7 +21904,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Building Other Services",
@@ -31159,7 +31159,7 @@
                 3379,
                 3380
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Light Features",
@@ -31174,7 +31174,7 @@
                 3379,
                 3380
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Light Features",
@@ -32714,7 +32714,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Maintenance Asset - Core Fields",
@@ -32836,7 +32836,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Maintenance Management",
@@ -33395,7 +33395,7 @@
                 3381,
                 3382
             ],
-            "link": "CAAttributes\/CAAssetDashboard\/"
+            "link": "\/CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Agreements",
@@ -34864,7 +34864,7 @@
                 1990,
                 1992
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Pit Dimensions",
@@ -34880,7 +34880,7 @@
                 1990,
                 1992
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Pit Dimensions",
@@ -37999,7 +37999,7 @@
                 2013,
                 3377
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Overflow Potential",
@@ -38013,7 +38013,7 @@
                 2013,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Well Level Details",
@@ -40809,7 +40809,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Population",
@@ -40829,7 +40829,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Public Access",
@@ -46419,7 +46419,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Population",
@@ -46439,7 +46439,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Building Services",
@@ -47170,7 +47170,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Sign Info",
@@ -47184,7 +47184,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Lantern Features",
