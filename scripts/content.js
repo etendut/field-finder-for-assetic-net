@@ -7,7 +7,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     switch (request.action) {
         case "getContext":
-            sendResponse({ data: pageContext, success: true });
+            if (!pageContext) {
+                getContext
+            } else {
+                sendResponse({ data: pageContext, success: true });
+            }
             break;
         case "showField":
             if (!request.data || !request.data.field) {
@@ -32,7 +36,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 element.fadeOut(300)
                     .fadeIn(300)
 
-                    .fadeOut(300)
+                .fadeOut(300)
                     .fadeIn(300)
                     .fadeOut(300)
                     .fadeIn(300)
@@ -41,9 +45,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     .fadeOut(300)
                     .fadeIn(300);
 
-            }
-            if (spinner) {
-                spinner.remove();
+            } else {
+                if (spinner) {
+                    spinner.remove();
+                }
             }
             break;
         default:
@@ -52,24 +57,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 
 });
+var contextScript;
 
-var s = document.createElement('script');
-s.src = chrome.extension.getURL('scripts/pageScript.js');
-(document.head || document.documentElement).appendChild(s);
-s.onload = function() {
-    s.remove();
-};
-
+function getContext() {
+    contextScript = document.createElement('script');
+    contextScript.src = chrome.extension.getURL('scripts/getContext.js');
+    (document.head || document.documentElement).appendChild(contextScript);
+}
+getContext();
 // Event listener
 document.addEventListener('asseticExtension_context', function(e) {
     if (!e || !e.detail) {
         return;
     }
     pageContext = e.detail;
-
+    if (contextScript) {
+        contextScript.remove();
+    }
 });
-
-            }
-        });
-    });
-}
