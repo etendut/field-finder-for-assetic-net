@@ -5,8 +5,6 @@ var category;
 /* main code */
 window.onload = function() {
 
-    loadOptions();
-
     sendMessage("getContext", {}, function(e) {
         if (e) {
             category = e.Category;
