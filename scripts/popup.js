@@ -13,6 +13,8 @@ window.onload = function() {
             db.setCategory(e.Category)
         }
         loadSearchGrid();
+    }, function() {
+        loadSearchGrid();
     });
 
 
@@ -32,24 +34,24 @@ window.onload = function() {
 
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
         if (info.status == "complete") {
-
-            var field = localStorage["showField"];
-            if (field) {
-                sendMessage("showField", { field: field }, function() {
-                    localStorage.removeItem("showField");
-                    unShrinkGrid();
-
-                    if (spinner) {
-                        spinner.remove();
-                    }
-                })
-
-            }
+            showField(localStorage["showField"]);
         }
     });
 
 
 };
+
+function showField(field) {
+
+    if (field) {
+        sendMessage("showField", { field: field }, function() {
+            localStorage.removeItem("showField");
+            unShrinkGrid();
+        }, function() {
+            unShrinkGrid();
+        })
+    }
+}
 
 function shrinkGrid() {
     $("#searchGrid").addClass("maxheight10");
@@ -57,15 +59,22 @@ function shrinkGrid() {
 
 function unShrinkGrid() {
     $("#searchGrid").removeClass("maxheight10");
+    if (spinner) {
+        spinner.remove();
+    }
 }
 
-function sendMessage(action, data, successFunction) {
+function sendMessage(action, data, successFunction, failFunction) {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, { action: action, data: data }, function(response) {
-            console.log(response);
-            if (response && response.success) {
+            if (response && response.success && successFunction) {
                 successFunction(response.data);
+            } else if (failFunction) {
+                failFunction(response)
+            } else {
+                console.log('message received ' + response)
             }
+
         });
     });
 }
@@ -73,31 +82,43 @@ function sendMessage(action, data, successFunction) {
 var spinner;
 
 function loadSearchLink(item) {
+
+
     spinner = new ajaxLoader($("body"));
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
 
+        /*test URL pattern 1*/
         var re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/Complex\/ComplexAsset\/)');
         var urlParts = re.exec(tab.url)
-        var myNewUrl
+        var myNewUrl = "";
         if (urlParts && urlParts.length >= 4) {
             myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + urlParts[4] + urlParts[3] + item.link;
-            localStorage["showField"] = item.label;
-            chrome.tabs.update(tab.id, { url: myNewUrl });
-            return;
         }
+        /*test URL pattern 2*/
         re = new RegExp('(.*?)(\/Assets\/)(.*?)(\/complex)');
         urlParts = re.exec(tab.url)
         if (urlParts && urlParts.length > 4) {
             myNewUrl = urlParts[1] + urlParts[2] + urlParts[3] + "/Complex/ComplexAsset/" + urlParts[3] + item.link;
-            localStorage["showField"] = item.label;
-            chrome.tabs.update(tab.id, { url: myNewUrl });
-            return;
         }
-        unShrinkGrid()
-        if (spinner)
-            spinner.remove();
-        return;
+        if (myNewUrl != "") {
+            /*Reload tab*/
+
+            if (tab.url.toUpperCase() != myNewUrl.toUpperCase()) {
+                localStorage["showField"] = item.label;
+                chrome.tabs.update(tab.id, { url: myNewUrl });
+                return;
+            }
+            /*highlight on same tab*/
+            showField(item.label)
+            return;
+        } else {
+            /*reset grid*/
+            unShrinkGrid()
+            if (spinner) {
+                spinner.remove();
+            }
+        }
     });
 }
 
