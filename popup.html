@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="plugins/jsgrid-1.5.2/jsgrid-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="css/popup.css">
     <link rel="stylesheet" type="text/css" href="css/spinners.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
 </head>
 <!-- tabindex=1 because Chrome automatically focuses on first link -->
 
@@ -17,14 +18,23 @@
             <div>
                 <div class="header clearfix" role="banner">
                     <div class="actions">
-                        <div class="admin-only"> <a href="#" class="assetic-admin">Admin</a> </div><a href="#" class="reload-app">Reload</a>
+                        <div class="admin-only"> <a href="#" class="assetic-admin">Admin</a> </div>
+                        <!--<div class="site_switcher line setting_item on"><label class="select_checkbox"><span >Show All Fields</span><input class="checkbox" checked="" type="checkbox"><div class="checkbox_check checkbox_check"><div class="checkbox_check_round"></div></div></label></div>-->
+                        <a href="#" class="reload-app">Reload</a>
                     </div>
                     <h1 class="title">Asset Field Finder</h1>
+
                 </div>
+
             </div>
             <div class="data-list-content-wrap">
                 <div class="data-list-content">
                     <div id="searchGrid"></div>
+                    <div id="categorySelector">
+                        <div class="padding10">Please choose a category to navigate to</div>
+                        <div id="categoryGrid" class=""></div>
+                    </div>
+
                     <div class="data-list-empty-msg" style="display: none;"></div>
                     <div class="data-list-load-wrap" style="display: none;">
                         <div class="data-list-load-mask"></div>

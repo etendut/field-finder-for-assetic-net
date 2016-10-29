@@ -26,11 +26,14 @@ function SearchFieldlist() {
 
 
         data = $.grep(fields, function(field) {
-            field.categoryTemplates = $.grep(field.categoryTemplates, function(field2) {
+            field.inCurrentCategory = $.grep(field.categoryTemplates, function(field2) {
                 return (!categoryTemplateID || field2 == categoryTemplateID);
-            });
+            }).length > 0;
+
+            //field.categoryLabels = getCategoryLabels(field.categoryTemplates)
+
             return (
-                (!categoryTemplateID || field.categoryTemplates.length > 0) &&
+                (!categoryTemplateID || field.inCurrentCategory) &&
                 // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
@@ -72,7 +75,33 @@ function SearchFieldlist() {
             }
         });
     }
+}
 
+function Categorylist() {
+    var categories = [];
+    var templateIds;
+    this.setTemplateIds = function(templateIdlist) {
+        templateIds = templateIdlist;
+    }
+    this.loadData = function(filter) {
 
+        if (categories.length === 0) {
+            initdb_();
+        }
+        return $.grep(categories, function(category) {
+            return (!filter.label || category.categoryLabel.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
+                (!templateIds || $.inArray(category.templateID, templateIds) !== -1)
+        });
+    }
 
+    function initdb_() {
+        $.ajax({
+            url: 'data/categories.json',
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                categories = data.categories;
+            }
+        });
+    }
 }

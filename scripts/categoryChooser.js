@@ -2,7 +2,6 @@ var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
 var category;
-var dbCat = new Categorylist();
 /* main code */
 window.onload = function() {
 
@@ -85,15 +84,8 @@ function loadSearchLink(item) {
     if (!item || !item.label) {
         return;
     }
-    if (true || !item.inCurrentCategory) {
+    if (!item.inCurrentCategory) {
         //show category popup
-        dbCat.setTemplateIds(item.categoryTemplates)
-        loadCategoryGrid();
-        $("#searchGrid").hide();
-        $("#categorySelector").show();
-    } else {
-        $("#searchGrid").show();
-        $("#categorySelector").hide();
     }
     trackEvent("link:" + category + '-' + item.label);
     spinner = new ajaxLoader($("body").parent());
@@ -171,29 +163,6 @@ function loadSearchGrid() {
             { name: "group", title: "Control Group", type: "text", width: 100 },
             { name: "inCurrentCategory", title: "Available?", type: "checkbox", width: 40, sorting: false, visible: false }
 
-        ]
-    });
-}
-
-
-function loadCategoryGrid() {
-
-    $("#categoryGrid").jsGrid({
-        width: "100%",
-        height: "400px",
-
-        inserting: false,
-        editing: false,
-        filtering: true,
-        sorting: true,
-        paging: true,
-        autoload: true,
-        controller: dbCat,
-        rowClick: function(args) {
-            loadSearchLink(args.item);
-        },
-        fields: [
-            { name: "categoryLabel", title: "Category", type: "text", width: 150 },
         ]
     });
 }
