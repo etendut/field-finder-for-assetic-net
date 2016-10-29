@@ -58,6 +58,8 @@ select A.* into #cloudDashboardFields  from (
  values
  ('Asset - Attributes','Asset ID','Unique Identifier for the Asset','textBox',CAST(null AS NVARCHAR(100)),'CAAssetDashboard','CAAttributes')
  ,('Asset - Attributes','Asset Name','Common name for the Asset','textBox',null,'CAAssetDashboard','CAAttributes')
+ ,('Asset - Attributes','Asset Category','Category of the asset','textBox',null,'CAAssetDashboard','CAAttributes')
+ ,('Asset - Attributes','Asset Catalogue','Catalogue of the asset','textBox',null,'CAAssetDashboard','CAAttributes')
  ,('Asset - Attributes','External ID','External system identifier','textBox',null,'CAAssetDashboard','CAAttributes')
  ,('Asset - Core Fields','Asset Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
  ,('Asset - Core Fields','Asset Sub Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
@@ -118,10 +120,10 @@ INSERT INTO #cloudFields
            ,[cloudResourceType]
            ,[cloudsection]
            ,[cloudsubmodule])
-SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule from FieldDDMappings 
+SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/a/Auto/' + cloudsubmodule from FieldDDMappings 
 where cloudsection is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields)
 UNION ALL
-SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule from #cloudDashboardFields
+SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/' + cloudsubmodule from #cloudDashboardFields
 ORDER BY CloudLabel
 	
 
@@ -137,7 +139,7 @@ select replace(replace(replace(
 				--,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudcategory from #cloudCat s where s.CloudLabel = fm.cloudlabel COLLATE SQL_Latin1_General_CP1_CI_AS AND cloudcategory IS NOT NULL FOR JSON AUTO),'{"cloudcategory":','' ),'"}','"' )) as categories
 				,(SELECT REPLACE( REPLACE( (SELECT DISTINCT templateID from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND templateID IS NOT NULL FOR JSON AUTO),'{"templateID":"','' ),'"}','' )) as categoryTemplates
 				--,(SELECT REPLACE( REPLACE( (SELECT DISTINCT cloudTemplate from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND cloudTemplate IS NOT NULL FOR JSON AUTO),'{"cloudTemplate":','' ),'"}','"' )) as categoryTemplates
-				,CASE WHEN isnull(cloudsection, '') = '' THEN '' ELSE '/a/Auto/' + cloudsubmodule + '/' + cloudsection + '/' END AS link
+				,CASE WHEN isnull(cloudsection, '') = '' THEN '' ELSE  cloudsubmodule + '/' + cloudsection + '/' END AS link
 
 FROM     #cloudFields fm 
 

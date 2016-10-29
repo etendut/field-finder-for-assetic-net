@@ -2526,7 +2526,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Asset Commissioning",
@@ -3355,7 +3355,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Location",
@@ -3477,7 +3477,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Asset - Attributes",
@@ -3603,7 +3603,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Region Location",
@@ -4141,7 +4141,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Region Location",
@@ -4282,7 +4282,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Service Classification",
@@ -4532,7 +4532,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Fair Value Information",
@@ -5500,20 +5500,6 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "GPT Details",
-            "label": "Basket Size",
-            "help": "Diameter of basket",
-            "type": "Measurement",
-            "mdpLabels": [
-                "Basket Size (mm):"
-            ],
-            "categoryTemplates": [
-                1989,
-                1992
-            ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
-        },
-        {
             "group": "Trash Recovery Details",
             "label": "Basket Size",
             "help": "Diameter of basket",
@@ -5526,6 +5512,20 @@
                 1992
             ],
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+        },
+        {
+            "group": "GPT Details",
+            "label": "Basket Size",
+            "help": "Diameter of basket",
+            "type": "Measurement",
+            "mdpLabels": [
+                "Basket Size (mm):"
+            ],
+            "categoryTemplates": [
+                1989,
+                1992
+            ],
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Bathroom Basin Details",
@@ -6819,7 +6819,7 @@
                 2013,
                 3377
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Overflow Potential",
@@ -6833,7 +6833,7 @@
                 2013,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Reservoir Data",
@@ -7673,7 +7673,7 @@
                 1923,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Asset Strategy",
@@ -7687,7 +7687,7 @@
                 1923,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Circuit Protection Details",
@@ -9314,7 +9314,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Land Service Features",
@@ -9328,7 +9328,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Land Externalities",
@@ -10322,7 +10322,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "IRIS Pavement Detail",
@@ -10675,7 +10675,7 @@
                 1986,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Culvert Details",
@@ -10689,7 +10689,7 @@
                 1986,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Open Drain Dimensions",
@@ -10742,7 +10742,7 @@
                 1986,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Culvert Details",
@@ -10757,7 +10757,7 @@
                 1986,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Culvert Dimensions",
@@ -12780,7 +12780,7 @@
                 2018,
                 3374
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Rainfall Details",
@@ -12824,7 +12824,7 @@
                 2018,
                 3374
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Rainfall Details",
@@ -13154,7 +13154,7 @@
                 3369,
                 3378
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CASubdivisionDetail\/"
         },
         {
             "group": "Subdivision Application",
@@ -13178,7 +13178,7 @@
                 3369,
                 3378
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CASubdivisionDetail\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Park Service Features",
@@ -13217,7 +13217,7 @@
                 2004,
                 2076
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Vehicle Access Details",
@@ -13237,7 +13237,7 @@
                 2004,
                 2076
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Hardware Service Features",
@@ -13964,9 +13964,9 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Other Levels",
+            "group": "Pipe Level Details",
             "label": "Downstream Depth",
-            "help": "Downstream Depth",
+            "help": "Relative Depth of the downstream pipe in metres. This is the depth of the pipe from the top of the ground surface up to the bottom of the pipe.",
             "type": "Measurement",
             "mdpLabels": [
                 "Downstream Depth (m):"
@@ -13987,9 +13987,9 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Pipe Level Details",
+            "group": "Other Levels",
             "label": "Downstream Depth",
-            "help": "Relative Depth of the downstream pipe in metres. This is the depth of the pipe from the top of the ground surface up to the bottom of the pipe.",
+            "help": "Downstream Depth",
             "type": "Measurement",
             "mdpLabels": [
                 "Downstream Depth (m):"
@@ -15076,7 +15076,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Land Service Features",
@@ -15090,7 +15090,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Road Other Location",
@@ -21904,7 +21904,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Building Other Services",
@@ -23073,7 +23073,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Land Service Features",
@@ -23087,7 +23087,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Land Externalities",
@@ -24018,7 +24018,7 @@
                 1972,
                 3369
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Garden Bed",
@@ -24034,22 +24034,6 @@
                 1972,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
-        },
-        {
-            "group": "Garden Bed",
-            "label": "Garden Beds Quantity",
-            "help": "The number of garden beds.",
-            "type": "Numeric Stepper",
-            "mdpLabels": [
-                "No. Garden Beds:"
-            ],
-            "categoryTemplates": [
-                1959,
-                1969,
-                1972,
-                3369
-            ],
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
@@ -24067,6 +24051,22 @@
                 3369
             ],
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+        },
+        {
+            "group": "Garden Bed",
+            "label": "Garden Beds Quantity",
+            "help": "The number of garden beds.",
+            "type": "Numeric Stepper",
+            "mdpLabels": [
+                "No. Garden Beds:"
+            ],
+            "categoryTemplates": [
+                1959,
+                1969,
+                1972,
+                3369
+            ],
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Utilities Consumption",
@@ -25291,7 +25291,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAValuations\/CAValuation\/"
         },
         {
             "group": "Grants Commission",
@@ -25395,7 +25395,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAValuations\/CAValuation\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Grate",
@@ -26290,12 +26290,12 @@
                 2018,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Wall Dimensions",
+            "group": "Wall Details",
             "label": "Height Offset",
-            "help": "Height Offset",
+            "help": "The Height Offset in metres of the wall from its nearest surface level e.g. Property boundary or kerb etc.",
             "type": "Measurement",
             "mdpLabels": [
                 "Height Offset (m):"
@@ -26309,12 +26309,12 @@
                 2018,
                 3382
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Wall Details",
+            "group": "Wall Dimensions",
             "label": "Height Offset",
-            "help": "The Height Offset in metres of the wall from its nearest surface level e.g. Property boundary or kerb etc.",
+            "help": "Height Offset",
             "type": "Measurement",
             "mdpLabels": [
                 "Height Offset (m):"
@@ -27771,7 +27771,7 @@
                 1989,
                 1990
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Pit Other Dimensions",
@@ -27785,7 +27785,7 @@
                 1989,
                 1990
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "HVAC",
@@ -29028,7 +29028,7 @@
                 1964,
                 2077
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Irrigation Control Details",
@@ -29039,7 +29039,7 @@
                 1964,
                 2077
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Irrigation Features",
@@ -29060,7 +29060,7 @@
                 1964,
                 2077
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Irrigation Control Details",
@@ -29071,7 +29071,7 @@
                 1964,
                 2077
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Irrigation Regulator Rail Dimensions",
@@ -29327,7 +29327,7 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Kerb Dimensions",
+            "group": "Right Kerb Dimensions",
             "label": "Kerb Bay Quantity",
             "help": "Number of Bays in any given segment",
             "type": "Numeric Stepper",
@@ -29340,7 +29340,7 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Right Kerb Dimensions",
+            "group": "Kerb Dimensions",
             "label": "Kerb Bay Quantity",
             "help": "Number of Bays in any given segment",
             "type": "Numeric Stepper",
@@ -29447,7 +29447,7 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Kerb Details",
+            "group": "Right Kerb Details",
             "label": "Kerb Profile Type",
             "help": "Type of asset construction design e.g. 150mm Standard KG, 150mm Standard K, Rollover, Layback, etc.",
             "type": "Combobox",
@@ -29467,7 +29467,7 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Right Kerb Details",
+            "group": "Kerb Details",
             "label": "Kerb Profile Type",
             "help": "Type of asset construction design e.g. 150mm Standard KG, 150mm Standard K, Rollover, Layback, etc.",
             "type": "Combobox",
@@ -29814,7 +29814,7 @@
                 1979,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Land Usage",
@@ -29829,7 +29829,7 @@
                 1979,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Land Usage",
@@ -29945,7 +29945,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Land Service Features",
@@ -29960,7 +29960,7 @@
                 1950,
                 1978
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Marine Structure Details",
@@ -30002,7 +30002,7 @@
                 1975,
                 1981
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Wall Details",
@@ -30016,7 +30016,7 @@
                 1975,
                 1981
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Land Details",
@@ -32714,7 +32714,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Maintenance Asset - Core Fields",
@@ -32836,7 +32836,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Maintenance Management",
@@ -33395,7 +33395,7 @@
                 3381,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAAssetDashboard\/"
+            "link": "CAAttributes\/CAAssetDashboard\/"
         },
         {
             "group": "Agreements",
@@ -34707,7 +34707,7 @@
                 2003,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Meter Readings",
@@ -34723,19 +34723,6 @@
                 2003,
                 2013
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
-        },
-        {
-            "group": "Meter Readings",
-            "label": "Meter Reading Comments",
-            "help": "Any general comments",
-            "type": "Mulitline Text",
-            "categoryTemplates": [
-                1941,
-                1944,
-                2003,
-                2013
-            ],
             "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
@@ -34753,12 +34740,9 @@
         },
         {
             "group": "Meter Readings",
-            "label": "Meter Reading Date",
-            "help": "Date of measurement",
-            "type": "Date Picker",
-            "mdpLabels": [
-                "Test Date:"
-            ],
+            "label": "Meter Reading Comments",
+            "help": "Any general comments",
+            "type": "Mulitline Text",
             "categoryTemplates": [
                 1941,
                 1944,
@@ -34782,6 +34766,22 @@
                 2013
             ],
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+        },
+        {
+            "group": "Meter Readings",
+            "label": "Meter Reading Date",
+            "help": "Date of measurement",
+            "type": "Date Picker",
+            "mdpLabels": [
+                "Test Date:"
+            ],
+            "categoryTemplates": [
+                1941,
+                1944,
+                2003,
+                2013
+            ],
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Meter Details",
@@ -34896,7 +34896,7 @@
                 1990,
                 1992
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Pit Dimensions",
@@ -34912,7 +34912,7 @@
                 1990,
                 1992
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Program",
@@ -34993,7 +34993,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Motor Low Data",
@@ -35008,7 +35008,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Irrigation Features",
@@ -35275,7 +35275,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Motor High Data",
@@ -35290,7 +35290,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Motor Low Data",
@@ -35394,7 +35394,7 @@
                 1983,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Mowing Details",
@@ -35413,7 +35413,7 @@
                 1983,
                 3369
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Riverbank Dimensions",
@@ -35580,7 +35580,7 @@
             "link": "\/a\/Auto\/CAValuations\/CAValuation\/"
         },
         {
-            "group": "Building Areas",
+            "group": "Wall Dimensions",
             "label": "Net External Wall Area",
             "help": "Refers to the external wall area. Derived by multiplying the perimeter by the wall height.",
             "type": "Measurement",
@@ -35601,7 +35601,7 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Wall Dimensions",
+            "group": "Building Areas",
             "label": "Net External Wall Area",
             "help": "Refers to the external wall area. Derived by multiplying the perimeter by the wall height.",
             "type": "Measurement",
@@ -36930,7 +36930,7 @@
                 1953,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Circuit Capacity",
@@ -36945,7 +36945,7 @@
                 1953,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Bus Stop Location Features",
@@ -38790,7 +38790,7 @@
                 2003,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Rate Payer Details",
@@ -38810,7 +38810,7 @@
                 2003,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Tree Service Features",
@@ -39244,7 +39244,7 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Kerb Dimensions",
+            "group": "Right Kerb Dimensions",
             "label": "Pavement Extension",
             "help": "The width of any pavement extension",
             "type": "Measurement",
@@ -39257,7 +39257,7 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Right Kerb Dimensions",
+            "group": "Kerb Dimensions",
             "label": "Pavement Extension",
             "help": "The width of any pavement extension",
             "type": "Measurement",
@@ -40809,7 +40809,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Population",
@@ -40829,7 +40829,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Public Access",
@@ -42509,7 +42509,7 @@
                 1950,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Telemetry",
@@ -42527,25 +42527,7 @@
                 1950,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
-        },
-        {
-            "group": "Telemetry",
-            "label": "Radio Type",
-            "help": "Type of radio transmitter attached",
-            "type": "Combobox",
-            "mdpLabels": [
-                "Radio Type:"
-            ],
-            "categoryTemplates": [
-                1944,
-                1947,
-                1948,
-                1949,
-                1950,
-                2013
-            ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Telemetry",
@@ -42564,6 +42546,24 @@
                 2013
             ],
             "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+        },
+        {
+            "group": "Telemetry",
+            "label": "Radio Type",
+            "help": "Type of radio transmitter attached",
+            "type": "Combobox",
+            "mdpLabels": [
+                "Radio Type:"
+            ],
+            "categoryTemplates": [
+                1944,
+                1947,
+                1948,
+                1949,
+                1950,
+                2013
+            ],
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Railing",
@@ -42731,7 +42731,7 @@
                 2003,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Rate Payer Details",
@@ -42751,7 +42751,7 @@
                 2003,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Rating Details",
@@ -43299,7 +43299,7 @@
                 2004,
                 2005
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Reservoir Data",
@@ -43314,7 +43314,7 @@
                 2004,
                 2005
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Weather Conditions",
@@ -45477,7 +45477,7 @@
                 1979,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Land Usage",
@@ -45492,7 +45492,7 @@
                 1979,
                 3369
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Housing Areas",
@@ -46112,7 +46112,7 @@
                 2009,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Property Service",
@@ -46129,7 +46129,7 @@
                 2009,
                 2010
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Servicing",
@@ -46419,7 +46419,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Population",
@@ -46439,7 +46439,7 @@
                 3374,
                 3377
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
         },
         {
             "group": "Building Services",
@@ -46976,7 +46976,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Sign Info",
@@ -46990,7 +46990,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Sign Installation Details",
@@ -47024,7 +47024,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Sign Info",
@@ -47038,7 +47038,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Bus Stop Information",
@@ -47123,7 +47123,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Sign Info",
@@ -47137,7 +47137,7 @@
                 1939,
                 2021
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Sign Details",
@@ -47463,27 +47463,6 @@
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
-            "group": "Bridge Details",
-            "label": "Skew Angle",
-            "help": "Skew Angle is the direction of the per-frame origin shift, in degrees.",
-            "type": "Measurement",
-            "mdpLabels": [
-                "Skew Angle:"
-            ],
-            "categoryTemplates": [
-                1927,
-                1964,
-                1986,
-                1987,
-                1988,
-                2000,
-                2008,
-                2009,
-                2010
-            ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
-        },
-        {
             "group": "Pipe Specification Details",
             "label": "Skew Angle",
             "help": "NULL",
@@ -47503,6 +47482,27 @@
                 2010
             ],
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+        },
+        {
+            "group": "Bridge Details",
+            "label": "Skew Angle",
+            "help": "Skew Angle is the direction of the per-frame origin shift, in degrees.",
+            "type": "Measurement",
+            "mdpLabels": [
+                "Skew Angle:"
+            ],
+            "categoryTemplates": [
+                1927,
+                1964,
+                1986,
+                1987,
+                1988,
+                2000,
+                2008,
+                2009,
+                2010
+            ],
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Slab Details",
@@ -47776,7 +47776,7 @@
                 1953,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Circuit Capacity",
@@ -47788,7 +47788,7 @@
                 1953,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Road Information",
@@ -48105,7 +48105,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Motor High Data",
@@ -48120,22 +48120,7 @@
                 1999,
                 2013
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
-        },
-        {
-            "group": "Motor Low Data",
-            "label": "Start Current Low",
-            "help": "Amperage measurement",
-            "type": "Measurement",
-            "mdpLabels": [
-                "Start Current Low (A):"
-            ],
-            "categoryTemplates": [
-                1953,
-                1999,
-                2013
-            ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Motor Low Data",
@@ -48151,6 +48136,21 @@
                 2013
             ],
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+        },
+        {
+            "group": "Motor Low Data",
+            "label": "Start Current Low",
+            "help": "Amperage measurement",
+            "type": "Measurement",
+            "mdpLabels": [
+                "Start Current Low (A):"
+            ],
+            "categoryTemplates": [
+                1953,
+                1999,
+                2013
+            ],
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Road Intersection Connections",
@@ -51425,7 +51425,7 @@
                 2004,
                 2005
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
         },
         {
             "group": "Reservoir Data",
@@ -51440,7 +51440,7 @@
                 2004,
                 2005
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Well Level Details",
@@ -52225,29 +52225,6 @@
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
-            "group": "Pipe Level Details",
-            "label": "Upstream Depth",
-            "help": "The Relative Level (RL) in AHD of the pit from the top of pit cover to the bottom of the inlet pipe.",
-            "type": "Measurement",
-            "mdpLabels": [
-                "Upstream Depth (m):"
-            ],
-            "categoryTemplates": [
-                1986,
-                1987,
-                1988,
-                1989,
-                1990,
-                1993,
-                2000,
-                2001,
-                2008,
-                2009,
-                2010
-            ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
-        },
-        {
             "group": "Other Levels",
             "label": "Upstream Depth",
             "help": "Relative Depth of the upstream pipe in metres. This is the depth of the pipe from the top of the ground surface up to the bottom of the pipe.",
@@ -52269,6 +52246,29 @@
                 2010
             ],
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+        },
+        {
+            "group": "Pipe Level Details",
+            "label": "Upstream Depth",
+            "help": "The Relative Level (RL) in AHD of the pit from the top of pit cover to the bottom of the inlet pipe.",
+            "type": "Measurement",
+            "mdpLabels": [
+                "Upstream Depth (m):"
+            ],
+            "categoryTemplates": [
+                1986,
+                1987,
+                1988,
+                1989,
+                1990,
+                1993,
+                2000,
+                2001,
+                2008,
+                2009,
+                2010
+            ],
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Pipe Level Details",
@@ -53623,7 +53623,7 @@
                 2018,
                 3382
             ],
-            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Wall Details",
@@ -53642,7 +53642,7 @@
                 2018,
                 3382
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+            "link": "\/a\/Auto\/CADimension\/CASpecification\/"
         },
         {
             "group": "Sign Material Details",
@@ -53728,6 +53728,104 @@
                 2013
             ],
             "link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+        },
+        {
+            "group": "Title Details",
+            "label": "Volume",
+            "help": "Volume title is contained within",
+            "type": "Measurement",
+            "mdpLabels": [
+                "Volume (Lt):",
+                "Volume (m3):",
+                "Volume Capacity:",
+                "Volume:",
+                "Wall Volume (m3):"
+            ],
+            "categoryTemplates": [
+                1916,
+                1917,
+                1921,
+                1922,
+                1923,
+                1924,
+                1925,
+                1927,
+                1928,
+                1929,
+                1931,
+                1932,
+                1933,
+                1934,
+                1938,
+                1939,
+                1940,
+                1941,
+                1943,
+                1944,
+                1945,
+                1946,
+                1947,
+                1948,
+                1949,
+                1950,
+                1952,
+                1953,
+                1955,
+                1957,
+                1958,
+                1961,
+                1964,
+                1967,
+                1969,
+                1970,
+                1971,
+                1972,
+                1974,
+                1975,
+                1976,
+                1977,
+                1978,
+                1979,
+                1981,
+                1982,
+                1983,
+                1984,
+                1985,
+                1986,
+                1987,
+                1988,
+                1989,
+                1990,
+                1991,
+                1992,
+                1993,
+                1999,
+                2000,
+                2001,
+                2002,
+                2003,
+                2004,
+                2005,
+                2006,
+                2008,
+                2009,
+                2010,
+                2012,
+                2013,
+                2018,
+                2021,
+                2076,
+                2077,
+                2294,
+                3367,
+                3369,
+                3377,
+                3378,
+                3379,
+                3380,
+                3381
+            ],
+            "link": "\/a\/Auto\/CAMapping\/CALocation\/"
         },
         {
             "group": "General Dimension Attributes",
@@ -53924,104 +54022,6 @@
                 3381
             ],
             "link": "\/a\/Auto\/CADimension\/CASpecification\/"
-        },
-        {
-            "group": "Title Details",
-            "label": "Volume",
-            "help": "Volume title is contained within",
-            "type": "Measurement",
-            "mdpLabels": [
-                "Volume (Lt):",
-                "Volume (m3):",
-                "Volume Capacity:",
-                "Volume:",
-                "Wall Volume (m3):"
-            ],
-            "categoryTemplates": [
-                1916,
-                1917,
-                1921,
-                1922,
-                1923,
-                1924,
-                1925,
-                1927,
-                1928,
-                1929,
-                1931,
-                1932,
-                1933,
-                1934,
-                1938,
-                1939,
-                1940,
-                1941,
-                1943,
-                1944,
-                1945,
-                1946,
-                1947,
-                1948,
-                1949,
-                1950,
-                1952,
-                1953,
-                1955,
-                1957,
-                1958,
-                1961,
-                1964,
-                1967,
-                1969,
-                1970,
-                1971,
-                1972,
-                1974,
-                1975,
-                1976,
-                1977,
-                1978,
-                1979,
-                1981,
-                1982,
-                1983,
-                1984,
-                1985,
-                1986,
-                1987,
-                1988,
-                1989,
-                1990,
-                1991,
-                1992,
-                1993,
-                1999,
-                2000,
-                2001,
-                2002,
-                2003,
-                2004,
-                2005,
-                2006,
-                2008,
-                2009,
-                2010,
-                2012,
-                2013,
-                2018,
-                2021,
-                2076,
-                2077,
-                2294,
-                3367,
-                3369,
-                3377,
-                3378,
-                3379,
-                3380,
-                3381
-            ],
-            "link": "\/a\/Auto\/CAMapping\/CALocation\/"
         },
         {
             "group": "Pump Materials and Dimensions",
@@ -54416,7 +54416,7 @@
                 1950,
                 2077
             ],
-            "link": "\/a\/Auto\/CAValuations\/CAInsurance\/"
+            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
         },
         {
             "group": "Warranty Details",
@@ -54433,23 +54433,6 @@
                 1950,
                 2077
             ],
-            "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
-        },
-        {
-            "group": "Warranty Details",
-            "label": "Warranty Start Date",
-            "help": "Date of warranty start",
-            "type": "Date Picker",
-            "mdpLabels": [
-                "Start:"
-            ],
-            "categoryTemplates": [
-                1947,
-                1948,
-                1949,
-                1950,
-                2077
-            ],
             "link": "\/a\/Auto\/CAValuations\/CAInsurance\/"
         },
         {
@@ -54468,6 +54451,23 @@
                 2077
             ],
             "link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+        },
+        {
+            "group": "Warranty Details",
+            "label": "Warranty Start Date",
+            "help": "Date of warranty start",
+            "type": "Date Picker",
+            "mdpLabels": [
+                "Start:"
+            ],
+            "categoryTemplates": [
+                1947,
+                1948,
+                1949,
+                1950,
+                2077
+            ],
+            "link": "\/a\/Auto\/CAValuations\/CAInsurance\/"
         },
         {
             "group": "Warranty Details",

@@ -2,7 +2,7 @@ var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
 /* ga */
-var _AnalyticsCode = 'UA-XXXXXX-X';
+var _AnalyticsCode = 'UA-86528300-1';
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', _AnalyticsCode]);
