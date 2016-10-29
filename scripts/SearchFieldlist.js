@@ -4,9 +4,18 @@ function SearchFieldlist() {
     var categories = [];
     var categoryTemplateID;
     this.setCategory = function(template) {
-        categoryTemplateID = !template ? null : $.grep(fields, function(field) {
-            return (field.templateName.toUpperCase().indexOf(template.toUpperCase()) > -1);
+        if (categories.length === 0) {
+            initdb_();
+        }
+
+
+        var templates = !template ? null : $.grep(categories, function(category) {
+            return (category.templateName.toUpperCase().indexOf(template.toUpperCase()) > -1);
         });
+        if (templates && templates.length > 0) {
+            categoryTemplateID = templates[0].templateID;
+        }
+
     }
 
     this.loadData = function(filter) {
@@ -22,7 +31,7 @@ function SearchFieldlist() {
             });
             return (
                 (!categoryTemplateID || field.categoryTemplates.length > 0) &&
-               // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
+                // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
