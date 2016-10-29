@@ -5,3 +5,83 @@
 .maxheight10 {
     max-height: 20px;
 }
+
+html,
+body {
+    min-width: 430px;
+    height: 410px;
+    background: #fff;
+    font-family: Roboto, Arial!important;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.data-list-empty-msg {
+    margin: 0 auto;
+    padding: 90px 0
+}
+
+.data-list-empty-msg.data-list-content {
+    border-radius: 0 4px 4px 0
+}
+
+.data-list-loading .data-list-empty-msg {
+    visibility: hidden
+}
+
+.data-list-empty-img {
+    position: absolute;
+    top: 2.2em;
+    left: 50%;
+    margin-left: -24px
+}
+
+.header {
+    height: 48px;
+    line-height: 46px;
+    padding: 0 12px;
+    background: #008da8;
+    border-bottom: 1px solid #135070;
+    border-radius: 2px 2px 0 0
+}
+
+.header .title {
+    padding-left: 28px;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    background: url(../images/icon-19w.png) no-repeat 0 13px
+}
+
+.header .actions {
+    float: right;
+    opacity: 0.8
+}
+
+.header .actions a {
+    color: #fff
+}
+
+.header .actions a:hover {
+    text-decoration: underline
+}
+
+.admin-only {
+    display: none;
+    margin-right: 20px
+}
+
+.user-is-admin .admin-only {
+    display: inline
+}
+
+.jsgrid-pager-nav-button a,
+.jsgrid-pager-page a {
+    color: #008da8;
+}
+
+.th{
+    font-weight: normal;
+}

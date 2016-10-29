@@ -1,25 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Assetic Field Finder</title>
+    <!-- build:style inline popover -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link type="text/css" rel="stylesheet" href="plugins/jsgrid-1.5.2/jsgrid.min.css" />
     <link type="text/css" rel="stylesheet" href="plugins/jsgrid-1.5.2/jsgrid-theme.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="css/popup.css">    
 </head>
+<!-- tabindex=1 because Chrome automatically focuses on first link -->
 
-<body>
-    <!--<h2>Change Color</h2>
-    Color: <input id="colorChooser"></input>
-    <button id="eraseOptions">Restore default</button>-->
-    <h4>Field Finder</h4> <button id="eraseOptions">Reset</button>
-    <div id="searchGrid"></div>
+<body tabindex="1">
+    <div id="content">
+        <div>
+            <div>
+                <div class="header clearfix" role="banner">
+                    <div class="actions">
+                        <div class="admin-only"> <a href="#" class="assetic-admin">Admin</a> </div>
+                    </div>
+                    <h1 class="title">Asset Field Finder</h1>
+                </div>
+            </div>
+            <div class="data-list-content-wrap">
+                <div class="data-list-content">
+                    <div id="searchGrid"></div>
+                    <div class="data-list-empty-msg" style="display: none;"></div>
+                    <div class="data-list-load-wrap" style="display: none;">
+                        <div class="data-list-load-mask"></div>
+                        <h4 class="data-list-head">Loading...</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- build:remove -->
     <script src="plugins/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="plugins/jsgrid-1.5.2/jsgrid.min.js" type="text/javascript"></script>
     <script src="plugins/jscolor.min.js" type="text/javascript"></script>
     <script src="scripts/SearchFieldlist.js" type="text/javascript"></script>
     <script src="scripts/spinloader.js" type="text/javascript"></script>
     <script src="scripts/popup.js" type="text/javascript"></script>
+    <!-- /build -->
+
+
 </body>
 
 </html>
