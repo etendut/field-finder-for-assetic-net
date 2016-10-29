@@ -1,12 +1,34 @@
 var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
+/* ga */
+var _AnalyticsCode = 'UA-XXXXXX-X';
 
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', _AnalyticsCode]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+function trackButtonClick(e) {
+    _gaq.push(['_trackEvent', e.target.id, 'clicked']);
+}
+
+function trackEvent(id) {
+    _gaq.push(['_trackEvent', id, 'clicked']);
+}
+
+/* main code */
 window.onload = function() {
 
     loadOptions();
-
-
 
     sendMessage("getContext", {}, function(e) {
         if (e) {
@@ -28,7 +50,8 @@ window.onload = function() {
     $("#eraseOptions").click(function() {
         eraseOptions();
     })
-    $(".reload-app").click(function() {
+    $(".reload-app").click(function(e) {
+        trackEvent("reload-app");
         location.reload();
     })
 
@@ -56,12 +79,9 @@ function showField(field) {
             localStorage.removeItem("showField");
             unShrinkGrid();
         }, function() {
-
             delay(function() {
                 unShrinkGrid();
             }, 1000);
-
-
         })
     }
 }
@@ -96,7 +116,11 @@ var spinner;
 
 function loadSearchLink(item) {
 
+    if (!item || !item.label) {
+        return;
+    }
 
+    trackEvent("link:" + item.label);
     spinner = new ajaxLoader($("body").parent());
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
