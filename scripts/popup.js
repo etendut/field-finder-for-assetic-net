@@ -115,8 +115,8 @@ function loadSearchLink(item) {
             return;
         } else {
             /*reset grid*/
-            unShrinkGrid()
-            !spinner || spinner.remove();
+            unShrinkGrid();
+             !spinner || spinner.remove();
         }
     });
 }
