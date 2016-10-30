@@ -20,6 +20,7 @@
         "js": [
             "plugins/jquery-3.1.1.min.js",
             "plugins/spinloader.js",
+            "plugins/js-toast-master/toast.min.js",
             "scripts/content.js"
         ],
         "run_at": "document_end"
