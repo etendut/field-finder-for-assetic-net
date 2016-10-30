@@ -127,7 +127,8 @@ function loadfirstCategoryAsset(item) {
                     !spinner || spinner.remove();
                 }
             }).fail(function(e) {
-                iqwerty.toast.Toast(e, toastErrorOptions);
+                var message = !e || !e.responseText ? "Error encountered, please try refreshing the page." : e.responseText;
+                iqwerty.toast.Toast(message, toastErrorOptions);
                 !spinner || spinner.remove();
             });
         }

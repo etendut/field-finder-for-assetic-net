@@ -89,3 +89,21 @@ body {
 .padding10 {
     padding: 10px
 }
+
+.backToFields {
+    padding: 5px;
+    color: #008da8;
+    cursor: pointer;
+}
+
+.backToFields:hover {
+    color: grey;
+}
+
+.reload-app {
+    color: white;
+}
+
+.reload-app:hover {
+    color: grey;
+}
