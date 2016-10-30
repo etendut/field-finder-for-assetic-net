@@ -1,16 +1,36 @@
 var defaultColor = '#008da8';
 var dataDictionary;
 var db = new SearchFieldlist();
-var category;
 var dbCat = new Categorylist();
+
+var category;
 var fieldItem;
+
+var toastErrorOptions = {
+    style: {
+        main: {
+            background: "pink",
+            color: "black"
+        }
+    }
+};
+
+var toastInfoOptions = {
+    style: {
+        main: {
+            background: "#008da8",
+            color: "white"
+        }
+    }
+};
+
 /* main code */
 window.onload = function() {
 
     sendMessage("getContext", {}, function(e) {
         if (e) {
             category = e.Category;
-             db.setCategory(category)
+            db.setCategory(category)
             trackEvent('category-change:' + category);
             $("#searchGrid").jsGrid("reset");
         }
@@ -22,6 +42,11 @@ window.onload = function() {
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
+    })
+
+    $(".backToFields").click(function(e) {
+        $("#searchGrid").show();
+        $("#categorySelector").hide();
     })
 
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
@@ -98,9 +123,12 @@ function loadfirstCategoryAsset(item) {
                     $("#searchGrid").show();
                     $("#categorySelector").hide();
                 } else {
-                    //not found
+                    iqwerty.toast.Toast(item.categoryLabel + ' does not contain any assets, please choose another category!', toastInfoOptions);
                     !spinner || spinner.remove();
                 }
+            }).fail(function(e) {
+                iqwerty.toast.Toast(e, toastErrorOptions);
+                !spinner || spinner.remove();
             });
         }
     });
