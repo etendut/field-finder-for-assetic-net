@@ -143,7 +143,7 @@ function loadSearchLink(item) {
     }
     trackEvent("link:" + category + '-' + item.label);
 
-    if (true || !item.inCurrentCategory) {
+    if (!item.inCurrentCategory) {
         //show category popup
         dbCat.setTemplateIds(item.categoryTemplates)
         loadCategoryGrid();
@@ -227,7 +227,21 @@ function loadSearchGrid() {
             { name: "help", title: "Control Help", type: "text", width: 200 },
             { name: "type", title: "Control Type", type: "text", width: 80, sorting: false },
             { name: "group", title: "Control Group", type: "text", width: 100 },
-            { name: "inCurrentCategory", title: "Available?", type: "checkbox", width: 40, sorting: false }
+            {
+                name: "inCurrentCategory",
+                title: "Available?",
+                type: "checkbox",
+                width: 40,
+                sorting: false,
+                filterTemplate: function() {
+                    var $filterControl = jsGrid.fields.checkbox.prototype.filterTemplate.call(this);
+                    return $filterControl.prop({
+                        indeterminate: false,
+                        readOnly: true,
+                        checked: true
+                    });
+                }
+            }
 
         ]
     });
