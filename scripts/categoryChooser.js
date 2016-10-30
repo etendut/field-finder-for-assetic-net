@@ -20,7 +20,7 @@ window.onload = function() {
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
-    })
+    });
 
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
         if (info.status == "complete") {
