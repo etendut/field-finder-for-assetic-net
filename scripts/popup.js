@@ -5,7 +5,7 @@ var dbCat = new Categorylist();
 
 var category;
 var fieldItem;
-
+var reloadOnSuccess;
 var toastErrorOptions = {
     style: {
         main: {
@@ -24,20 +24,22 @@ var toastInfoOptions = {
     }
 };
 
-/* main code */
-window.onload = function() {
-
+function getContext(callback) {
     sendMessage("getContext", {}, function(e) {
         if (e) {
             category = e.Category;
             db.setCategory(category)
             trackEvent('category-change:' + category);
-            $("#searchGrid").jsGrid("reset");
-        }
-        loadSearchGrid();
+        }!callback || callback();
     }, function() {
-        loadSearchGrid();
+        !callback || callback();
     });
+}
+
+/* main code */
+window.onload = function() {
+
+    getContext(loadSearchGrid);
 
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
@@ -52,6 +54,10 @@ window.onload = function() {
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
         if (info.status == "complete") {
             showField(localStorage["showField"]);
+            if (reloadOnSuccess) {
+                reloadOnSuccess
+                location.reload();
+            }
         }
     });
 
@@ -118,10 +124,10 @@ function loadfirstCategoryAsset(item) {
 
                     myNewUrl = urlParts[1] + urlParts[2] + '/Assets/' + data.Data[0].Id + '/Complex/ComplexAsset/' + data.Data[0].Id + '/' + fieldItem.link
                     localStorage["showField"] = fieldItem.label;
+                    reloadOnSuccess = true;
                     chrome.tabs.update(tab.id, { url: myNewUrl });
                     shrinkGrid();
-                    $("#searchGrid").show();
-                    $("#categorySelector").hide();
+
                 } else {
                     iqwerty.toast.Toast(item.categoryLabel + ' does not contain any assets, please choose another category!', toastInfoOptions);
                     !spinner || spinner.remove();
@@ -148,6 +154,7 @@ function loadSearchLink(item) {
         dbCat.setTemplateIds(item.categoryTemplates)
         loadCategoryGrid();
         fieldItem = item;
+        getContext();
         $("#searchGrid").hide();
         $("#categorySelector").show();
         return;
@@ -242,7 +249,6 @@ function loadSearchGrid() {
                     });
                 }
             }
-
         ]
     });
 }
