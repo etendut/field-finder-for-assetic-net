@@ -24,17 +24,12 @@ function SearchFieldlist() {
             initdb_();
         }
 
-
         data = $.grep(fields, function(field) {
-            field.inCurrentCategory = $.grep(field.categoryTemplates, function(field2) {
-                return (!categoryTemplateID || field2 == categoryTemplateID);
+            field.inCurrentCategory = !categoryTemplateID ? false : $.grep(field.categoryTemplates, function(field2) {
+                return (field2 == categoryTemplateID);
             }).length > 0;
 
-            //field.categoryLabels = getCategoryLabels(field.categoryTemplates)
-
             return (
-                //(!categoryTemplateID || field.inCurrentCategory) &&
-                // (!filter.mdpLabel || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
@@ -84,6 +79,7 @@ function Categorylist() {
     this.setTemplateIds = function(templateIdlist) {
         templateIds = templateIdlist;
     }
+
     this.loadData = function(filter) {
 
         if (categories.length === 0) {
@@ -93,6 +89,12 @@ function Categorylist() {
             return (!filter.label || category.categoryLabel.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!templateIds || $.inArray(category.templateID, templateIds) !== -1)
         });
+    }
+
+    this.templateExists = function(template) {
+        return !template ? false : $.grep(categories, function(category) {
+            return (category.templateName.toUpperCase() === template.toUpperCase())
+        }).length > 0;
     }
 
     function initdb_() {
