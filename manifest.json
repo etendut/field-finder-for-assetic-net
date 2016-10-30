@@ -3,7 +3,7 @@
     "name": "Assetic Field Finder",
     "short_name": "Field Finder",
     "description": "Helps you find fields in the register",
-    "version": "1.4",
+    "version": "1.5",
     "page_action": {
         "default_icon": "images/icon-19.png",
         "default_popup": "popup.html"
