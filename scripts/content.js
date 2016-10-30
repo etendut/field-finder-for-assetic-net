@@ -20,7 +20,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 sendResponse({ data: data, success: false });
             }
             var spinner = new ajaxLoader($("body"));
-            var element = $("span:contains('" + request.data.field + "')")
+            var element = $("span").filter(function() { return ($(this).text().toUpperCase() === request.data.field.toUpperCase()) });
             if (element && element.length > 0) {
                 var widgetElement = element.closest(".widget");
                 if (widgetElement.length > 0 && widgetElement[0].id) {
@@ -31,8 +31,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                     (document.head || document.documentElement).appendChild(script);
                     script.remove();
 
-                } 
-                !spinner || spinner.remove();
+                }!spinner || spinner.remove();
 
                 element.fadeOut(300)
                     .fadeIn(300)
