@@ -8,12 +8,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     switch (request.action) {
         case "getContext":
-            if (!pageContext) {
-                pendingContextSendResponse = sendResponse;
-                getContext();
-            } else {
-                sendResponse({ data: pageContext, success: true });
-            }
+            pendingContextSendResponse = sendResponse;
+            getContext();
             break;
         case "showField":
             if (!request.data || !request.data.field) {
