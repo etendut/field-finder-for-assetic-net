@@ -25,15 +25,21 @@ function SearchFieldlist() {
         }
 
         data = $.grep(fields, function(field) {
+            //filter by view context
             field.inCurrentCategory = !categoryTemplateID ? false : $.grep(field.categoryTemplates, function(field2) {
                 return (field2 == categoryTemplateID);
             }).length > 0;
-
+            //mydata label search
+            field.mdMatch = !filter.label ? false : $.grep(field.mdpLabels, function(field2) {
+                return (field2.toUpperCase().indexOf(filter.label.toUpperCase()) > -1);
+            }).length > 0;
             return (
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
+                (!filter.label || field.mdMatch) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
                 (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
                 (!filter.inCurrentCategory || field.inCurrentCategory == filter.inCurrentCategory) &&
+                (!filter.help || field.help.toUpperCase().indexOf(filter.help.toUpperCase()) > -1) &&
                 (!filter.type || field.type.toUpperCase().indexOf(filter.type.toUpperCase()) > -1)
             );
         });
