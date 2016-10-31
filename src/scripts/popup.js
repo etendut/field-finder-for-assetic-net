@@ -99,6 +99,10 @@ function getHelpStage(stage) {
                 {
                     element: '.help1step3',
                     intro: 'Found what you want, click on a row to navigate to the field'
+                },
+                {
+                    element: '.show-help',
+                    intro: 'Click me again for more tips'
                 }
             ];
     }
@@ -119,6 +123,7 @@ function getContext(callback) {
 }
 //var helpstage = 1;
 function showHelp(stage) {
+    trackEvent("show_help_" + stage);
     switch (stage) {
         case 2:
             if ($(".help2step1").length <= 0)
@@ -160,9 +165,8 @@ window.onload = function() {
     })
 
     $(".show-help").click(function(e) {
-        trackEvent("show_help");
         showHelp(helpstage);
-        helpstage = helpstage >= 2?1 : helpstage += 1;
+        helpstage = helpstage >= 2 ? 1 : helpstage += 1;
     })
 
     $(".backToFields").click(function(e) {
