@@ -60,8 +60,9 @@ body {
     opacity: 0.8
 }
 
-.header .actions a {
-    color: #fff
+.header .actions a ,
+.header .actions i {
+    color: white;
 }
 
 .header .actions a:hover {
@@ -98,10 +99,6 @@ body {
 
 .backToFields:hover {
     color: grey;
-}
-
-.reload-app {
-    color: white;
 }
 
 .reload-app:hover {

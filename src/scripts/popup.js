@@ -24,6 +24,43 @@ var toastInfoOptions = {
     }
 };
 
+function setupHelp() {
+    var headerElements = $(".jsgrid-header-row th")
+    var filterElements = $(".jsgrid-filter-row input")
+    for (i = 0; i < headerElements.length; i++) {
+        var filterElement = $(filterElements[i])
+        switch ($(headerElements[i]).text().toUpperCase()) {
+            case "CONTROL":
+                filterElement.attr("data-step", 1);
+                filterElement.attr("data-intro", "Start here, by searching for or a field by name");
+                break;
+            case "CONTROL GROUP":
+                filterElement.attr("data-step", 2);
+                filterElement.attr("data-intro", "Or here, by searcing for or a field by its group name");
+                break;
+            case "AVAILABLE?":
+                filterElement.attr("data-step", 4);
+                filterElement.attr("data-intro", "Available shows you if a field is available in the current Asset category");
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    var element = $($(".jsgrid-row")[1]);
+    element.attr("data-step", 3)
+    element.attr("data-intro", "Found what you want, click on a row to navigate to the field")
+    var element = $($(".jsgrid-row")[2]);
+    element.attr("data-step", 5)
+    element.attr("data-intro", "When you click on an unchecked row")
+
+}
+function setupHelp2() {
+    
+}
+
+
 function getContext(callback) {
     sendMessage("getContext", {}, function(e) {
         if (e) {
@@ -44,6 +81,12 @@ window.onload = function() {
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
+    })
+
+    $(".show-help").click(function(e) {
+        trackEvent("show_help");
+        setupHelp()
+        introJs().start().setOption('doneLabel', 'Next page').start().oncomplete()
     })
 
     $(".backToFields").click(function(e) {
@@ -205,7 +248,8 @@ jsGrid.fields.text.prototype.filterTemplate = function() {
     var $result = originalFilterTemplate.call(this);
     $result.on("keyup", function(e) {
         // TODO: add proper condition and optionally throttling to avoid too much requests  
-        grid.search();
+        delay(grid.search(), 500);
+
     });
     return $result;
 }
