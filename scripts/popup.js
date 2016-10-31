@@ -213,6 +213,7 @@ jsGrid.fields.text.prototype.filterTemplate = function() {
 
 function loadSearchGrid() {
 
+    var checked = dbCat.templateExists(category);
     $("#searchGrid").jsGrid({
         width: "100%",
         height: "400px",
@@ -245,7 +246,7 @@ function loadSearchGrid() {
                     return $filterControl.prop({
                         indeterminate: false,
                         readOnly: true,
-                        checked: true
+                        checked: checked
                     });
                 }
             }

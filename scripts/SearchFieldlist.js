@@ -98,6 +98,10 @@ function Categorylist() {
     }
 
     this.templateExists = function(template) {
+        if (categories.length === 0) {
+            initdb_();
+        }        
+        
         return !template ? false : $.grep(categories, function(category) {
             return (category.templateName.toUpperCase() === template.toUpperCase())
         }).length > 0;
