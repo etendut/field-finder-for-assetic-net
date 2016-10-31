@@ -8,8 +8,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     switch (request.action) {
         case "getContext":
-            pendingContextSendResponse = sendResponse;
             getContext();
+            if (pageContext) {
+                sendResponse({data:  pageContext, success: true })
+            }
             break;
         case "showField":
             if (!request.data || !request.data.field) {
@@ -63,9 +65,7 @@ getContext();
 document.addEventListener('asseticExtension_context', function(e) {
     if (!e || !e.detail) {
         return;
-    }
-    pageContext = e.detail;
+    };
     !contextScript || contextScript.remove();
-    !pendingContextSendResponse || pendingContextSendResponse()
-    pendingContextSendResponse = null;
+    pageContext = e.detail;   
 });
