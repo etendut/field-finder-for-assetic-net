@@ -31,16 +31,13 @@ function setupHelp() {
         var filterElement = $(filterElements[i])
         switch ($(headerElements[i]).text().toUpperCase()) {
             case "CONTROL":
-                filterElement.attr("data-step", 1);
-                filterElement.attr("data-intro", "Start here, by searching for or a field by name");
+                filterElement.addClass("help1step1")
                 break;
             case "CONTROL GROUP":
-                filterElement.attr("data-step", 2);
-                filterElement.attr("data-intro", "Or here, by searcing for or a field by its group name");
+                filterElement.addClass("help1step2")
                 break;
             case "AVAILABLE?":
-                filterElement.attr("data-step", 4);
-                filterElement.attr("data-intro", "Available shows you if a field is available in the current Asset category");
+                filterElement.addClass("help2step1");
                 break;
 
             default:
@@ -48,18 +45,66 @@ function setupHelp() {
         }
     }
 
-    var element = $($(".jsgrid-row")[1]);
-    element.attr("data-step", 3)
-    element.attr("data-intro", "Found what you want, click on a row to navigate to the field")
-    var element = $($(".jsgrid-row")[2]);
-    element.attr("data-step", 5)
-    element.attr("data-intro", "When you click on an unchecked row")
+    var element = $($("#searchGrid .jsgrid-row")[1]);
+    element.addClass("help1step3");
+
+    element = $($("#searchGrid .jsgrid-row")[2]);
+    element.addClass("help2step2");
+
+    element = $("#categorySelector");
+    element.addClass("help2step3");
+
+    element = $($("#categorySelector .jsgrid-row")[0]);
+    element.addClass("help2step4");
+}
+
+function getHelpStage(stage) {
+    switch (stage) {
+        case 2:
+            return [{
+                    element: '.help2step1',
+                    intro: 'Available shows you if a field is available in the current Asset category'
+                },
+                {
+                    element: '.help2step1',
+                    intro: 'Unchecking Available, will show all fields available in the Asset Register.'
+                },
+                {
+                    element: '.help2step2',
+                    intro: 'When you click on an unchecked row.'
+                },
+                {
+                    element: '.help2step3',
+                    intro: 'You will be presented with a list of categories to navigate to',
+                    position: 'auto'
+                },
+                {
+                    element: '.help2step4',
+                    intro: 'Choose a Category to navigate to the field in that category'
+                }
+            ];
+
+        default:
+            return [{
+                    intro: "This extension will help you find fields in the Asset Register.",
+                },
+                {
+                    element: '.help1step1',
+                    intro: 'Start here, by searching for or a field by name.'
+                },
+                {
+                    element: '.help1step2',
+                    intro: 'Or here, by searcing for or a field by its group name.'
+                },
+                {
+                    element: '.help1step3',
+                    intro: 'Found what you want, click on a row to navigate to the field'
+                }
+            ];
+    }
+
 
 }
-function setupHelp2() {
-    
-}
-
 
 function getContext(callback) {
     sendMessage("getContext", {}, function(e) {
@@ -72,12 +117,43 @@ function getContext(callback) {
         !callback || callback();
     });
 }
+//var helpstage = 1;
+function showHelp(stage) {
+    switch (stage) {
+        case 2:
+            if ($(".help2step1").length <= 0)
+                setupHelp()
 
+            introJs().setOptions({
+                    steps: getHelpStage(stage)
+                }).onbeforechange(function(e) {
+                    if (e && $(e).hasClass("help2step3")) {
+                        $("#searchGrid").hide();
+                        $("#categorySelector").show();
+                    }
+                }).oncomplete(function() {
+                    $("#searchGrid").show();
+                    $("#categorySelector").hide();
+                }).onexit(function() {
+                    $("#searchGrid").show();
+                    $("#categorySelector").hide();
+                })
+                .start();
+            break;
+
+        default:
+            if ($(".help1step1").length <= 0)
+                setupHelp()
+            introJs().setOptions({ steps: getHelpStage(1) }).start();
+            break;
+    }
+}
+var helpstage = 1;
 /* main code */
 window.onload = function() {
 
     getContext(loadSearchGrid);
-
+    loadCategoryGrid();
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
@@ -85,8 +161,8 @@ window.onload = function() {
 
     $(".show-help").click(function(e) {
         trackEvent("show_help");
-        setupHelp()
-        introJs().start().setOption('doneLabel', 'Next page').start().oncomplete()
+        showHelp(helpstage);
+        helpstage = helpstage >= 2?1 : helpstage += 1;
     })
 
     $(".backToFields").click(function(e) {
@@ -195,7 +271,6 @@ function loadSearchLink(item) {
     if (!item.inCurrentCategory) {
         //show category popup
         dbCat.setTemplateIds(item.categoryTemplates)
-        loadCategoryGrid();
         fieldItem = item;
         getContext();
         $("#searchGrid").hide();
