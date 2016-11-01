@@ -5,12 +5,12 @@
     "description": "Helps you find fields in the register",
     "version": "1.8",
     "page_action": {
-        "default_icon": "images/icon-19.png",
+        "default_icon": "images/etendut-48.png",
         "default_popup": "popup.html"
     },
     "icons": {
-        "48": "images/icon-128.png",
-        "128": "images/icon-128.png"
+        "48": "images/etendut-48.png",
+        "128": "images/etendut-128.png"
     },
     "content_scripts": [{
         "matches": [
