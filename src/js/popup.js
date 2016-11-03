@@ -112,11 +112,11 @@ function getHelpStage(stage) {
                 },
                 {
                     element: '.help1step1',
-                    intro: 'Start here, by searching for or a field by name.'
+                    intro: 'Start here, by searching for a field by name.'
                 },
                 {
                     element: '.help1step2',
-                    intro: 'Or here, by searcing for or a field by its group name.'
+                    intro: 'Or here, by searcing for a field by its group name.'
                 },
                 {
                     element: '.help1step3',
