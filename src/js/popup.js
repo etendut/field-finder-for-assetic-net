@@ -3,8 +3,19 @@ $(function() {
         if (!e) {
             return;
         }
+        e.preventDefault();
+        $(".mdl-layout__drawer.is-visible").removeClass("is-visible")
+        $(".mdl-layout__obfuscator.is-visible").removeClass("is-visible")
         var t = $(e.currentTarget).text();
-        $('.mdl-layout-title').text("hello");
+        switch (t) {
+            case "help_outlineHelp":
+                showHelp(helpstage);
+                helpstage = helpstage >= 2 ? 1 : helpstage += 1;
+                break;
+
+            default:
+                break;
+        }
     });
 })
 
@@ -55,10 +66,10 @@ function setupHelp() {
         }
     }
 
-    var element = $($("#searchGrid .jsgrid-row")[1]);
+    var element = $($("#searchGrid .jsgrid-row")[0]);
     element.addClass("help1step3");
 
-    element = $($("#searchGrid .jsgrid-row")[2]);
+    element = $($("#searchGrid .jsgrid-row")[0]);
     element.addClass("help2step2");
 
     element = $("#categorySelector");
@@ -112,7 +123,7 @@ function getHelpStage(stage) {
                 },
                 {
                     element: '.show-help',
-                    intro: 'Click me again for more tips'
+                    intro: 'Click <i class="material-icons" role="presentation">help_outline</i> again for more tips'
                 }
             ];
     }
@@ -171,11 +182,6 @@ $(function() {
     $(".reload-app").click(function(e) {
         trackEvent("reload-app");
         location.reload();
-    })
-
-    $(".show-help").click(function(e) {
-        showHelp(helpstage);
-        helpstage = helpstage >= 2 ? 1 : helpstage += 1;
     })
 
     $(".backToFields").click(function(e) {

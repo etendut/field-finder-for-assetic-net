@@ -99,3 +99,26 @@ input[type="checkbox"]:after {
     background: #fff;
     cursor: pointer;
 }
+
+
+/*introjs*/
+
+.introjs-button {
+    border-radius: 0;
+    border-radius: 0;
+    background: white;
+    padding: .8em .6em;
+    font-size: inherit;
+}
+
+.introjs-bullets ul li a {
+    width: 16px;
+    height: 16px;
+}
+
+.introjs-helperNumberLayer {
+    left: -6px;
+    background: linear-gradient(to bottom,#607d8b 0,#607d8b 100%);
+    border-color: #03A9F4;
+    border-radius: 0;
+}
