@@ -1,12 +1,10 @@
 .popup-start.mdl-card,
 body {
     min-width: 600px;
-    /* min-height: 320px;*/
 }
 
 .shrinkWindow {
-    max-height: 60px;
-    max-width: 60px;
+    max-height: 62px;
 }
 
 

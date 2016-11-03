@@ -213,18 +213,21 @@ function showField(field) {
         }, function() {
             delay(function() {
                 unShrinkGrid();
-            }, 1000);
+            }, 2000);
         })
     }
 }
+var windowHeight;
 
 function shrinkGrid() {
+    windowHeight = $("html").height();
     $("html").addClass("shrinkWindow");
 }
 
 function unShrinkGrid() {
-    $("#searchGrid").removeClass("shrinkWindow");
+    $(".shrinkWindow").removeClass("shrinkWindow");
     $("#p2").hide();
+    $("html").height(windowHeight ? windowHeight : 400);
 }
 
 function sendMessage(action, data, successFunction, failFunction) {
