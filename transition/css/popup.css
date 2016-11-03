@@ -1,6 +1,6 @@
 body {
-    min-width: 320px;
-    min-height: 320px;  
+    min-width: 420px;
+    min-height: 320px;
 }
 
 .header {
@@ -69,4 +69,9 @@ body {
 
 .reload-app:hover {
     color: grey;
+}
+
+a:hover {
+    border-bottom: solid;
+    border-bottom-color: gray;
 }
