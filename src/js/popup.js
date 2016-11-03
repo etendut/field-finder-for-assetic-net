@@ -143,6 +143,18 @@ function getContext(callback) {
         !callback || callback();
     });
 }
+
+function showCategoryGrid() {
+    $("#searchGrid").hide();
+    $("#categorySelector").show();
+    $(".mdl-layout-title").text("Navigate to Category..");
+}
+
+function hideCategoryGrid() {
+    $("#searchGrid").show();
+    $("#categorySelector").hide();
+    $(".mdl-layout-title").text("Field Finder");
+}
 //var helpstage = 1;
 function showHelp(stage) {
     trackEvent("show_help_" + stage);
@@ -155,15 +167,12 @@ function showHelp(stage) {
                     steps: getHelpStage(stage)
                 }).onbeforechange(function(e) {
                     if (e && $(e).hasClass("help2step3")) {
-                        $("#searchGrid").hide();
-                        $("#categorySelector").show();
+                        showCategoryGrid();
                     }
                 }).oncomplete(function() {
-                    $("#searchGrid").show();
-                    $("#categorySelector").hide();
+                    hideCategoryGrid();
                 }).onexit(function() {
-                    $("#searchGrid").show();
-                    $("#categorySelector").hide();
+                    hideCategoryGrid();
                 })
                 .start();
             break;
@@ -186,8 +195,7 @@ $(function() {
     })
 
     $(".backToFields").click(function(e) {
-        $("#searchGrid").show();
-        $("#categorySelector").hide();
+        hideCategoryGrid();
     })
 
     chrome.tabs.onUpdated.addListener(function(tabId, info) {
@@ -294,12 +302,10 @@ function loadSearchLink(item) {
         dbCat.setTemplateIds(item.categoryTemplates)
         fieldItem = item;
         getContext();
-        $("#searchGrid").hide();
-        $("#categorySelector").show();
+        showCategoryGrid();
         return;
     } else {
-        $("#searchGrid").show();
-        $("#categorySelector").hide();
+        hideCategoryGrid();
     }
     $("#p2").show();
     shrinkGrid();
@@ -406,6 +412,7 @@ function loadCategoryGrid() {
         filtering: true,
         sorting: true,
         paging: true,
+        heading: false,
         pageButtonCount: 5,
         autoload: true,
         controller: dbCat,
