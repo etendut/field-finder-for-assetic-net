@@ -14,6 +14,7 @@ $(function() {
                 break;
 
             default:
+                location.reload();
                 break;
         }
     });
