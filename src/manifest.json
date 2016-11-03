@@ -11,8 +11,8 @@
     "content_scripts": [{
         "js": [
             "js/plugin/jquery-3.1.1.min.js",
-            "js/popup.js",
-            "js/plugin/mdl/material.min.js"
+            "js/plugin/mdl/material.min.js",
+            "js/content.js"
         ],
         "css": [
             "css/popup.css"

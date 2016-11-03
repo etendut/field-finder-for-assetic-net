@@ -57,7 +57,7 @@ var contextScript;
 
 function getContext() {
     contextScript = document.createElement('script');
-    contextScript.src = chrome.extension.getURL('scripts/pageScripts/getContext.js');
+    contextScript.src = chrome.extension.getURL('js/pageScripts/getContext.js');
     (document.head || document.documentElement).appendChild(contextScript);
 }
 getContext();
