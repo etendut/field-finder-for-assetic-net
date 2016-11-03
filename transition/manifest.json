@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Assetic Field Finder (Retired)",
+    "short_name": "Field Finder",
+    "description": "Helps you find fields in the register",
+    "version": "1.8.1",
+    "page_action": {
+        "default_icon": "images/icon-19.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "images/icon-128.png",
+        "128": "images/icon-128.png"
+    },
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "activeTab",
+        "tabs",
+        "https://*.assetic.net/"
+    ]
+}

@@ -1,0 +1,72 @@
+body {
+    min-width: 320px;
+    min-height: 320px;  
+}
+
+.header {
+    height: 48px;
+    line-height: 46px;
+    padding: 0 12px;
+    background: #008da8;
+    border-bottom: 1px solid #135070;
+    border-radius: 2px 2px 0 0
+}
+
+.header .title {
+    padding-left: 28px;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    background: url(../images/icon-19w.png) no-repeat 0 13px
+}
+
+.header .actions {
+    float: right;
+    opacity: 0.8
+}
+
+.header .actions a,
+.header .actions i {
+    color: white;
+}
+
+.header .actions a:hover {
+    text-decoration: underline
+}
+
+.admin-only {
+    display: none;
+    margin-right: 20px
+}
+
+.user-is-admin .admin-only {
+    display: inline
+}
+
+.jsgrid-pager-nav-button a,
+.jsgrid-pager-page a {
+    color: #008da8;
+}
+
+.th {
+    font-weight: normal;
+}
+
+.padding10 {
+    padding: 10px
+}
+
+.backToFields {
+    padding: 5px;
+    color: #008da8;
+    cursor: pointer;
+}
+
+.backToFields:hover {
+    color: grey;
+}
+
+.reload-app:hover {
+    color: grey;
+}

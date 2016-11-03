@@ -1,38 +1,39 @@
 {
-    "manifest_version": 2,
-    "name": "Assetic Field Finder",
+    "author": "L George",
+    "name": "Field Finder for assetic.net",
     "short_name": "Field Finder",
-    "description": "Helps you find fields in the register",
-    "version": "1.8",
+    "description": "Helps you find fields in the asset register",
+    "version": "2.0",
     "page_action": {
-        "default_icon": "images/etendut-48.png",
+        "default_icon": "img/etendut-48.png",
         "default_popup": "popup.html"
     },
-    "icons": {
-        "48": "images/etendut-48.png",
-        "128": "images/etendut-128.png"
-    },
     "content_scripts": [{
+        "js": [
+            "js/plugin/jquery-3.1.1.min.js",
+            "js/popup.js",
+            "js/plugin/mdl/material.min.js"
+        ],
+        "css": [
+            "css/popup.css"
+        ],
         "matches": [
             "https://*.assetic.net/*"
-        ],
-        "all_frames": true,
-        "js": [
-            "plugins/jquery-3.1.1.min.js",
-            "plugins/spinloader.js",
-            "plugins/js-toast-master/toast.min.js",
-            "scripts/content.js"
-        ],
-        "run_at": "document_end"
+        ]
     }],
-
     "background": {
         "scripts": [
-            "scripts/content.js",
-            "scripts/background.js"
+            "js/content.js",
+            "js/background.js"
         ],
         "persistent": false
     },
+    "icons": {
+        "16": "img/etendut-19.png",
+        "48": "img/etendut-48.png",
+        "128": "img/etendut-128.png"
+    },
+    "manifest_version": 2,
     "permissions": [
         "declarativeContent",
         "activeTab",
@@ -43,5 +44,4 @@
         "scripts/pageScripts/getContext.js"
     ],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://ajax.googleapis.com/ https://fonts.googleapis.com/css; object-src 'self'"
-
 }

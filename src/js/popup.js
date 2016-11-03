@@ -1,4 +1,14 @@
-var defaultColor = '#008da8';
+$(function() {
+    $(".mdl-navigation__link").click(function(e) {
+        if (!e) {
+            return;
+        }
+        var t = $(e.currentTarget).text();
+        $('.mdl-layout-title').text("hello");
+    });
+})
+
+var defaultColor = '#03A9F4';
 var dataDictionary;
 var db = new SearchFieldlist();
 var dbCat = new Categorylist();
@@ -18,7 +28,7 @@ var toastErrorOptions = {
 var toastInfoOptions = {
     style: {
         main: {
-            background: "#008da8",
+            background: "#03A9F4",
             color: "white"
         }
     }
@@ -155,8 +165,7 @@ function showHelp(stage) {
 }
 var helpstage = 1;
 /* main code */
-window.onload = function() {
-
+$(function() {
     getContext(loadSearchGrid);
     loadCategoryGrid();
     $(".reload-app").click(function(e) {
@@ -185,7 +194,7 @@ window.onload = function() {
     });
 
 
-};
+});
 
 var delay = (function() {
     var timer = 0;
@@ -346,6 +355,7 @@ function loadSearchGrid() {
         filtering: true,
         sorting: true,
         paging: true,
+        pageButtonCount: 5,
         autoload: true,
         //data: dataDictionary,
         controller: db,
@@ -355,8 +365,8 @@ function loadSearchGrid() {
         fields: [
             // { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },
             { name: "label", title: "Control", type: "text", width: 150 },
-            { name: "help", title: "Control Help", type: "text", width: 200 },
-            { name: "type", title: "Control Type", type: "text", width: 80, sorting: false },
+            { name: "help", title: "Control Help", type: "text", width: 150 },
+            { name: "type", title: "Control Type", type: "text", width: 100, sorting: false },
             { name: "group", title: "Control Group", type: "text", width: 100 },
             {
                 name: "inCurrentCategory",
@@ -383,19 +393,20 @@ function loadCategoryGrid() {
     $("#categoryGrid").jsGrid({
         width: "100%",
         height: "400px",
-
         inserting: false,
         editing: false,
         filtering: true,
         sorting: true,
         paging: true,
+        pageButtonCount: 5,
         autoload: true,
         controller: dbCat,
+        // autowidth: false,
         rowClick: function(args) {
             loadfirstCategoryAsset(args.item);
         },
         fields: [
-            { name: "categoryLabel", title: "Category", type: "text", width: 150 },
+            { name: "categoryLabel", title: "Category", type: "text" },
         ]
     });
 }

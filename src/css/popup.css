@@ -1,106 +1,104 @@
-.minheight200 {
-    min-height: 200px;
-}
-
-.maxheight10 {
-    max-height: 20px;
-}
-
-html,
+.popup-start.mdl-card,
 body {
-    min-width: 430px;
-    /*height: 410px;*/
-    background: #fff;
-    font-family: Roboto, Arial!important;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
+    min-width: 600px;
+    min-height: 320px;
 }
 
-.data-list-empty-msg {
-    margin: 0 auto;
-    padding: 90px 0
+.popup-start>.mdl-card__title {
+    color: #212121;
+    background: url('../img/etendut-full.png') left / cover #03A9F4;
+    min-height: 50px
 }
 
-.data-list-empty-msg.data-list-content {
-    border-radius: 0 4px 4px 0
+
+/*Grid style overrides*/
+
+.jsgrid-selected-row>.jsgrid-cell,
+.jsgrid-selected-row.jsgrid-alt-row>.jsgrid-cell {
+    background: #eee;
+    border-color: #607d8b;
 }
 
-.data-list-loading .data-list-empty-msg {
-    visibility: hidden
+.jsgrid-cell,
+.jsgrid-edit-row>.jsgrid-cell,
+.jsgrid-filter-row>.jsgrid-cell,
+.jsgrid-grid-body,
+.jsgrid-grid-header,
+.jsgrid-header-row>.jsgrid-header-cell,
+.jsgrid-insert-row>.jsgrid-cell {
+    border-left: none;
+    border-right: none;
+    border-color: #607d8b;
 }
 
-.data-list-empty-img {
-    position: absolute;
-    top: 2.2em;
-    left: 50%;
-    margin-left: -24px
+.jsgrid-row,
+.jsgrid-alt-row {
+    height: 45px;
 }
 
-.header {
-    height: 48px;
-    line-height: 46px;
-    padding: 0 12px;
-    background: #008da8;
-    border-bottom: 1px solid #135070;
-    border-radius: 2px 2px 0 0
-}
-
-.header .title {
-    padding-left: 28px;
-    margin: 0;
-    color: #fff;
-    font-size: 14px;
-    font-weight: normal;
-    background: url(../images/etendut-19.png) no-repeat 0 13px
-}
-
-.header .actions {
-    float: right;
-    opacity: 0.8
-}
-
-.header .actions a,
-.header .actions i {
-    color: white;
-}
-
-.header .actions a:hover {
-    text-decoration: underline
-}
-
-.admin-only {
-    display: none;
-    margin-right: 20px
-}
-
-.user-is-admin .admin-only {
-    display: inline
+.jsgrid-alt-row>.jsgrid-cell {
+    background: white;
 }
 
 .jsgrid-pager-nav-button a,
 .jsgrid-pager-page a {
-    color: #008da8;
+    color: #607d8b;
 }
 
-.th {
-    font-weight: normal;
+.jsgrid-table {
+    width: 100%!important;
 }
 
-.padding10 {
-    padding: 10px
-}
 
-.backToFields {
-    padding: 5px;
-    color: #008da8;
+/*Checkbox*/
+
+input[type="checkbox"] {
+    position: relative;
+    top: -0.375rem;
+    margin: 0 1rem 0 0;
     cursor: pointer;
 }
 
-.backToFields:hover {
-    color: grey;
+input[type="checkbox"]:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #607d8b;
 }
 
-.reload-app:hover {
-    color: grey;
+input[type="checkbox"]:checked:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: .5rem;
+    border-color: #03A9F4;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+input[type="checkbox"]:indeterminate:before {
+    top: 0.5rem;
+    height: 0;
+    border-color: #03A9F4;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+input[type="checkbox"]:after {
+    content: "";
+    position: absolute;
+    top: -0.125rem;
+    left: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: #fff;
+    cursor: pointer;
 }
