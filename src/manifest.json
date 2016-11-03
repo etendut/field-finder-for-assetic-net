@@ -2,8 +2,8 @@
     "author": "Etendut",
     "name": "Field Finder for assetic.net",
     "short_name": "Field Finder",
-    "description": "Helps you find fields in your assetic.nets Asset Register",
-    "version": "2.2",
+    "description": "Helps you find fields in your assetic.net Asset Register",
+    "version": "2.3",
     "page_action": {
         "default_icon": "img/etendut-48.png",
         "default_popup": "popup.html"
@@ -20,7 +20,8 @@
         ],
         "matches": [
             "https://*.assetic.net/*"
-        ]
+        ],
+        "run_at": "document_end"
     }],
     "background": {
         "scripts": [
