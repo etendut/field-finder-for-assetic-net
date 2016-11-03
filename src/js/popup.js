@@ -219,12 +219,12 @@ function showField(field) {
 }
 
 function shrinkGrid() {
-    $("#searchGrid").addClass("maxheight10");
+    $("html").addClass("shrinkWindow");
 }
 
 function unShrinkGrid() {
-    $("#searchGrid").removeClass("maxheight10");
-    !spinner || spinner.remove();
+    $("#searchGrid").removeClass("shrinkWindow");
+    $("#p2").hide();
 }
 
 function sendMessage(action, data, successFunction, failFunction) {
@@ -242,15 +242,13 @@ function sendMessage(action, data, successFunction, failFunction) {
     });
 }
 
-var spinner;
-
 function loadfirstCategoryAsset(item) {
     chrome.tabs.getSelected(function(tab) {
         var re = new RegExp('(.*?)(.assetic.net)(.*?)');
         var urlParts = re.exec(tab.url)
         if (urlParts && urlParts.length >= 3) {
             myNewUrl = urlParts[1] + urlParts[2] + '/api/ComplexAssetApi/Category?sort=Label-asc&page=1&pageSize=1&group=&filter=ComplexAssetCategoryLabel~eq~%27' + item.categoryLabel + '%27';
-            spinner = new ajaxLoader($("body").parent());
+            $("#p2").show();
             $.get(myNewUrl, function(data, status) {
                 if (data && data.Data && data.Data.length > 0) {
 
@@ -262,12 +260,12 @@ function loadfirstCategoryAsset(item) {
 
                 } else {
                     iqwerty.toast.Toast(item.categoryLabel + ' does not contain any assets, please choose another category!', toastInfoOptions);
-                    !spinner || spinner.remove();
+                    $("#p2").hide();
                 }
             }).fail(function(e) {
                 var message = !e || !e.responseText ? "Error encountered, please try refreshing the page." : e.responseText;
                 iqwerty.toast.Toast(message, toastErrorOptions);
-                !spinner || spinner.remove();
+                $("#p2").hide();
             });
         }
     });
@@ -293,7 +291,7 @@ function loadSearchLink(item) {
         $("#searchGrid").show();
         $("#categorySelector").hide();
     }
-    spinner = new ajaxLoader($("body").parent());
+    $("#p2").show();
     shrinkGrid();
     chrome.tabs.getSelected(function(tab) {
 
@@ -323,7 +321,7 @@ function loadSearchLink(item) {
         } else {
             /*reset grid*/
             unShrinkGrid();
-            !spinner || spinner.remove();
+            $("#p2").hide();
         }
     });
 }

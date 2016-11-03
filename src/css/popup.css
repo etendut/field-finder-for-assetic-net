@@ -1,13 +1,12 @@
 .popup-start.mdl-card,
 body {
     min-width: 600px;
-    min-height: 320px;
+    /* min-height: 320px;*/
 }
 
-.popup-start>.mdl-card__title {
-    color: #212121;
-    background: url('../img/etendut-full.png') left / cover #03A9F4;
-    min-height: 50px
+.shrinkWindow {
+    max-height: 60px;
+    max-width: 60px;
 }
 
 
