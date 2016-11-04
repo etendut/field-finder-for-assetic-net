@@ -16,8 +16,8 @@
 * All dependencies are in the source
 * See the *ext* folder for un-minified files
 * To deploy either 
-** load the *src* folder as an unpacked chrome extension
-** or zip the *src* folder and deploy using your chrome developer console
+** load the src folder as an unpacked chrome extension
+** or zip the src folder and deploy using your chrome developer console
 
 ### Who do I talk to? ###
 
