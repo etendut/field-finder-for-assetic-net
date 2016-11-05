@@ -1,5 +1,5 @@
 $(function() {
-    $(".mdl-navigation__link").click(function(e) {
+    $(".mdl-navigation__link.applink").click(function(e) {
         if (!e) {
             return;
         }
