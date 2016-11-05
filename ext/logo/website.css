@@ -1,0 +1,46 @@
+/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+#header .bottom-header .header-button-two,
+#latest-news .latest-news-button,
+#blog .blog-post .blog-post-button,
+.widget .widget-title:before,
+#comments #respond .comment-form #input-submit, input[type=submit] {
+	background: #607d8b;
+}
+
+#header .bottom-header .header-button-two:hover,
+#latest-news .latest-news-button:hover,
+#blog .blog-post .blog-post-button:hover,
+#comments #respond .comment-form #input-submit:hover, input[type=submit]:hover {
+	background: #03A9F4;
+}
+
+#header .bottom-header span.span-dot,
+#contact-us .section-content .contact-us-box .box-right span a,
+#contact-us .section-content .contact-us-box .box-right span {
+	color: white;
+}
+
+#blog .blog-post .blog-post-title,
+#blog .blog-post .blog-post-meta,
+#blog .blog-post .blog-post-meta .post-meta-author,
+#blog .blog-post .blog-post-meta .post-meta-author .fa,
+#blog .blog-post .blog-post-meta .post-meta-time .fa,
+#blog .blog-post .blog-post-meta .post-meta-categories .fa,
+#blog .blog-post .blog-post-meta .post-meta-comments .fa,
+.widget ul li:before {
+	color: #607d8b;
+}
+
+#contact-us {
+	background: #607d8b;
+}
+
+#header .top-header .header-logo:hover,
+#header .top-header .header-navigation ul li a:hover,.widget ul li a:hover,#footer .widget ul li a:hover,
+#blog .blog-post .blog-post-title:hover {
+	color: #03A9F4;
+}/*http://www.odec.ca/projects/2013/kope13p/*/
