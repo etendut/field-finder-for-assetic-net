@@ -148,6 +148,7 @@ function showCategoryGrid() {
     $("#searchGrid").hide();
     $("#categorySelector").show();
     $(".mdl-layout-title").text("Navigate to Category..");
+    $("#categoryGrid").jsGrid("loadData");
 }
 
 function hideCategoryGrid() {
