@@ -1,869 +1,867 @@
 ﻿{
-    "categories": [
-        {
-            "categoryLabel": "Access Platforms",
-            "templateName": "CATemplateCivil",
-            "templateID": 1952
-        },
-        {
-            "categoryLabel": "Airport Buildings",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "Airport Plant and Equipment",
-            "templateName": "CATemplateBuildingsPlantAndEquipment",
-            "templateID": 1921
-        },
-        {
-            "categoryLabel": "Artworks",
-            "templateName": "CATemplateArtworks",
-            "templateID": 1916
-        },
-        {
-            "categoryLabel": "Bins",
-            "templateName": "CATemplateBins",
-            "templateID": 2061
-        },
-        {
-            "categoryLabel": "Boardwalks",
-            "templateName": "CATemplatePathways",
-            "templateID": 1931
-        },
-        {
-            "categoryLabel": "Bores and Wells",
-            "templateName": "CATemplateBores",
-            "templateID": 1977
-        },
-        {
-            "categoryLabel": "Bridges",
-            "templateName": "CATemplateBridges",
-            "templateID": 1927
-        },
-        {
-            "categoryLabel": "Buildings",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "Buildings (Market Value)",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "Buildings Equipment and Furniture",
-            "templateName": "CATemplateEquipmentAndFurniture",
-            "templateID": 1922
-        },
-        {
-            "categoryLabel": "Buildings Functional Spaces",
-            "templateName": "CATemplateBuildingFunctionalSpace",
-            "templateID": 3379
-        },
-        {
-            "categoryLabel": "Buildings Infrastructure",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "Buildings Plant and Equipment",
-            "templateName": "CATemplateBuildingsPlantAndEquipment",
-            "templateID": 1921
-        },
-        {
-            "categoryLabel": "Bus Shelters",
-            "templateName": "CATemplateBusShelters",
-            "templateID": 1928
-        },
-        {
-            "categoryLabel": "Bus Stops",
-            "templateName": "CATemplateBusStop",
-            "templateID": 1929
-        },
-        {
-            "categoryLabel": "Car Parks",
-            "templateName": "CATemplateCarParks",
-            "templateID": 1930
-        },
-        {
-            "categoryLabel": "Catchment",
-            "templateName": "CATemplateCatchment",
-            "templateID": 3378
-        },
-        {
-            "categoryLabel": "Chemical Structures",
-            "templateName": "CATemplateChemicalStructures",
-            "templateID": 2006
-        },
-        {
-            "categoryLabel": "Civil",
-            "templateName": "CATemplateCivil",
-            "templateID": 1952
-        },
-        {
-            "categoryLabel": "Compressors",
-            "templateName": "CATemplateCivil",
-            "templateID": 1952
-        },
-        {
-            "categoryLabel": "Control Systems",
-            "templateName": "CATemplateControlSystems",
-            "templateID": 1948
-        },
-        {
-            "categoryLabel": "Cranes",
-            "templateName": "CATemplateFleet",
-            "templateID": 1950
-        },
-        {
-            "categoryLabel": "Creeks",
-            "templateName": "CATemplateCreeks",
-            "templateID": 1983
-        },
-        {
-            "categoryLabel": "Culverts",
-            "templateName": "CATemplateCulverts",
-            "templateID": 1986
-        },
-        {
-            "categoryLabel": "DolphinStructures",
-            "templateName": "CATemplateJetties",
-            "templateID": 2078
-        },
-        {
-            "categoryLabel": "EducationBuildings",
-            "templateName": "CATemplateEDUBuildings",
-            "templateID": 1925
-        },
-        {
-            "categoryLabel": "EducationBuildingsFunctionalSpaces",
-            "templateName": "CATemplateEducationFunctionalSpace",
-            "templateID": 3382
-        },
-        {
-            "categoryLabel": "Electrical",
-            "templateName": "CATemplateElectricalComponants",
-            "templateID": 1944
-        },
-        {
-            "categoryLabel": "ElectricalConduitPits",
-            "templateName": "CATemplateConduitPits",
-            "templateID": 1946
-        },
-        {
-            "categoryLabel": "ElectricalConduits",
-            "templateName": "CATemplateConduit",
-            "templateID": 1945
-        },
-        {
-            "categoryLabel": "ElectricalPlantandEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "EmergencyMarkers",
-            "templateName": "CATemplateEmergencyMarkers",
-            "templateID": 2069
-        },
-        {
-            "categoryLabel": "EmergencyRoutes",
-            "templateName": "CATemplateEmergencyRoute",
-            "templateID": 2070
-        },
-        {
-            "categoryLabel": "Facility",
-            "templateName": "CATemplateFacility",
-            "templateID": 3367
-        },
-        {
-            "categoryLabel": "Fences",
-            "templateName": "CATemplateFences",
-            "templateID": 1971
-        },
-        {
-            "categoryLabel": "Fleet",
-            "templateName": "CATemplateFleet",
-            "templateID": 1950
-        },
-        {
-            "categoryLabel": "Fleet, Plant and Equipment",
-            "templateName": "CATemplateFleet",
-            "templateID": 1950
-        },
-        {
-            "categoryLabel": "Gates",
-            "templateName": "CATemplateGates",
-            "templateID": 2071
-        },
-        {
-            "categoryLabel": "Generators",
-            "templateName": "CATemplateElectricalComponants",
-            "templateID": 1944
-        },
-        {
-            "categoryLabel": "HeavyFleet",
-            "templateName": "CATemplateFleet",
-            "templateID": 1950
-        },
-        {
-            "categoryLabel": "HighVoltageLines",
-            "templateName": "CATemplateTransmissionLine",
-            "templateID": 2300
-        },
-        {
-            "categoryLabel": "HighVoltagePoles",
-            "templateName": "CATemplateTransmissionPole",
-            "templateID": 2297
-        },
-        {
-            "categoryLabel": "HousingBuildings",
-            "templateName": "CATemplateHousingBuildings",
-            "templateID": 1955
-        },
-        {
-            "categoryLabel": "Housing Functional Spaces",
-            "templateName": "CATemplateHousingFunctionalSpace",
-            "templateID": 3380
-        },
-        {
-            "categoryLabel": "Housing Hard Surfaces",
-            "templateName": "CATemplateHousingHardSurfaces",
-            "templateID": 1958
-        },
-        {
-            "categoryLabel": "Housing Landscaping",
-            "templateName": "CATemplateHousingLandscaping",
-            "templateID": 1959
-        },
-        {
-            "categoryLabel": "Housing Other Structures",
-            "templateName": "CATemplateHousingOtherStructures",
-            "templateID": 2294
-        },
-        {
-            "categoryLabel": "Housing Plant and Equipment",
-            "templateName": "CATemplateHousingPlantAndEquipment",
-            "templateID": 1961
-        },
-        {
-            "categoryLabel": "Housing Property",
-            "templateName": "CATemplateHousingProperty",
-            "templateID": 1957
-        },
-        {
-            "categoryLabel": "Housing Site",
-            "templateName": "CATemplateHousingSite",
-            "templateID": 3369
-        },
-        {
-            "categoryLabel": "Hydrants",
-            "templateName": "CATemplateHydrants",
-            "templateID": 2075
-        },
-        {
-            "categoryLabel": "ICT Hardware",
-            "templateName": "CATemplateICT",
-            "templateID": 1947
-        },
-        {
-            "categoryLabel": "Infiltration Devices",
-            "templateName": "CATemplateInfiltrationDevice",
-            "templateID": 1990
-        },
-        {
-            "categoryLabel": "Instrumentation",
-            "templateName": "CATemplateInstrumentation",
-            "templateID": 1949
-        },
-        {
-            "categoryLabel": "Intersections",
-            "templateName": "CATemplateIntersectionRoads",
-            "templateID": 1932
-        },
-        {
-            "categoryLabel": "Irrigation",
-            "templateName": "CATemplateIrrigation",
-            "templateID": 1964
-        },
-        {
-            "categoryLabel": "Irrigation Channels",
-            "templateName": "CATemplateIrrigationChannel",
-            "templateID": 2076
-        },
-        {
-            "categoryLabel": "Irrigation Regulators",
-            "templateName": "CATemplateIrrigationRegulators",
-            "templateID": 2077
-        },
-        {
-            "categoryLabel": "Irrigation Sprinklers",
-            "templateName": "CATemplateSprinklers",
-            "templateID": 2103
-        },
-        {
-            "categoryLabel": "Jetties",
-            "templateName": "CATemplateJetties",
-            "templateID": 2078
-        },
-        {
-            "categoryLabel": "Kerbs",
-            "templateName": "CATemplateKerbs",
-            "templateID": 1934
-        },
-        {
-            "categoryLabel": "Kerbs (Auxiliary)",
-            "templateName": "CATemplateKerbs",
-            "templateID": 1934
-        },
-        {
-            "categoryLabel": "Lagoons",
-            "templateName": "CATemplateLagoon",
-            "templateID": 1991
-        },
-        {
-            "categoryLabel": "Land",
-            "templateName": "CATemplateLand",
-            "templateID": 1978
-        },
-        {
-            "categoryLabel": "Landfill Cells",
-            "templateName": "CATemplateLandfillCells",
-            "templateID": 1980
-        },
-        {
-            "categoryLabel": "Landfill Lagoons",
-            "templateName": "CATemplateLagoon",
-            "templateID": 1991
-        },
-        {
-            "categoryLabel": "Levee Banks",
-            "templateName": "CATemplateLeveebanks",
-            "templateID": 1984
-        },
-        {
-            "categoryLabel": "Lifting Equipment",
-            "templateName": "CATemplateCivil",
-            "templateID": 1952
-        },
-        {
-            "categoryLabel": "Lighting",
-            "templateName": "CATemplateStreetLighting",
-            "templateID": 1941
-        },
-        {
-            "categoryLabel": "Low Voltage Lines",
-            "templateName": "CATemplateTransmissionLine",
-            "templateID": 2300
-        },
-        {
-            "categoryLabel": "Low Voltage Poles",
-            "templateName": "CATemplateTransmissionPole",
-            "templateID": 2297
-        },
-        {
-            "categoryLabel": "Marine Structures",
-            "templateName": "CATemplateMarineStructures",
-            "templateID": 1981
-        },
-        {
-            "categoryLabel": "Mechanical",
-            "templateName": "CATemplateMechanical",
-            "templateID": 1953
-        },
-        {
-            "categoryLabel": "Minor Plant and Equipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "Municipal Heritage",
-            "templateName": "CATemplateMunicipalHeritage",
-            "templateID": 1923
-        },
-        {
-            "categoryLabel": "Open Drains and Rain Gardens",
-            "templateName": "CATemplateOpenDrains",
-            "templateID": 1987
-        },
-        {
-            "categoryLabel": "Open Space Furniture",
-            "templateName": "CATemplateOutdoorFurniture",
-            "templateID": 1940
-        },
-        {
-            "categoryLabel": "Open Space Service Lines",
-            "templateName": "CATemplateOpenSpaceServiceLine",
-            "templateID": 2085
-        },
-        {
-            "categoryLabel": "Open Space Services",
-            "templateName": "CATemplateWaterMetersAndService",
-            "templateID": 2003
-        },
-        {
-            "categoryLabel": "Open Space Trees",
-            "templateName": "CATemplateTree",
-            "templateID": 1942
-        },
-        {
-            "categoryLabel": "Other Structures",
-            "templateName": "CATemplateOtherStructures",
-            "templateID": 1985
-        },
-        {
-            "categoryLabel": "Park Active Areas",
-            "templateName": "CATemplateParkActiveAreas",
-            "templateID": 1967
-        },
-        {
-            "categoryLabel": "Park Equipment",
-            "templateName": "CATemplateOutdoorFurniture",
-            "templateID": 1940
-        },
-        {
-            "categoryLabel": "Park Formal Assets",
-            "templateName": "CATemplateParkFormalAssets",
-            "templateID": 1969
-        },
-        {
-            "categoryLabel": "Park Infrastructure",
-            "templateName": "CATemplateParkInfrastructure",
-            "templateID": 1970
-        },
-        {
-            "categoryLabel": "ParkPassiveAreas",
-            "templateName": "CATemplateParkPassiveAreas",
-            "templateID": 1972
-        },
-        {
-            "categoryLabel": "ParkSite",
-            "templateName": "CATemplateParkSite",
-            "templateID": 3370
-        },
-        {
-            "categoryLabel": "ParksandGardens",
-            "templateName": "CATemplateParks",
-            "templateID": 3372
-        },
-        {
-            "categoryLabel": "Pathways",
-            "templateName": "CATemplatePathways",
-            "templateID": 1931
-        },
-        {
-            "categoryLabel": "Pathways(Auxiliary)",
-            "templateName": "CATemplatePathways",
-            "templateID": 1931
-        },
-        {
-            "categoryLabel": "PlaygroundSite",
-            "templateName": "CATemplatePlaygroundSite",
-            "templateID": 3371
-        },
-        {
-            "categoryLabel": "Playgrounds",
-            "templateName": "CATemplatePlaygrounds",
-            "templateID": 1974
-        },
-        {
-            "categoryLabel": "PoolStructures",
-            "templateName": "CATemplatePoolStructures",
-            "templateID": 1924
-        },
-        {
-            "categoryLabel": "PortBuildings",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "PortJetties",
-            "templateName": "CATemplateJetties",
-            "templateID": 2078
-        },
-        {
-            "categoryLabel": "PortLand",
-            "templateName": "CATemplateLand",
-            "templateID": 1978
-        },
-        {
-            "categoryLabel": "PortNavigationAids",
-            "templateName": "CATemplateNavigationAid",
-            "templateID": 2296
-        },
-        {
-            "categoryLabel": "PortNavigationEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "PortPiers",
-            "templateName": "CATemplateJetties",
-            "templateID": 2078
-        },
-        {
-            "categoryLabel": "PortPlantandEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "PortRail",
-            "templateName": "CATemplateRailway",
-            "templateID": 2101
-        },
-        {
-            "categoryLabel": "PortRoad",
-            "templateName": "CATemplateSealedRoads",
-            "templateID": 2347
-        },
-        {
-            "categoryLabel": "PortStackingAreas",
-            "templateName": "CATemplateCarParks",
-            "templateID": 1930
-        },
-        {
-            "categoryLabel": "PortUtilityServices",
-            "templateName": "CATemplateWaterMetersAndService",
-            "templateID": 2003
-        },
-        {
-            "categoryLabel": "Property",
-            "templateName": "CATemplateProperty",
-            "templateID": 1979
-        },
-        {
-            "categoryLabel": "RailBridges",
-            "templateName": "CATemplateBridges",
-            "templateID": 1927
-        },
-        {
-            "categoryLabel": "RailControlSystems",
-            "templateName": "CATemplateControlSystems",
-            "templateID": 1948
-        },
-        {
-            "categoryLabel": "RailCrossings",
-            "templateName": "CATemplateIntersectionRoads",
-            "templateID": 1932
-        },
-        {
-            "categoryLabel": "RailJunctions",
-            "templateName": "CATemplateIntersectionRoads",
-            "templateID": 1932
-        },
-        {
-            "categoryLabel": "RailSignals",
-            "templateName": "CATemplateEquipmentRoads",
-            "templateID": 1933
-        },
-        {
-            "categoryLabel": "Railways",
-            "templateName": "CATemplateRailway",
-            "templateID": 2101
-        },
-        {
-            "categoryLabel": "RetainingWalls",
-            "templateName": "CATemplateRetainingWalls",
-            "templateID": 1975
-        },
-        {
-            "categoryLabel": "Riverbanks",
-            "templateName": "CATemplateRiverbanks",
-            "templateID": 1982
-        },
-        {
-            "categoryLabel": "RoadBarriers",
-            "templateName": "CATemplateBarriers",
-            "templateID": 2060
-        },
-        {
-            "categoryLabel": "RoadElements",
-            "templateName": "CATemplateRoadElement",
-            "templateID": 3381
-        },
-        {
-            "categoryLabel": "Roads",
-            "templateName": "CATemplateSealedRoads",
-            "templateID": 2347
-        },
-        {
-            "categoryLabel": "Roads(Auxiliary)",
-            "templateName": "CATemplateSealedRoads",
-            "templateID": 2347
-        },
-        {
-            "categoryLabel": "RoadsEquipment",
-            "templateName": "CATemplateEquipmentRoads",
-            "templateID": 1933
-        },
-        {
-            "categoryLabel": "Runways",
-            "templateName": "CATemplateRunway",
-            "templateID": 2346
-        },
-        {
-            "categoryLabel": "SewerFittings",
-            "templateName": "CATemplateSewerNodes",
-            "templateID": 2011
-        },
-        {
-            "categoryLabel": "SewerLowPressurePipes",
-            "templateName": "CATemplateSewerLowPressurePipe",
-            "templateID": 2009
-        },
-        {
-            "categoryLabel": "SewerNodes",
-            "templateName": "CATemplateSewerNodes",
-            "templateID": 2011
-        },
-        {
-            "categoryLabel": "SewerPits",
-            "templateName": "CATemplateSWNode",
-            "templateID": 1992
-        },
-        {
-            "categoryLabel": "SewerPlantandEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "SewerPlantandEquipment(Auxiliary)",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "SewerPressurePipes",
-            "templateName": "CATemplateSewerPressurePipe",
-            "templateID": 2008
-        },
-        {
-            "categoryLabel": "SewerPressurePipes(Auxiliary)",
-            "templateName": "CATemplateSewerPressurePipe",
-            "templateID": 2008
-        },
-        {
-            "categoryLabel": "SewerPumpStations",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "SewerPumps",
-            "templateName": "CATemplatePumps",
-            "templateID": 1999
-        },
-        {
-            "categoryLabel": "SewerServices",
-            "templateName": "CATemplateSewerServices",
-            "templateID": 2010
-        },
-        {
-            "categoryLabel": "SewerTreatmentFacility",
-            "templateName": "CATemplateSewerTreatmentFacility",
-            "templateID": 3375
-        },
-        {
-            "categoryLabel": "SewerTreatmentSystems",
-            "templateName": "CATemplateSewerTreatmentSystem",
-            "templateID": 3377
-        },
-        {
-            "categoryLabel": "SewerValves",
-            "templateName": "CATemplateSewerValves",
-            "templateID": 2012
-        },
-        {
-            "categoryLabel": "Signals",
-            "templateName": "CATemplateSignals",
-            "templateID": 1938
-        },
-        {
-            "categoryLabel": "Signs",
-            "templateName": "CATemplateSigns",
-            "templateID": 1939
-        },
-        {
-            "categoryLabel": "Steps",
-            "templateName": "CATemplateSteps",
-            "templateID": 2104
-        },
-        {
-            "categoryLabel": "StorageStructures",
-            "templateName": "CATemplateStorageStructure",
-            "templateID": 2018
-        },
-        {
-            "categoryLabel": "StormwaterDrains",
-            "templateName": "CATemplateSWLowPressurePipe",
-            "templateID": 1988
-        },
-        {
-            "categoryLabel": "StormwaterEndStructures",
-            "templateName": "CATemplateSWEndStructures",
-            "templateID": 2106
-        },
-        {
-            "categoryLabel": "StormwaterFittings",
-            "templateName": "CATemplateSWNode",
-            "templateID": 1992
-        },
-        {
-            "categoryLabel": "StormwaterGPTs",
-            "templateName": "CATemplateGPT",
-            "templateID": 1989
-        },
-        {
-            "categoryLabel": "StormwaterPits",
-            "templateName": "CATemplateSWNode",
-            "templateID": 1992
-        },
-        {
-            "categoryLabel": "StormwaterPropertyConnections",
-            "templateName": "CATemplateSWPropertyConnection",
-            "templateID": 1993
-        },
-        {
-            "categoryLabel": "StreetFurniture",
-            "templateName": "CATemplateOutdoorFurniture",
-            "templateID": 1940
-        },
-        {
-            "categoryLabel": "StreetTrees",
-            "templateName": "CATemplateTree",
-            "templateID": 1942
-        },
-        {
-            "categoryLabel": "Structures",
-            "templateName": "CATemplateStructures",
-            "templateID": 1976
-        },
-        {
-            "categoryLabel": "Substations",
-            "templateName": "CATemplateSubstation",
-            "templateID": 2105
-        },
-        {
-            "categoryLabel": "SwitchBoards",
-            "templateName": "CATemplateElectricalComponants",
-            "templateID": 1944
-        },
-        {
-            "categoryLabel": "TableDrains",
-            "templateName": "CATemplateInfiltrationDevice",
-            "templateID": 1990
-        },
-        {
-            "categoryLabel": "Toilets",
-            "templateName": "CATemplateToilets",
-            "templateID": 2109
-        },
-        {
-            "categoryLabel": "TrafficManagementDevices",
-            "templateName": "CATemplateTrafficMgmtDevices",
-            "templateID": 1943
-        },
-        {
-            "categoryLabel": "UnsealedRoads",
-            "templateName": "CATemplateUnsealedRoads",
-            "templateID": 2021
-        },
-        {
-            "categoryLabel": "WaterDams",
-            "templateName": "CATemplateWaterDams",
-            "templateID": 2004
-        },
-        {
-            "categoryLabel": "WaterFittings",
-            "templateName": "CATemplateWaterNode",
-            "templateID": 2001
-        },
-        {
-            "categoryLabel": "WaterHydrants",
-            "templateName": "CATemplateWaterHydrants",
-            "templateID": 2002
-        },
-        {
-            "categoryLabel": "WaterMetersandServices",
-            "templateName": "CATemplateWaterMetersAndService",
-            "templateID": 2003
-        },
-        {
-            "categoryLabel": "WaterNodes",
-            "templateName": "CATemplateWaterNode",
-            "templateID": 2001
-        },
-        {
-            "categoryLabel": "WaterPits",
-            "templateName": "CATemplateSWNode",
-            "templateID": 1992
-        },
-        {
-            "categoryLabel": "WaterPlantandEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "WaterPlantandEquipment(Auxiliary)",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "WaterPressurePipes",
-            "templateName": "CATemplateWaterPressurePipe",
-            "templateID": 2000
-        },
-        {
-            "categoryLabel": "WaterPumpStations",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        },
-        {
-            "categoryLabel": "WaterPumps",
-            "templateName": "CATemplatePumps",
-            "templateID": 1999
-        },
-        {
-            "categoryLabel": "WaterReservoirs",
-            "templateName": "CATemplateWaterReservoirs",
-            "templateID": 2005
-        },
-        {
-            "categoryLabel": "WaterServices",
-            "templateName": "CATemplateWaterPressurePipe",
-            "templateID": 2000
-        },
-        {
-            "categoryLabel": "WaterTreatmentFacility",
-            "templateName": "CATemplateWaterTreatmentFacility",
-            "templateID": 3374
-        },
-        {
-            "categoryLabel": "WaterTreatmentSystems",
-            "templateName": "CATemplateWaterTreatmentSystem",
-            "templateID": 3376
-        },
-        {
-            "categoryLabel": "WaterValves",
-            "templateName": "CATemplateWaterNode",
-            "templateID": 2001
-        },
-        {
-            "categoryLabel": "Wharves",
-            "templateName": "CATemplateJetties",
-            "templateID": 2078
-        },
-        {
-            "categoryLabel": "WineryBuildings",
-            "templateName": "CATemplateBuildings",
-            "templateID": 1917
-        },
-        {
-            "categoryLabel": "WineryFleet",
-            "templateName": "CATemplateFleet",
-            "templateID": 1950
-        },
-        {
-            "categoryLabel": "WineryPlantandEquipment",
-            "templateName": "CATemplatePlantAndEquipment",
-            "templateID": 2013
-        }
-    ]
+	"categories": [{
+		"categoryLabel": "Access Platforms",
+		"templateName": "CATemplateCivil",
+		"templateID": 1952
+	},
+	{
+		"categoryLabel": "Airport Buildings",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Airport Plant and Equipment",
+		"templateName": "CATemplateBuildingsPlantAndEquipment",
+		"templateID": 1921
+	},
+	{
+		"categoryLabel": "Artworks",
+		"templateName": "CATemplateArtworks",
+		"templateID": 1916
+	},
+	{
+		"categoryLabel": "Bins",
+		"templateName": "CATemplateBins",
+		"templateID": 2061
+	},
+	{
+		"categoryLabel": "Boardwalks",
+		"templateName": "CATemplatePathways",
+		"templateID": 1931
+	},
+	{
+		"categoryLabel": "Bores and Wells",
+		"templateName": "CATemplateBores",
+		"templateID": 1977
+	},
+	{
+		"categoryLabel": "Bridges",
+		"templateName": "CATemplateBridges",
+		"templateID": 1927
+	},
+	{
+		"categoryLabel": "Buildings",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Buildings (Market Value)",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Buildings Equipment and Furniture",
+		"templateName": "CATemplateEquipmentAndFurniture",
+		"templateID": 1922
+	},
+	{
+		"categoryLabel": "Buildings Functional Spaces",
+		"templateName": "CATemplateBuildingFunctionalSpace",
+		"templateID": 3379
+	},
+	{
+		"categoryLabel": "Buildings Infrastructure",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Buildings Plant and Equipment",
+		"templateName": "CATemplateBuildingsPlantAndEquipment",
+		"templateID": 1921
+	},
+	{
+		"categoryLabel": "Bus Shelters",
+		"templateName": "CATemplateBusShelters",
+		"templateID": 1928
+	},
+	{
+		"categoryLabel": "Bus Stops",
+		"templateName": "CATemplateBusStop",
+		"templateID": 1929
+	},
+	{
+		"categoryLabel": "Car Parks",
+		"templateName": "CATemplateCarParks",
+		"templateID": 1930
+	},
+	{
+		"categoryLabel": "Catchment",
+		"templateName": "CATemplateCatchment",
+		"templateID": 3378
+	},
+	{
+		"categoryLabel": "Chemical Structures",
+		"templateName": "CATemplateChemicalStructures",
+		"templateID": 2006
+	},
+	{
+		"categoryLabel": "Civil",
+		"templateName": "CATemplateCivil",
+		"templateID": 1952
+	},
+	{
+		"categoryLabel": "Compressors",
+		"templateName": "CATemplateCivil",
+		"templateID": 1952
+	},
+	{
+		"categoryLabel": "Control Systems",
+		"templateName": "CATemplateControlSystems",
+		"templateID": 1948
+	},
+	{
+		"categoryLabel": "Cranes",
+		"templateName": "CATemplateFleet",
+		"templateID": 1950
+	},
+	{
+		"categoryLabel": "Creeks",
+		"templateName": "CATemplateCreeks",
+		"templateID": 1983
+	},
+	{
+		"categoryLabel": "Culverts",
+		"templateName": "CATemplateCulverts",
+		"templateID": 1986
+	},
+	{
+		"categoryLabel": "Dolphin Structures",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Education Buildings",
+		"templateName": "CATemplateEDUBuildings",
+		"templateID": 1925
+	},
+	{
+		"categoryLabel": "Education Buildings Functional Spaces",
+		"templateName": "CATemplateEducationFunctionalSpace",
+		"templateID": 3382
+	},
+	{
+		"categoryLabel": "Electrical",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
+	},
+	{
+		"categoryLabel": "Electrical Conduit Pits",
+		"templateName": "CATemplateConduitPits",
+		"templateID": 1946
+	},
+	{
+		"categoryLabel": "Electrical Conduits",
+		"templateName": "CATemplateConduit",
+		"templateID": 1945
+	},
+	{
+		"categoryLabel": "Electrical Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Emergency Markers",
+		"templateName": "CATemplateEmergencyMarkers",
+		"templateID": 2069
+	},
+	{
+		"categoryLabel": "Emergency Routes",
+		"templateName": "CATemplateEmergencyRoute",
+		"templateID": 2070
+	},
+	{
+		"categoryLabel": "Facility",
+		"templateName": "CATemplateFacility",
+		"templateID": 3367
+	},
+	{
+		"categoryLabel": "Fences",
+		"templateName": "CATemplateFences",
+		"templateID": 1971
+	},
+	{
+		"categoryLabel": "Fleet",
+		"templateName": "CATemplateFleet",
+		"templateID": 1950
+	},
+	{
+		"categoryLabel": "Fleet, Plant and Equipment",
+		"templateName": "CATemplateFleet",
+		"templateID": 1950
+	},
+	{
+		"categoryLabel": "Gates",
+		"templateName": "CATemplateGates",
+		"templateID": 2071
+	},
+	{
+		"categoryLabel": "Generators",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
+	},
+	{
+		"categoryLabel": "Heavy Fleet",
+		"templateName": "CATemplateFleet",
+		"templateID": 1950
+	},
+	{
+		"categoryLabel": "High Voltage Lines",
+		"templateName": "CATemplateTransmissionLine",
+		"templateID": 2300
+	},
+	{
+		"categoryLabel": "High Voltage Poles",
+		"templateName": "CATemplateTransmissionPole",
+		"templateID": 2297
+	},
+	{
+		"categoryLabel": "Housing Buildings",
+		"templateName": "CATemplateHousingBuildings",
+		"templateID": 1955
+	},
+	{
+		"categoryLabel": "Housing Functional Spaces",
+		"templateName": "CATemplateHousingFunctionalSpace",
+		"templateID": 3380
+	},
+	{
+		"categoryLabel": "Housing Hard Surfaces",
+		"templateName": "CATemplateHousingHardSurfaces",
+		"templateID": 1958
+	},
+	{
+		"categoryLabel": "Housing Landscaping",
+		"templateName": "CATemplateHousingLandscaping",
+		"templateID": 1959
+	},
+	{
+		"categoryLabel": "Housing Other Structures",
+		"templateName": "CATemplateHousingOtherStructures",
+		"templateID": 2294
+	},
+	{
+		"categoryLabel": "Housing Plant and Equipment",
+		"templateName": "CATemplateHousingPlantAndEquipment",
+		"templateID": 1961
+	},
+	{
+		"categoryLabel": "Housing Property",
+		"templateName": "CATemplateHousingProperty",
+		"templateID": 1957
+	},
+	{
+		"categoryLabel": "Housing Site",
+		"templateName": "CATemplateHousingSite",
+		"templateID": 3369
+	},
+	{
+		"categoryLabel": "Hydrants",
+		"templateName": "CATemplateHydrants",
+		"templateID": 2075
+	},
+	{
+		"categoryLabel": "ICT Hardware",
+		"templateName": "CATemplateICT",
+		"templateID": 1947
+	},
+	{
+		"categoryLabel": "Infiltration Devices",
+		"templateName": "CATemplateInfiltrationDevice",
+		"templateID": 1990
+	},
+	{
+		"categoryLabel": "Instrumentation",
+		"templateName": "CATemplateInstrumentation",
+		"templateID": 1949
+	},
+	{
+		"categoryLabel": "Intersections",
+		"templateName": "CATemplateIntersectionRoads",
+		"templateID": 1932
+	},
+	{
+		"categoryLabel": "Irrigation",
+		"templateName": "CATemplateIrrigation",
+		"templateID": 1964
+	},
+	{
+		"categoryLabel": "Irrigation Channels",
+		"templateName": "CATemplateIrrigationChannel",
+		"templateID": 2076
+	},
+	{
+		"categoryLabel": "Irrigation Regulators",
+		"templateName": "CATemplateIrrigationRegulators",
+		"templateID": 2077
+	},
+	{
+		"categoryLabel": "Irrigation Sprinklers",
+		"templateName": "CATemplateSprinklers",
+		"templateID": 2103
+	},
+	{
+		"categoryLabel": "Jetties",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Kerbs",
+		"templateName": "CATemplateKerbs",
+		"templateID": 1934
+	},
+	{
+		"categoryLabel": "Kerbs (Auxiliary)",
+		"templateName": "CATemplateKerbs",
+		"templateID": 1934
+	},
+	{
+		"categoryLabel": "Lagoons",
+		"templateName": "CATemplateLagoon",
+		"templateID": 1991
+	},
+	{
+		"categoryLabel": "Land",
+		"templateName": "CATemplateLand",
+		"templateID": 1978
+	},
+	{
+		"categoryLabel": "Landfill Cells",
+		"templateName": "CATemplateLandfillCells",
+		"templateID": 1980
+	},
+	{
+		"categoryLabel": "Landfill Lagoons",
+		"templateName": "CATemplateLagoon",
+		"templateID": 1991
+	},
+	{
+		"categoryLabel": "Levee Banks",
+		"templateName": "CATemplateLeveebanks",
+		"templateID": 1984
+	},
+	{
+		"categoryLabel": "Lifting Equipment",
+		"templateName": "CATemplateCivil",
+		"templateID": 1952
+	},
+	{
+		"categoryLabel": "Lighting",
+		"templateName": "CATemplateStreetLighting",
+		"templateID": 1941
+	},
+	{
+		"categoryLabel": "Low Voltage Lines",
+		"templateName": "CATemplateTransmissionLine",
+		"templateID": 2300
+	},
+	{
+		"categoryLabel": "Low Voltage Poles",
+		"templateName": "CATemplateTransmissionPole",
+		"templateID": 2297
+	},
+	{
+		"categoryLabel": "Marine Structures",
+		"templateName": "CATemplateMarineStructures",
+		"templateID": 1981
+	},
+	{
+		"categoryLabel": "Mechanical",
+		"templateName": "CATemplateMechanical",
+		"templateID": 1953
+	},
+	{
+		"categoryLabel": "Minor Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Municipal Heritage",
+		"templateName": "CATemplateMunicipalHeritage",
+		"templateID": 1923
+	},
+	{
+		"categoryLabel": "Open Drains and Rain Gardens",
+		"templateName": "CATemplateOpenDrains",
+		"templateID": 1987
+	},
+	{
+		"categoryLabel": "Open Space Furniture",
+		"templateName": "CATemplateOutdoorFurniture",
+		"templateID": 1940
+	},
+	{
+		"categoryLabel": "Open Space Service Lines",
+		"templateName": "CATemplateOpenSpaceServiceLine",
+		"templateID": 2085
+	},
+	{
+		"categoryLabel": "Open Space Services",
+		"templateName": "CATemplateWaterMetersAndService",
+		"templateID": 2003
+	},
+	{
+		"categoryLabel": "Open Space Trees",
+		"templateName": "CATemplateTree",
+		"templateID": 1942
+	},
+	{
+		"categoryLabel": "Other Structures",
+		"templateName": "CATemplateOtherStructures",
+		"templateID": 1985
+	},
+	{
+		"categoryLabel": "Park Active Areas",
+		"templateName": "CATemplateParkActiveAreas",
+		"templateID": 1967
+	},
+	{
+		"categoryLabel": "Park Equipment",
+		"templateName": "CATemplateOutdoorFurniture",
+		"templateID": 1940
+	},
+	{
+		"categoryLabel": "Park Formal Assets",
+		"templateName": "CATemplateParkFormalAssets",
+		"templateID": 1969
+	},
+	{
+		"categoryLabel": "Park Infrastructure",
+		"templateName": "CATemplateParkInfrastructure",
+		"templateID": 1970
+	},
+	{
+		"categoryLabel": "Park Passive Areas",
+		"templateName": "CATemplateParkPassiveAreas",
+		"templateID": 1972
+	},
+	{
+		"categoryLabel": "Park Site",
+		"templateName": "CATemplateParkSite",
+		"templateID": 3370
+	},
+	{
+		"categoryLabel": "Parks and Gardens",
+		"templateName": "CATemplateParks",
+		"templateID": 3372
+	},
+	{
+		"categoryLabel": "Pathways",
+		"templateName": "CATemplatePathways",
+		"templateID": 1931
+	},
+	{
+		"categoryLabel": "Pathways (Auxiliary)",
+		"templateName": "CATemplatePathways",
+		"templateID": 1931
+	},
+	{
+		"categoryLabel": "Playground Site",
+		"templateName": "CATemplatePlaygroundSite",
+		"templateID": 3371
+	},
+	{
+		"categoryLabel": "Playgrounds",
+		"templateName": "CATemplatePlaygrounds",
+		"templateID": 1974
+	},
+	{
+		"categoryLabel": "Pool Structures",
+		"templateName": "CATemplatePoolStructures",
+		"templateID": 1924
+	},
+	{
+		"categoryLabel": "Port Buildings",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Port Jetties",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Port Land",
+		"templateName": "CATemplateLand",
+		"templateID": 1978
+	},
+	{
+		"categoryLabel": "Port Navigation Aids",
+		"templateName": "CATemplateNavigationAid",
+		"templateID": 2296
+	},
+	{
+		"categoryLabel": "Port Navigation Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Port Piers",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Port Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Port Rail",
+		"templateName": "CATemplateRailway",
+		"templateID": 2101
+	},
+	{
+		"categoryLabel": "Port Road",
+		"templateName": "CATemplateSealedRoads",
+		"templateID": 2347
+	},
+	{
+		"categoryLabel": "Port Stacking Areas",
+		"templateName": "CATemplateCarParks",
+		"templateID": 1930
+	},
+	{
+		"categoryLabel": "Port Utility Services",
+		"templateName": "CATemplateWaterMetersAndService",
+		"templateID": 2003
+	},
+	{
+		"categoryLabel": "Property",
+		"templateName": "CATemplateProperty",
+		"templateID": 1979
+	},
+	{
+		"categoryLabel": "Rail Bridges",
+		"templateName": "CATemplateBridges",
+		"templateID": 1927
+	},
+	{
+		"categoryLabel": "Rail Control Systems",
+		"templateName": "CATemplateControlSystems",
+		"templateID": 1948
+	},
+	{
+		"categoryLabel": "Rail Crossings",
+		"templateName": "CATemplateIntersectionRoads",
+		"templateID": 1932
+	},
+	{
+		"categoryLabel": "Rail Junctions",
+		"templateName": "CATemplateIntersectionRoads",
+		"templateID": 1932
+	},
+	{
+		"categoryLabel": "Rail Signals",
+		"templateName": "CATemplateEquipmentRoads",
+		"templateID": 1933
+	},
+	{
+		"categoryLabel": "Railways",
+		"templateName": "CATemplateRailway",
+		"templateID": 2101
+	},
+	{
+		"categoryLabel": "Retaining Walls",
+		"templateName": "CATemplateRetainingWalls",
+		"templateID": 1975
+	},
+	{
+		"categoryLabel": "Riverbanks",
+		"templateName": "CATemplateRiverbanks",
+		"templateID": 1982
+	},
+	{
+		"categoryLabel": "Road Barriers",
+		"templateName": "CATemplateBarriers",
+		"templateID": 2060
+	},
+	{
+		"categoryLabel": "Road Elements",
+		"templateName": "CATemplateRoadElement",
+		"templateID": 3381
+	},
+	{
+		"categoryLabel": "Roads",
+		"templateName": "CATemplateSealedRoads",
+		"templateID": 2347
+	},
+	{
+		"categoryLabel": "Roads (Auxiliary)",
+		"templateName": "CATemplateSealedRoads",
+		"templateID": 2347
+	},
+	{
+		"categoryLabel": "Roads Equipment",
+		"templateName": "CATemplateEquipmentRoads",
+		"templateID": 1933
+	},
+	{
+		"categoryLabel": "Runways",
+		"templateName": "CATemplateRunway",
+		"templateID": 2346
+	},
+	{
+		"categoryLabel": "Sewer Fittings",
+		"templateName": "CATemplateSewerNodes",
+		"templateID": 2011
+	},
+	{
+		"categoryLabel": "Sewer Low Pressure Pipes",
+		"templateName": "CATemplateSewerLowPressurePipe",
+		"templateID": 2009
+	},
+	{
+		"categoryLabel": "Sewer Nodes",
+		"templateName": "CATemplateSewerNodes",
+		"templateID": 2011
+	},
+	{
+		"categoryLabel": "Sewer Pits",
+		"templateName": "CATemplateSWNode",
+		"templateID": 1992
+	},
+	{
+		"categoryLabel": "Sewer Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Sewer Plant and Equipment (Auxiliary)",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Sewer Pressure Pipes",
+		"templateName": "CATemplateSewerPressurePipe",
+		"templateID": 2008
+	},
+	{
+		"categoryLabel": "Sewer Pressure Pipes (Auxiliary)",
+		"templateName": "CATemplateSewerPressurePipe",
+		"templateID": 2008
+	},
+	{
+		"categoryLabel": "Sewer Pump Stations",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Sewer Pumps",
+		"templateName": "CATemplatePumps",
+		"templateID": 1999
+	},
+	{
+		"categoryLabel": "Sewer Services",
+		"templateName": "CATemplateSewerServices",
+		"templateID": 2010
+	},
+	{
+		"categoryLabel": "Sewer Treatment Facility",
+		"templateName": "CATemplateSewerTreatmentFacility",
+		"templateID": 3375
+	},
+	{
+		"categoryLabel": "Sewer Treatment Systems",
+		"templateName": "CATemplateSewerTreatmentSystem",
+		"templateID": 3377
+	},
+	{
+		"categoryLabel": "Sewer Valves",
+		"templateName": "CATemplateSewerValves",
+		"templateID": 2012
+	},
+	{
+		"categoryLabel": "Signals",
+		"templateName": "CATemplateSignals",
+		"templateID": 1938
+	},
+	{
+		"categoryLabel": "Signs",
+		"templateName": "CATemplateSigns",
+		"templateID": 1939
+	},
+	{
+		"categoryLabel": "Steps",
+		"templateName": "CATemplateSteps",
+		"templateID": 2104
+	},
+	{
+		"categoryLabel": "Storage Structures",
+		"templateName": "CATemplateStorageStructure",
+		"templateID": 2018
+	},
+	{
+		"categoryLabel": "Stormwater Drains",
+		"templateName": "CATemplateSWLowPressurePipe",
+		"templateID": 1988
+	},
+	{
+		"categoryLabel": "Stormwater End Structures",
+		"templateName": "CATemplateSWEndStructures",
+		"templateID": 2106
+	},
+	{
+		"categoryLabel": "Stormwater Fittings",
+		"templateName": "CATemplateSWNode",
+		"templateID": 1992
+	},
+	{
+		"categoryLabel": "Stormwater GPTs",
+		"templateName": "CATemplateGPT",
+		"templateID": 1989
+	},
+	{
+		"categoryLabel": "Stormwater Pits",
+		"templateName": "CATemplateSWNode",
+		"templateID": 1992
+	},
+	{
+		"categoryLabel": "Stormwater Property Connections",
+		"templateName": "CATemplateSWPropertyConnection",
+		"templateID": 1993
+	},
+	{
+		"categoryLabel": "Street Furniture",
+		"templateName": "CATemplateOutdoorFurniture",
+		"templateID": 1940
+	},
+	{
+		"categoryLabel": "Street Trees",
+		"templateName": "CATemplateTree",
+		"templateID": 1942
+	},
+	{
+		"categoryLabel": "Structures",
+		"templateName": "CATemplateStructures",
+		"templateID": 1976
+	},
+	{
+		"categoryLabel": "Substations",
+		"templateName": "CATemplateSubstation",
+		"templateID": 2105
+	},
+	{
+		"categoryLabel": "SwitchBoards",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
+	},
+	{
+		"categoryLabel": "Table Drains",
+		"templateName": "CATemplateInfiltrationDevice",
+		"templateID": 1990
+	},
+	{
+		"categoryLabel": "Toilets",
+		"templateName": "CATemplateToilets",
+		"templateID": 2109
+	},
+	{
+		"categoryLabel": "Traffic Management Devices",
+		"templateName": "CATemplateTrafficMgmtDevices",
+		"templateID": 1943
+	},
+	{
+		"categoryLabel": "Unsealed Roads",
+		"templateName": "CATemplateUnsealedRoads",
+		"templateID": 2021
+	},
+	{
+		"categoryLabel": "Water Dams",
+		"templateName": "CATemplateWaterDams",
+		"templateID": 2004
+	},
+	{
+		"categoryLabel": "Water Fittings",
+		"templateName": "CATemplateWaterNode",
+		"templateID": 2001
+	},
+	{
+		"categoryLabel": "Water Hydrants",
+		"templateName": "CATemplateWaterHydrants",
+		"templateID": 2002
+	},
+	{
+		"categoryLabel": "Water Meters and Services",
+		"templateName": "CATemplateWaterMetersAndService",
+		"templateID": 2003
+	},
+	{
+		"categoryLabel": "Water Nodes",
+		"templateName": "CATemplateWaterNode",
+		"templateID": 2001
+	},
+	{
+		"categoryLabel": "Water Pits",
+		"templateName": "CATemplateSWNode",
+		"templateID": 1992
+	},
+	{
+		"categoryLabel": "Water Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Water Plant and Equipment (Auxiliary)",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Water Pressure Pipes",
+		"templateName": "CATemplateWaterPressurePipe",
+		"templateID": 2000
+	},
+	{
+		"categoryLabel": "Water Pump Stations",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	},
+	{
+		"categoryLabel": "Water Pumps",
+		"templateName": "CATemplatePumps",
+		"templateID": 1999
+	},
+	{
+		"categoryLabel": "Water Reservoirs",
+		"templateName": "CATemplateWaterReservoirs",
+		"templateID": 2005
+	},
+	{
+		"categoryLabel": "Water Services",
+		"templateName": "CATemplateWaterPressurePipe",
+		"templateID": 2000
+	},
+	{
+		"categoryLabel": "Water Treatment Facility",
+		"templateName": "CATemplateWaterTreatmentFacility",
+		"templateID": 3374
+	},
+	{
+		"categoryLabel": "Water Treatment Systems",
+		"templateName": "CATemplateWaterTreatmentSystem",
+		"templateID": 3376
+	},
+	{
+		"categoryLabel": "Water Valves",
+		"templateName": "CATemplateWaterNode",
+		"templateID": 2001
+	},
+	{
+		"categoryLabel": "Wharves",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Winery Buildings",
+		"templateName": "CATemplateBuildings",
+		"templateID": 1917
+	},
+	{
+		"categoryLabel": "Winery Fleet",
+		"templateName": "CATemplateFleet",
+		"templateID": 1950
+	},
+	{
+		"categoryLabel": "Winery Plant and Equipment",
+		"templateName": "CATemplatePlantAndEquipment",
+		"templateID": 2013
+	}]
 }
