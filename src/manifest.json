@@ -45,5 +45,5 @@
     "web_accessible_resources": [
         "js/pageScripts/getContext.js"
     ],
-    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://ajax.googleapis.com/ https://fonts.googleapis.com/css; object-src 'self'"
+    "content_security_policy": "script-src 'unsafe-eval' 'self' https://ssl.google-analytics.com https://ajax.googleapis.com/ https://fonts.googleapis.com/css; object-src 'self'"
 }

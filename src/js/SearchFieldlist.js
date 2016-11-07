@@ -33,7 +33,7 @@ function SearchFieldlist() {
             field.mdMatch = !filter.label || !field.mdpLabels ? false : $.grep(field.mdpLabels, function(field2) {
                 return (field2.toUpperCase().indexOf(filter.label.toUpperCase()) > -1);
             }).length > 0;
-            
+
             return (
                 (!filter.group || field.group.toUpperCase().indexOf(filter.group.toUpperCase()) > -1) &&
                 (!filter.label || field.label.toUpperCase().indexOf(filter.label.toUpperCase()) > -1 || field.mdMatch) &&
@@ -92,7 +92,7 @@ function Categorylist() {
             initdb_();
         }
         return $.grep(categories, function(category) {
-            return (!filter.label || category.categoryLabel.toUpperCase().indexOf(filter.label.toUpperCase()) > -1) &&
+            return (!filter.categoryLabel || category.categoryLabel.toUpperCase().indexOf(filter.categoryLabel.toUpperCase()) > -1) &&
                 (!templateIds || $.inArray(category.templateID, templateIds) !== -1)
         });
     }
