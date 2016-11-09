@@ -148,6 +148,8 @@ function showCategoryGrid() {
     $("#searchGrid").hide();
     $("#categorySelector").show();
     $(".mdl-layout-title").text("Navigate to Category..");
+    $(".mdl-layout__drawer-button").hide();
+    $(".backToFields").show();
     $("#categoryGrid").jsGrid("loadData");
 }
 
@@ -196,6 +198,8 @@ $(function() {
     })
 
     $(".backToFields").click(function(e) {
+        $(this).hide()
+        $(".mdl-layout__drawer-button").show();
         hideCategoryGrid();
     })
 

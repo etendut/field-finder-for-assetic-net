@@ -41,6 +41,9 @@
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
+            <button class="backToFields mdl-layout-icon mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">arrow_back</i>
+            </button>
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Field Finder</span>
@@ -75,9 +78,6 @@
             <div class="page-content">
                 <div id="searchGrid"></div>
                 <div id="categorySelector" style="display: none;">
-                    <button class="backToFields mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                        <i class="material-icons">arrow_back</i>
-                    </button>
                     <div id="categoryGrid" class=""></div>
                 </div>
             </div>
