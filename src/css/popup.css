@@ -76,7 +76,7 @@ body {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
     height: .5rem;
-    border-color: #03A9F4;
+    border-color: #607d8b;
     border-top-style: none;
     border-right-style: none;
 }
@@ -84,7 +84,7 @@ body {
 .jsgrid-cell>input[type="checkbox"]:indeterminate:before {
     top: 0.5rem;
     height: 0;
-    border-color: #03A9F4;
+    border-color: #607d8b;
     border-top-style: none;
     border-right-style: none;
 }
