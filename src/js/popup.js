@@ -73,7 +73,7 @@ function setupHelp() {
             case "CONTROL":
                 filterElement.addClass("help1step1")
                 break;
-            case "CONTROL GROUP":
+            case "GROUP":
                 filterElement.addClass("help1step2")
                 break;
             case "AVAILABLE?":
@@ -101,6 +101,7 @@ function setupHelp() {
 function getHelpStage(stage) {
     switch (stage) {
         case 2:
+
             return [{
                     element: '.help2step1',
                     intro: 'Available shows you if a field is available in the current Asset category'
@@ -162,13 +163,15 @@ function getContext(callback) {
     });
 }
 
-function showCategoryGrid() {
+function showCategoryGrid(loadData) {
     $("#searchGrid").hide();
     $("#categorySelector").show();
     $(".mdl-layout-title").text("Navigate to Category..");
     $(".mdl-layout__drawer-button").hide();
     $(".backToFields").show();
-    $("#categoryGrid").jsGrid("loadData");
+    if (loadData) {
+        $("#categoryGrid").jsGrid("loadData");
+    }
 }
 
 function hideCategoryGrid() {
@@ -325,7 +328,7 @@ function loadSearchLink(item) {
         dbCat.setTemplateIds(item.categoryTemplates)
         fieldItem = item;
         getContext();
-        showCategoryGrid();
+        showCategoryGrid(true);
         return;
     } else {
         hideCategoryGrid();
