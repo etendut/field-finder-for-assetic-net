@@ -56,22 +56,22 @@ IF OBJECT_ID('tempdb.dbo.#cloudDashboardFields', 'U') IS NOT NULL
 --common fields
 select A.* into #cloudDashboardFields  from (
  values
- ('Asset - Attributes','Asset ID','Unique Identifier for the Asset','textBox',CAST(null AS NVARCHAR(100)),'CAAssetDashboard','CAAttributes')
- ,('Asset - Attributes','Asset Name','Common name for the Asset','textBox',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Attributes','Asset Category','Category of the asset','textBox',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Attributes','Asset Catalogue','Catalogue of the asset','textBox',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Attributes','External ID','External system identifier','textBox',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Core Fields','Asset Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Core Fields','Asset Sub Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Core Fields','Asset Type','Type of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Core Fields','Asset Sub Type','Type of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Asset - Core Fields','Criticality','Criticality of the Asset','Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Maintenance Asset - Core Fields','Maintenance Asset Type','Type of the Asset for Maintenance purposes','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Maintenance Asset - Core Fields','Maintenance Asset Sub Type','Type of the Asset for Maintenance purposes','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Maintenance Asset - Core Fields','Maintenance Work Group','Working Zone the asset falls under','Dropdown',null,'CAAssetDashboard','CAAttributes')
- ,('Location','Asset Location','Map location of asset','Map Editor',null,'CAAssetDashboard','CAAttributes')
+ ('Asset - Attributes','Asset ID','Unique Identifier for the Asset','textBox',CAST(null AS NVARCHAR(100)),'CAAssetDashboard','CAAttributes',200)
+ ,('Asset - Attributes','Asset Name','Common name for the Asset','textBox',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Attributes','Asset Category','Category of the asset','textBox',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Attributes','Asset Catalogue','Catalogue of the asset','textBox',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Attributes','External ID','External system identifier','textBox',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Core Fields','Asset Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Core Fields','Asset Sub Class','Classification of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Core Fields','Asset Type','Type of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Core Fields','Asset Sub Type','Type of the Asset','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Asset - Core Fields','Criticality','Criticality of the Asset','Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Maintenance Asset - Core Fields','Maintenance Asset Type','Type of the Asset for Maintenance purposes','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Maintenance Asset - Core Fields','Maintenance Asset Sub Type','Type of the Asset for Maintenance purposes','Cascading Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Maintenance Asset - Core Fields','Maintenance Work Group','Working Zone the asset falls under','Dropdown',null,'CAAssetDashboard','CAAttributes',100)
+ ,('Location','Asset Location','Map location of asset','Map Editor',null,'CAAssetDashboard','CAAttributes',100)
  ) 
- a (cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule)
+ a (cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,cloudsubmodule,CloudTextLength)
 
 
 CREATE TABLE #cloudFields (
@@ -83,6 +83,7 @@ CREATE TABLE #cloudFields (
 	[cloudResourceType] [nvarchar](100) NULL,
 	[cloudsection] [nvarchar](max) NULL,
 	[cloudsubmodule] [nvarchar](max) NULL,
+	[CloudTextLength] [nvarchar](100) NULL
  CONSTRAINT [PK_cloudFields] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
@@ -119,18 +120,19 @@ INSERT INTO #cloudFields
            ,[cloudControlType]
            ,[cloudResourceType]
            ,[cloudsection]
-           ,[cloudsubmodule])
-SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/a/Auto/' + cloudsubmodule from FieldDDMappings 
+           ,[cloudsubmodule],
+		   [CloudTextLength])
+SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/a/Auto/' + cloudsubmodule, CloudTextLength from FieldDDMappings 
 where cloudsection is not null and CloudLabel not in (select CloudLabel from #cloudDashboardFields)
 UNION ALL
-SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/' + cloudsubmodule from #cloudDashboardFields
+SELECT distinct cloudControlGroupLabel , CloudLabel ,cloudHelpstring  ,cloudControlType , cloudResourceType ,cloudsection,'/' + cloudsubmodule,CloudTextLength from #cloudDashboardFields
 ORDER BY CloudLabel
 	
 
 PRINT '--TEMP TABLES SEEDED--'
 SELECT [processing-instruction(x)]=(
 select replace(replace(replace(
-(SELECT cloudControlGroupLabel [group], CloudLabel label,cloudHelpstring help ,cloudControlType [type], cloudResourceType resourceTypes
+(SELECT cloudControlGroupLabel [group], CloudLabel label,cloudHelpstring help ,cloudControlType [type], cloudResourceType resourceTypes,CloudTextLength fieldLength
 				--(select distinct MdpLabelDescription from dbo.FieldDDMappings s where s.CloudLabel = fm.cloudlabel AND MdpLabelDescription IS NOT NULL for json path) as mdpLabels
 				--,(select distinct cloudcategory  from #cloudCat s where s.CloudLabel = fm.cloudlabel AND cloudcategory IS NOT NULL FOR JSON PATH)  as categories
 				--,(select distinct cloudTemplate  from #cloudTemp s where s.CloudLabel = fm.cloudlabel AND cloudTemplate IS NOT NULL for json PATH) as categoryTemplates
