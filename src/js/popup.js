@@ -402,15 +402,15 @@ function loadSearchGrid() {
         fields: [
             // { name: "mdpLabel", title: "myData Label", type: "text", width: 150 },
             { name: "label", title: "Control", type: "text", width: 150 },
-            { name: "help", title: "Control Help", type: "text", width: 150 },
-            { name: "type", title: "Control Type", type: "text", width: 100, sorting: false },
-            { name: "fieldLength", title: "Length", type: "text", width: 20, sorting: false },
-            { name: "group", title: "Control Group", type: "text", width: 100 },
+            { name: "help", title: "Help String", type: "text", width: 150 },
+            { name: "type", title: "Type", type: "text", width: 100, sorting: false },
+            { name: "fieldLength", title: "Length", type: "text", width: 60, sorting: false },
+            { name: "group", title: "Group", type: "text", width: 100 },
             {
                 name: "inCurrentCategory",
                 title: "Available?",
                 type: "checkbox",
-                width: 40,
+                width: 50,
                 sorting: false,
                 filterTemplate: function() {
                     var $filterControl = jsGrid.fields.checkbox.prototype.filterTemplate.call(this);
