@@ -15,6 +15,11 @@
 		"templateID": 1921
 	},
 	{
+		"categoryLabel": "Anchors",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
+	},
+	{
 		"categoryLabel": "Artworks",
 		"templateName": "CATemplateArtworks",
 		"templateID": 1916
@@ -65,21 +70,6 @@
 		"templateID": 1917
 	},
 	{
-		"categoryLabel": "Buildings Plant and Equipment",
-		"templateName": "CATemplateBuildingsPlantAndEquipment",
-		"templateID": 1921
-	},
-	{
-		"categoryLabel": "Bus Shelters",
-		"templateName": "CATemplateBusShelters",
-		"templateID": 1928
-	},
-	{
-		"categoryLabel": "Bus Stops",
-		"templateName": "CATemplateBusStop",
-		"templateID": 1929
-	},
-	{
 		"categoryLabel": "Car Parks",
 		"templateName": "CATemplateCarParks",
 		"templateID": 1930
@@ -95,7 +85,7 @@
 		"templateID": 2006
 	},
 	{
-		"categoryLabel": "Civil",
+		"categoryLabel": "Civil Assets",
 		"templateName": "CATemplateCivil",
 		"templateID": 1952
 	},
@@ -120,9 +110,19 @@
 		"templateID": 1983
 	},
 	{
+		"categoryLabel": "Crossing Protection",
+		"templateName": "CATemplateMechanical",
+		"templateID": 1953
+	},
+	{
 		"categoryLabel": "Culverts",
 		"templateName": "CATemplateCulverts",
 		"templateID": 1986
+	},
+	{
+		"categoryLabel": "Detection",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
 	},
 	{
 		"categoryLabel": "Dolphin Structures",
@@ -190,6 +190,11 @@
 		"templateID": 1950
 	},
 	{
+		"categoryLabel": "Formal Areas",
+		"templateName": "CATemplateParkFormalAssets",
+		"templateID": 1969
+	},
+	{
 		"categoryLabel": "Gates",
 		"templateName": "CATemplateGates",
 		"templateID": 2071
@@ -198,6 +203,11 @@
 		"categoryLabel": "Generators",
 		"templateName": "CATemplateElectricalComponants",
 		"templateID": 1944
+	},
+	{
+		"categoryLabel": "Hard Surfaces",
+		"templateName": "CATemplateHousingHardSurfaces",
+		"templateID": 1958
 	},
 	{
 		"categoryLabel": "Heavy Fleet",
@@ -223,11 +233,6 @@
 		"categoryLabel": "Housing Functional Spaces",
 		"templateName": "CATemplateHousingFunctionalSpace",
 		"templateID": 3380
-	},
-	{
-		"categoryLabel": "Housing Hard Surfaces",
-		"templateName": "CATemplateHousingHardSurfaces",
-		"templateID": 1958
 	},
 	{
 		"categoryLabel": "Housing Landscaping",
@@ -360,6 +365,11 @@
 		"templateID": 2297
 	},
 	{
+		"categoryLabel": "Major Plant and Equipment",
+		"templateName": "CATemplateBuildingsPlantAndEquipment",
+		"templateID": 1921
+	},
+	{
 		"categoryLabel": "Marine Structures",
 		"templateName": "CATemplateMarineStructures",
 		"templateID": 1981
@@ -378,6 +388,11 @@
 		"categoryLabel": "Municipal Heritage",
 		"templateName": "CATemplateMunicipalHeritage",
 		"templateID": 1923
+	},
+	{
+		"categoryLabel": "Noise Walls",
+		"templateName": "CATemplateRetainingWalls",
+		"templateID": 1975
 	},
 	{
 		"categoryLabel": "Open Drains and Rain Gardens",
@@ -400,11 +415,6 @@
 		"templateID": 2003
 	},
 	{
-		"categoryLabel": "Open Space Trees",
-		"templateName": "CATemplateTree",
-		"templateID": 1942
-	},
-	{
 		"categoryLabel": "Other Structures",
 		"templateName": "CATemplateOtherStructures",
 		"templateID": 1985
@@ -413,16 +423,6 @@
 		"categoryLabel": "Park Active Areas",
 		"templateName": "CATemplateParkActiveAreas",
 		"templateID": 1967
-	},
-	{
-		"categoryLabel": "Park Equipment",
-		"templateName": "CATemplateOutdoorFurniture",
-		"templateID": 1940
-	},
-	{
-		"categoryLabel": "Park Formal Assets",
-		"templateName": "CATemplateParkFormalAssets",
-		"templateID": 1969
 	},
 	{
 		"categoryLabel": "Park Infrastructure",
@@ -455,6 +455,16 @@
 		"templateID": 1931
 	},
 	{
+		"categoryLabel": "Platform",
+		"templateName": "CATemplateJetties",
+		"templateID": 2078
+	},
+	{
+		"categoryLabel": "Play Equipment",
+		"templateName": "CATemplateOutdoorFurniture",
+		"templateID": 1940
+	},
+	{
 		"categoryLabel": "Playground Site",
 		"templateName": "CATemplatePlaygroundSite",
 		"templateID": 3371
@@ -463,6 +473,11 @@
 		"categoryLabel": "Playgrounds",
 		"templateName": "CATemplatePlaygrounds",
 		"templateID": 1974
+	},
+	{
+		"categoryLabel": "Point Mechanism",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
 	},
 	{
 		"categoryLabel": "Pool Structures",
@@ -530,34 +545,24 @@
 		"templateID": 1979
 	},
 	{
+		"categoryLabel": "Public Transport Shelters",
+		"templateName": "CATemplateBusShelters",
+		"templateID": 1928
+	},
+	{
+		"categoryLabel": "Public Transport Stops",
+		"templateName": "CATemplateBusStop",
+		"templateID": 1929
+	},
+	{
 		"categoryLabel": "Rail Bridges",
 		"templateName": "CATemplateBridges",
 		"templateID": 1927
 	},
 	{
-		"categoryLabel": "Rail Control Systems",
-		"templateName": "CATemplateControlSystems",
-		"templateID": 1948
-	},
-	{
-		"categoryLabel": "Rail Crossings",
-		"templateName": "CATemplateIntersectionRoads",
-		"templateID": 1932
-	},
-	{
 		"categoryLabel": "Rail Junctions",
 		"templateName": "CATemplateIntersectionRoads",
 		"templateID": 1932
-	},
-	{
-		"categoryLabel": "Rail Signals",
-		"templateName": "CATemplateEquipmentRoads",
-		"templateID": 1933
-	},
-	{
-		"categoryLabel": "Railways",
-		"templateName": "CATemplateRailway",
-		"templateID": 2101
 	},
 	{
 		"categoryLabel": "Retaining Walls",
@@ -610,12 +615,17 @@
 		"templateID": 2009
 	},
 	{
+		"categoryLabel": "Sewer Mains",
+		"templateName": "CATemplateSewerLowPressurePipe",
+		"templateID": 2009
+	},
+	{
 		"categoryLabel": "Sewer Nodes",
 		"templateName": "CATemplateSewerNodes",
 		"templateID": 2011
 	},
 	{
-		"categoryLabel": "Sewer Pits",
+		"categoryLabel": "Sewer Pits and Wells",
 		"templateName": "CATemplateSWNode",
 		"templateID": 1992
 	},
@@ -745,6 +755,11 @@
 		"templateID": 1944
 	},
 	{
+		"categoryLabel": "Switches",
+		"templateName": "CATemplateElectricalComponants",
+		"templateID": 1944
+	},
+	{
 		"categoryLabel": "Table Drains",
 		"templateName": "CATemplateInfiltrationDevice",
 		"templateID": 1990
@@ -755,9 +770,49 @@
 		"templateID": 2109
 	},
 	{
+		"categoryLabel": "Track",
+		"templateName": "CATemplateRailway",
+		"templateID": 2101
+	},
+	{
+		"categoryLabel": "Track Control Systems",
+		"templateName": "CATemplateControlSystems",
+		"templateID": 1948
+	},
+	{
+		"categoryLabel": "Track Foundation",
+		"templateName": "CATemplateCivil",
+		"templateID": 1952
+	},
+	{
+		"categoryLabel": "Track Points and Crossings",
+		"templateName": "CATemplateIntersectionRoads",
+		"templateID": 1932
+	},
+	{
+		"categoryLabel": "Track Signals",
+		"templateName": "CATemplateEquipmentRoads",
+		"templateID": 1933
+	},
+	{
 		"categoryLabel": "Traffic Management Devices",
 		"templateName": "CATemplateTrafficMgmtDevices",
 		"templateID": 1943
+	},
+	{
+		"categoryLabel": "Train Stops",
+		"templateName": "CATemplateMechanical",
+		"templateID": 1953
+	},
+	{
+		"categoryLabel": "Transformers",
+		"templateName": "CATemplateSubstation",
+		"templateID": 2105
+	},
+	{
+		"categoryLabel": "Trees",
+		"templateName": "CATemplateTree",
+		"templateID": 1942
 	},
 	{
 		"categoryLabel": "Unsealed Roads",

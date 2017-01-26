@@ -1233,6 +1233,7 @@
 		"label": "AMP Meter",
 		"help": "Amperage measurement",
 		"type": "Text",
+		"fieldLength": "50",
 		"mdpLabels": ["AMP Meter:"],
 		"categoryTemplates": [1944,
 		2013],
@@ -3579,7 +3580,7 @@
 		"mdpLabels": ["Asset Strategy:"],
 		"categoryTemplates": [1923,
 		3369],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
 	},
 	{
 		"group": "Asset Strategy",
@@ -3590,7 +3591,7 @@
 		"mdpLabels": ["Asset Strategy:"],
 		"categoryTemplates": [1923,
 		3369],
-		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Asset - Core Fields",
@@ -4812,7 +4813,7 @@
 		"mdpLabels": ["Base area:"],
 		"categoryTemplates": [1982,
 		1991],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Storage Info",
@@ -4822,7 +4823,7 @@
 		"mdpLabels": ["Base area:"],
 		"categoryTemplates": [1982,
 		1991],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Pit Details",
@@ -9110,6 +9111,7 @@
 		"label": "Crossing Type",
 		"help": "The type of crossing being bridged.",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Crossing Type:"],
 		"categoryTemplates": [1927],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -11552,7 +11554,7 @@
 		1991,
 		2004,
 		2076],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Vehicle Access Details",
@@ -11569,13 +11571,14 @@
 		1991,
 		2004,
 		2076],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Hardware Service Features",
 		"label": "Device Details",
 		"help": "Details of the devices hardware configuration",
 		"type": "Mulitline Text",
+		"fieldLength": "4000",
 		"mdpLabels": ["Device Details:"],
 		"categoryTemplates": [1947],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -12745,7 +12748,7 @@
 		"mdpLabels": ["Embankment Type:"],
 		"categoryTemplates": [1986,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Culvert Details",
@@ -12756,7 +12759,7 @@
 		"mdpLabels": ["Embankment Type:"],
 		"categoryTemplates": [1986,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Emergency Management Plan",
@@ -13720,6 +13723,7 @@
 		"label": "Ext. Accounting System 1 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -13840,6 +13844,7 @@
 		"label": "Ext. Accounting System 1 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -14202,6 +14207,7 @@
 		"label": "Ext. Accounting System 2 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -14322,6 +14328,7 @@
 		"label": "Ext. Accounting System 2 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -14684,6 +14691,7 @@
 		"label": "Ext. Accounting System 3 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -14804,6 +14812,7 @@
 		"label": "Ext. Accounting System 3 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -15166,6 +15175,7 @@
 		"label": "Ext. Maintenance System 1 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -15286,6 +15296,7 @@
 		"label": "Ext. Maintenance System 1 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -15648,6 +15659,7 @@
 		"label": "Ext. Maintenance System 2 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -15768,6 +15780,7 @@
 		"label": "Ext. Maintenance System 2 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -16130,6 +16143,7 @@
 		"label": "Ext. Maintenance System 3 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -16250,6 +16264,7 @@
 		"label": "Ext. Maintenance System 3 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -16612,6 +16627,7 @@
 		"label": "Ext. Other System 1 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -16732,6 +16748,7 @@
 		"label": "Ext. Other System 1 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -17094,6 +17111,7 @@
 		"label": "Ext. Other System 2 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -17214,6 +17232,7 @@
 		"label": "Ext. Other System 2 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -17576,6 +17595,7 @@
 		"label": "Ext. Other System 3 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -17696,6 +17716,7 @@
 		"label": "Ext. Other System 3 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -18058,6 +18079,7 @@
 		"label": "Ext. Spatial System 1 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -18178,6 +18200,7 @@
 		"label": "Ext. Spatial System 1 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -18540,6 +18563,7 @@
 		"label": "Ext. Spatial System 2 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -18660,6 +18684,7 @@
 		"label": "Ext. Spatial System 2 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -19022,6 +19047,7 @@
 		"label": "Ext. Spatial System 3 ID",
 		"help": "ID of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -19142,6 +19168,7 @@
 		"label": "Ext. Spatial System 3 ID2",
 		"help": "ID 2 of system",
 		"type": "Text",
+		"fieldLength": "200",
 		"categoryTemplates": [1916,
 		1917,
 		1921,
@@ -24479,7 +24506,7 @@
 		1989,
 		1990,
 		1992],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
 		"group": "Pit Dimensions",
@@ -24491,17 +24518,7 @@
 		1989,
 		1990,
 		1992],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
-	},
-	{
-		"group": "Pit Other Dimensions",
-		"label": "Inner Diameter Four",
-		"help": "measured Inner diameter",
-		"type": "Measurement",
-		"mdpLabels": ["Inner Diameter 4:"],
-		"categoryTemplates": [1989,
-		1990],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Pit Other Dimensions",
@@ -24512,6 +24529,16 @@
 		"categoryTemplates": [1989,
 		1990],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+	},
+	{
+		"group": "Pit Other Dimensions",
+		"label": "Inner Diameter Four",
+		"help": "measured Inner diameter",
+		"type": "Measurement",
+		"mdpLabels": ["Inner Diameter 4:"],
+		"categoryTemplates": [1989,
+		1990],
+		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
 		"group": "Pit Other Dimensions",
@@ -27274,7 +27301,7 @@
 		"categoryTemplates": [1941,
 		3379,
 		3380],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Light Features",
@@ -27286,7 +27313,7 @@
 		"categoryTemplates": [1941,
 		3379,
 		3380],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Lighting Details",
@@ -27868,6 +27895,7 @@
 		"label": "Load Rating",
 		"help": "The structural capacity as determined by load testing or analysis.",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Load Rating:"],
 		"categoryTemplates": [1927],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -27877,6 +27905,7 @@
 		"label": "Load Restriction",
 		"help": "The limit placed on the bridge to control heavy vehicle use.",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Load Restriction:"],
 		"categoryTemplates": [1927],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -31977,7 +32006,7 @@
 		"categoryTemplates": [1944,
 		1953,
 		2013],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Circuit Capacity",
@@ -31989,7 +32018,7 @@
 		"categoryTemplates": [1944,
 		1953,
 		2013],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Access Details",
@@ -32940,6 +32969,7 @@
 		"label": "Over Scale",
 		"help": "Scale being used e.g. kW\/h (kilowatt\/hours)",
 		"type": "Text",
+		"fieldLength": "50",
 		"mdpLabels": ["Over Scale:"],
 		"categoryTemplates": [1944,
 		2013],
@@ -32954,7 +32984,7 @@
 		"mdpLabels": ["Overflow Pathway:"],
 		"categoryTemplates": [2013,
 		3377],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
 		"group": "Overflow Potential",
@@ -32965,7 +32995,7 @@
 		"mdpLabels": ["Overflow Pathway:"],
 		"categoryTemplates": [2013,
 		3377],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Overflow Potential",
@@ -33692,7 +33722,7 @@
 		1979,
 		2003,
 		2010],
-		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Rate Payer Details",
@@ -33709,13 +33739,14 @@
 		1979,
 		2003,
 		2010],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
 	},
 	{
 		"group": "Tree Service Features",
 		"label": "Parcel Number",
 		"help": "Identifying number for the component",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Parcel Number:"],
 		"categoryTemplates": [1942],
 		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
@@ -33884,7 +33915,7 @@
 		"categoryTemplates": [1942,
 		1974,
 		3369],
-		"link": "\/a\/Auto\/CAMapping\/CALocation\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Park Location Features",
@@ -33896,7 +33927,7 @@
 		"categoryTemplates": [1942,
 		1974,
 		3369],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAMapping\/CALocation\/"
 	},
 	{
 		"group": "Sign Details",
@@ -35380,7 +35411,7 @@
 		2013,
 		3374,
 		3377],
-		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Population",
@@ -35397,7 +35428,7 @@
 		2013,
 		3374,
 		3377],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
 	},
 	{
 		"group": "Public Access",
@@ -36933,6 +36964,7 @@
 		"label": "Ramp Grade",
 		"help": "The longitudinal grade of the asset e.g. 1 in 25, 1 in 100, 1 in 250 or described as a percentage e.g. 5%.",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Ramp Grade:"],
 		"categoryTemplates": [1931],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -36951,6 +36983,7 @@
 		"label": "Ramp Type",
 		"help": "Type of ramps in segment",
 		"type": "Text",
+		"fieldLength": "100",
 		"mdpLabels": ["Ramps Type:"],
 		"categoryTemplates": [1931],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -38698,6 +38731,7 @@
 		"label": "Right Kerb Comments",
 		"help": "Comments for the section",
 		"type": "Mulitline Text",
+		"fieldLength": "4000",
 		"categoryTemplates": [1934],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
@@ -38877,7 +38911,7 @@
 		"mdpLabels": ["Road Surface Type:"],
 		"categoryTemplates": [1986,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Culvert Details",
@@ -38888,7 +38922,7 @@
 		"mdpLabels": ["Road Surface Type:"],
 		"categoryTemplates": [1986,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Connected Assets",
@@ -39231,6 +39265,7 @@
 		"label": "Scale",
 		"help": "Scale being used e.g. kW\/h (kilowatt\/hours)",
 		"type": "Text",
+		"fieldLength": "50",
 		"mdpLabels": ["Scale:"],
 		"categoryTemplates": [1944,
 		2013],
@@ -40190,7 +40225,7 @@
 		2013,
 		3374,
 		3377],
-		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Population",
@@ -40207,7 +40242,7 @@
 		2013,
 		3374,
 		3377],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
 	},
 	{
 		"group": "Building Services",
@@ -40358,6 +40393,7 @@
 		"label": "Shade Structure Details",
 		"help": "Additional details relating to the shade structure e.g. dimensions etc.",
 		"type": "Mulitline Text",
+		"fieldLength": "4000",
 		"mdpLabels": ["Shade Structure Details:"],
 		"categoryTemplates": [1974],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -40633,7 +40669,7 @@
 		"mdpLabels": ["Sign Condition"],
 		"categoryTemplates": [1939,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
 	},
 	{
 		"group": "Sign Info",
@@ -40644,7 +40680,7 @@
 		"mdpLabels": ["Sign Condition"],
 		"categoryTemplates": [1939,
 		2021],
-		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Sign Installation Details",
@@ -42121,7 +42157,7 @@
 		3380,
 		3381,
 		3382],
-		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
+		"link": "\/a\/Auto\/CAValuations\/CAValuation\/"
 	},
 	{
 		"group": "Grants Commission",
@@ -42223,7 +42259,7 @@
 		3380,
 		3381,
 		3382],
-		"link": "\/a\/Auto\/CAValuations\/CAValuation\/"
+		"link": "\/a\/Auto\/CAAttributes\/CAServiceFeature\/"
 	},
 	{
 		"group": "Bus Stop Location Features",
@@ -44779,6 +44815,7 @@
 		"label": "Treatment Capacity Comments",
 		"help": "General local description",
 		"type": "Mulitline Text",
+		"fieldLength": "4000",
 		"mdpLabels": ["Other Comments"],
 		"categoryTemplates": [1980],
 		"link": "\/a\/Auto\/CAAttributes\/CADesign\/"
@@ -46161,6 +46198,7 @@
 		"label": "Volts Voltage Meter",
 		"help": "type of meter fitted",
 		"type": "Text",
+		"fieldLength": "50",
 		"mdpLabels": ["Volts Voltage Meter:"],
 		"categoryTemplates": [1944,
 		2013],
