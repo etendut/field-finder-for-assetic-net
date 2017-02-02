@@ -11926,16 +11926,6 @@
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
-		"group": "Pump Materials and Dimensions",
-		"label": "Discharge Size",
-		"help": "Diameter of pump discharge",
-		"type": "Measurement",
-		"mdpLabels": ["Discharge Size (mm):"],
-		"categoryTemplates": [1999,
-		2013],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
-	},
-	{
 		"group": "Disease Vector Control Details",
 		"label": "Disease Vector Control",
 		"help": "Is a disease mitigation plan in place?",
@@ -19798,11 +19788,7 @@
 		"label": "Fence GPS End",
 		"help": "GPS coordinate at end of fence",
 		"type": "Numeric Stepper",
-		"categoryTemplates": [1929,
-		1974,
-		1978,
-		1980,
-		2076],
+		"categoryTemplates": [2076],
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
@@ -19810,11 +19796,7 @@
 		"label": "Fence GPS Start",
 		"help": "GPS coordinate at start of fence",
 		"type": "Numeric Stepper",
-		"categoryTemplates": [1929,
-		1974,
-		1978,
-		1980,
-		2076],
+		"categoryTemplates": [2076],
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
@@ -19824,11 +19806,7 @@
 		"type": "Measurement",
 		"mdpLabels": ["Fence Height (m):",
 		"Left Fence Height:"],
-		"categoryTemplates": [1929,
-		1974,
-		1978,
-		1980,
-		2076],
+		"categoryTemplates": [2076],
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
@@ -19837,11 +19815,7 @@
 		"help": "Measured length of asset",
 		"type": "Measurement",
 		"mdpLabels": ["Fence Length (m):"],
-		"categoryTemplates": [1929,
-		1974,
-		1978,
-		1980,
-		2076],
+		"categoryTemplates": [2076],
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
@@ -24177,27 +24151,6 @@
 		"categoryTemplates": [1925,
 		3382],
 		"link": "\/a\/Auto\/CAAttributes\/CAManagement\/"
-	},
-	{
-		"group": "Pump Materials and Dimensions",
-		"label": "Impeller Diameter",
-		"help": "Measured diameter of asset",
-		"type": "Measurement",
-		"mdpLabels": ["Impeller Diameter (mm):"],
-		"categoryTemplates": [1999,
-		2013],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
-	},
-	{
-		"group": "Pump Materials and Dimensions",
-		"label": "Impeller Material",
-		"help": "e.g. Cast Iron, Brass",
-		"type": "Text",
-		"fieldLength": "50",
-		"mdpLabels": ["Impeller Material:"],
-		"categoryTemplates": [1999,
-		2013],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
 		"group": "Inflow Data",
@@ -43193,16 +43146,6 @@
 		"link": "\/a\/Auto\/CAMapping\/CALocation\/"
 	},
 	{
-		"group": "Pump Materials and Dimensions",
-		"label": "Suction Size",
-		"help": "Diameter of pump suction",
-		"type": "Measurement",
-		"mdpLabels": ["Suction Size (mm):"],
-		"categoryTemplates": [1999,
-		2013],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
-	},
-	{
 		"group": "Sump Details",
 		"label": "Sump",
 		"help": "Does the site have a sump?",
@@ -46236,17 +46179,6 @@
 		2012,
 		2013,
 		2018],
-		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
-	},
-	{
-		"group": "Pump Materials and Dimensions",
-		"label": "Volute Material",
-		"help": "Material of the casing that receives the fluid being pumped by the impeller",
-		"type": "Combobox",
-		"fieldLength": "100",
-		"mdpLabels": ["Volute Material:"],
-		"categoryTemplates": [1999,
-		2013],
 		"link": "\/a\/Auto\/CADimension\/CASpecification\/"
 	},
 	{
