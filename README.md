@@ -1,17 +1,20 @@
-# README #
-![etendut 920x680.png](https://bitbucket.org/repo/6bEGrB/images/3280765377-etendut%20920x680.png)
+# Field Finder for assetic.net
+
+Helps user find fields within the Assets module with an assetic.net environment
 
 
-### What is this repository for? ###
+## What is this repository for?
 
 * This is a chrome extension for the assetic.net platform
-* Main Features
-** Find attribute fields in the current category
-** Find a category that contains a particular attribute field
+Features:
+ • Find Asset attribute fields in the current category
+ • Find an Asset Category that contains a particular Asset attribute field
 
+Requirements:
+ • Assetic Cloud Platfrom environment e.g. demo.assetic.net
+ • Visit http://www.assetic.com for more information
 
-
-### How do I get set up? ###
+## How do I get set up?
 
 * All dependencies are in the source
 * See the *ext* folder for un-minified files
@@ -19,6 +22,8 @@
 ** load the src folder as an unpacked chrome extension
 ** or zip the src folder and deploy using your chrome developer console
 
-### Who do I talk to? ###
-
-* [Issues](https://bitbucket.org/etendut/field-finder-for-assetic-net/issues)
+Resources
+---------
+* 'Chrome Webstore <https://chrome.google.com/webstore/detail/field-finder-for-asseticn/ibbfckindnnalfbomnkaenjghiknhhim>'_
+* 'Issues <https://github.com/etendut/field-finder-for-assetic-net/issues>'_
+* 'Etendut <https://www.etendut.com>'_
