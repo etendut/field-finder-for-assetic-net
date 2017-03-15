@@ -5,14 +5,14 @@ Helps user find fields within the Assets module with an assetic.net environment
 
 ## What is this repository for?
 
-* This is a chrome extension for the assetic.net platform
+This is a chrome extension for the assetic.net platform
 Features:
- • Find Asset attribute fields in the current category
- • Find an Asset Category that contains a particular Asset attribute field
+ * Find Asset attribute fields in the current category
+ * Find an Asset Category that contains a particular Asset attribute field
 
 Requirements:
- • Assetic Cloud Platfrom environment e.g. demo.assetic.net
- • Visit http://www.assetic.com for more information
+ * Assetic Cloud Platfrom environment e.g. demo.assetic.net
+ * Visit http://www.assetic.com for more information
 
 ## How do I get set up?
 
