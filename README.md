@@ -1,6 +1,6 @@
 # Field Finder for assetic.net
 
-Helps user find fields within the Assets module with an assetic.net environment
+Helps you find fields in your assetic.net Asset Register
 
 
 ## What is this repository for?
@@ -12,7 +12,7 @@ Features:
 
 Requirements:
  * Assetic Cloud Platfrom environment e.g. demo.assetic.net
- * Visit http://www.assetic.com for more information
+ * Visit [assetic.com](https://www.assetic.com) for more information
 
 ## How do I get set up?
 
@@ -23,7 +23,7 @@ Requirements:
 ** or zip the src folder and deploy using your chrome developer console
 
 Resources
----------
-* 'Chrome Webstore <https://chrome.google.com/webstore/detail/field-finder-for-asseticn/ibbfckindnnalfbomnkaenjghiknhhim>'_
-* 'Issues <https://github.com/etendut/field-finder-for-assetic-net/issues>'_
-* 'Etendut <https://www.etendut.com>'_
+ ---------
+* [Chrome Webstore](https://chrome.google.com/webstore/detail/field-finder-for-asseticn/ibbfckindnnalfbomnkaenjghiknhhim>)
+* [Issues](https://github.com/etendut/field-finder-for-assetic-net/issues)
+* [etendut.com](https://www.etendut.com>)
