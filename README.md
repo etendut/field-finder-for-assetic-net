@@ -1,4 +1,4 @@
-# Field Finder for assetic.net
+ Field Finder for assetic.net
 
 Helps you find fields in your assetic.net Asset Register
 
@@ -26,4 +26,4 @@ Resources
  ---------
 * [Chrome Webstore](https://chrome.google.com/webstore/detail/field-finder-for-asseticn/ibbfckindnnalfbomnkaenjghiknhhim>)
 * [Issues](https://github.com/etendut/field-finder-for-assetic-net/issues)
-* [etendut.com](https://www.etendut.com>)
+* [etendut.com](https://www.etendut.com)
